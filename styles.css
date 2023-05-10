@@ -1,3 +1,57 @@
-h1 {
-    text-align: center;
+
+.ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(163, 8, 163, 0.646);
+  width: 100vw;
+  height: 120px;
 }
+
+body,
+section {
+  margin-top: 0;
+  margin-left: 0;
+  margin: 0;
+}
+
+p {
+  font-size: 60px;
+  font-weight: bold;
+  position: absolute;
+  top: 1;
+  left: 0;
+  margin-left: 1cm;
+}
+
+
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 1;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  .menu li {
+    float: left;
+    margin: 0;
+  }
+    
+  .menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 18px;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    letter-spacing: 6px;
+    text-decoration: none;
+    transition: color 0.5s;
+    background-color: black; /* Agrega esta línea */
+  }
+  
+  .menu li a:hover {
+    color: rgb(46, 190, 2);
+  }
