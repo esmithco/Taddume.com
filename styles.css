@@ -1,11 +1,37 @@
 .ribbon {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: rgba(163, 8, 163, 0.646);
   width: 100vw;
   height: 120px;
 }
+
+
+.button-33 {
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-33:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
 
 .black-ribbon {
   display: flex;
@@ -13,7 +39,7 @@
   justify-content: center;
   background-color: black;
   width: 100vw;
-  height: 90px;
+  height: 80px;
 }
 
 
@@ -33,38 +59,60 @@ h1 {
   margin-left: 1cm;
 }
 
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
  
 .menu li {
     position: relative;
     float: left;
-    margin: 0;
-}
-    
-.menu li a {
-    display: block;
-    color: white;
+    margin: 0 5%;
+    width: auto;
     text-align: center;
-    padding: 16px 18px;
-    font-size: 24px;
-    font-family: Arial, sans-serif;
-    letter-spacing: 6px;
-    text-decoration: none;
-    transition: color 0.5s;
+    height: 100%;
+    white-space: nowrap;
 }
   
-.menu li a:hover {
-    color: rgb(46, 190, 2);
+.menu li a {
+  position: relative;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 25px;
+  font-size: 22px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.5s;
+  word-wrap: break-word;
 }
 
-.menu li ul {
+.menu li a:hover {
+  color: rgb(46, 190, 2);
+}
+
+.menu ul {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%; 
+  transform: translateX(-50%); 
   background-color: black;
-  width: 80%;
-  overflow: hidden;
- }
+  width: 6cm;
+}
+  
+
+.menu li ul li {
+  position: relative;
+  clear: both;
+  top: 20px;
+  padding: 0px 20px;
+  font-size: 22px;
+  text-align: center;
+  height: 80px;
+}
 
 .menu li:hover ul {
   display: block;
@@ -72,4 +120,10 @@ h1 {
 
 .menu ul a:hover {
   color: aqua;
+  transition: color 0.5s;
+}
+
+.menu li ul li a {
+  display: flex;
+  text-align: left;
 }
