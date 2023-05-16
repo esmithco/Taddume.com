@@ -1,29 +1,137 @@
-h1 {
-  color: #9103e9;
-  top: 1%;
-  transform: translateY(10%)
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: -20px;
 }
 
+.header h1 {
+  position: relative;
+  color: purple;
+  margin-right: 20px;
+  font-size: 35px;
+  top: -10px;
+}
 
+.menu {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 30px;
+  right: 600px;
+  justify-content: space-between;
+}
+
+.menu-item {
+  position: relative;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.login {
+  position: absolute;
+  top: 30px;
+  right: 180px;
+}
+
+.botton-new {
+  position: absolute;
+  top: 23px;
+  right: 25px;
+}
+
+.link {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: black;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.link2 {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: rgb(95, 95, 95);
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown.active>.link2,
+.link2:hover {
+  color: orange;
+}
+
+.dropdown.active>.link,
+.link:hover {
+  color: rgb(216, 4, 216);
+}
+
+.dropdown {
+  position: relative;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.5rem);
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 black;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-5px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown.active>.link+.dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-heading {
+  color: black;
+  font-size: 20px;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(1, max-content);
+  gap: 2rem;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
 
 .button-60 {
   align-items: center;
   appearance: none;
-  background-color: #fff;
+  background-color: #9619b921;
   border: 1px solid #dbdbdb;
-  border-radius: .375em;
+  border-radius: 0.375em;
   box-shadow: none;
   box-sizing: border-box;
   color: #363636;
   cursor: pointer;
   display: inline-flex;
-  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  height: 2.5em;
+  height: 2.2em;
   justify-content: center;
   line-height: 1.5;
-  padding: calc(.5em - 1px) 1em;
-  position: relative;
+  padding: calc(0.5em - 1px) 1em;
   text-align: center;
   user-select: none;
   -webkit-user-select: none;
@@ -47,100 +155,9 @@ h1 {
 }
 
 .button-60:focus:not(:active) {
-  box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
+  box-shadow: rgba(72, 95, 199, 0.25) 0 0 0 0.125em;
 }
 
-.black-ribbon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-  width: 100vw;
-  height: 80px;
-}
-
-
-body, 
-section {
-  margin-top: 0;
-  margin-left: 4cm;
-  margin: 80;
-}
-
-h1 {
-  font-size: 60px;
-  font-weight: bold;
-  position: absolute;
-  top: 1;
-  left: 0;
-  margin-left: 1cm;
-}
-
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
- 
-.menu li {
-    position: relative;
-    float: left;
-    margin: 0 2%;
-    width: auto;
-    text-align: center;
-    height: 100%;
-    white-space: nowrap;
-}
-  
-.menu li a {
-  position: relative;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 10px 25px;
-  font-size: 22px;
-  font-family: Arial, sans-serif;
-  letter-spacing: 1px;
-  text-decoration: none;
-  transition: color 0.5s;
-  word-wrap: break-word;
-}
-
-.menu li a:hover {
-  color: rgb(46, 190, 2);
-}
-
-.menu ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%; 
-  transform: translateX(-50%); 
-  background-color: black;
-  width: 6cm;
-}
-  
-
-.menu li ul li {
-  position: relative;
-  clear: both;
-  top: 20px;
-  padding: 0px 20px;
-  font-size: 22px;
-  text-align: center;
-  height: 80px;
-}
-
-.menu li:hover ul {
-  display: block;
- }
-
-.menu ul a:hover {
-  color: aqua;
-  transition: color 0.5s;
-}
-
-.menu li ul li a {
-  display: flex;
-  text-align: left;
+.login-form>input {
+  margin-bottom: 1rem;
 }
