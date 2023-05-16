@@ -1,45 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="JOJOJO.ico" type="image/x-icon">
-    <title>Taddume</title>
-</head>
-<body>
-    <section>
-        <div class="ribbon">
-            <h1>TADDUME</h1>
-            <div style="position: absolute; top: 1%; right: 20px; transform: translateY(10%);">
-                <button class="button-60" role="button">Ingresar</button>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="black-ribbon">
-            <ul>
-                <li>
-                    <a href="#content">Contenido</a>
-                    <ul>
-                        <li><a href="#learn">Aprende</a></li>
-                        <li><a href="#play">Juega</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#about">Sobre nosotros</a>
-                    <ul>
-                        <li><a href="#history">Historia</a></li>
-                        <li><a href="#team">Equipo</a></li>
-                    </ul>
-                </li>
-                <li><a href="https://www.instagram.com/esmith.co/">Contáctanos</a></li>
-                <li><a href="#work">Trabaja con Nosotros</a></li>
-                <li><a href="#play">Noticias</a></li>
-            </ul>
-        </div>
-    </section>
-</body>
-</html>
 
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="JOJOJO.ico" type="image/x-icon">
+  <title>Taddume</title>
+  <script src="scritp.js" defer></script>
+</head>
+
+<body>
+  <div class="header">
+    <h1>TADDUME</h1>
+    <div class="menu">
+      <div class="dropdown" data-dropdown>
+        <button class="link" data-dropdown-button>Contactanos</button>
+        <div class="dropdown-menu information-grid">
+          <div>
+            <div class="dropdown-heading">Redes Sociales</div>
+            <div class="dropdown-links">
+              <a href="#instagram" class="link2">Instagram</a>
+              <a href="#twitter" class="link2">Twitter</a>
+              <a href="#LinkedIn" class="link2">LinkedIn</a>
+            </div>
+          </div>
+          <div>
+            <div class="dropdown-heading">Apoyos</div>
+            <div class="dropdown-links">
+              <a href="#email" class="link2">Correo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown" data-dropdown>
+        <button class="link" data-dropdown-button>Sobre nosotros</button>
+        <div class="dropdown-menu information-grid">
+          <div>
+            <div class="dropdown-heading"></div>
+            <div class="dropdown-links">
+              <a href="#" class="link2">Historia</a>
+              <a href="#" class="link2">Equipo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown" data-dropdown>
+        <button class="link" data-dropdown-button>Noticias</button>
+        <div class="dropdown-menu information-grid">
+          <div>
+            <div class="dropdown-heading"></div>
+            <div class="dropdown-links">
+              <a href="#" class="link2">Logros</a>
+              <a href="#" class="link2">Nuevas Materias</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown" data-dropdown>
+        <button class="link" data-dropdown-button>Contenido</button>
+        <div class="dropdown-menu information-grid">
+          <div>
+            <div class="dropdown-heading"></div>
+            <div class="dropdown-links">
+              <a href="#" class="link2">Juegos</a>
+              <a href="#" class="link2">Ejercicios</a>
+              <a href="#" class="link2">Retos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="botton-new">
+      <button class="button-60">Crear una cuenta</button>
+    </div>
+    <div class="login">
+      <div class="dropdown" data-dropdown>
+        <button class="link" data-dropdown-button>Ingresar</button>
+        <div class="dropdown-menu">
+          <form class="login-form">
+            <label for="email">Correo</label>
+            <input type="email" name="email" id="email">
+            <label for="contraseña">Contraseña</label>
+            <input type="contraseña" name="contraseña" id="contraseña">
+            <button type="submit">Entrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
