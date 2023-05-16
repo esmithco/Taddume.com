@@ -1,43 +1,60 @@
-.ribbon {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgba(163, 8, 163, 0.646);
-  width: 100vw;
-  height: 120px;
+h1 {
+  color: #9103e9;
+  top: 1%;
+  transform: translateY(10%)
 }
 
 
-.button-33 {
-  background-color: #c2fbd7;
-  border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-  color: green;
+
+.button-60 {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: .375em;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #363636;
   cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 7px 20px;
+  display: inline-flex;
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: center;
+  line-height: 1.5;
+  padding: calc(.5em - 1px) 1em;
+  position: relative;
   text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 16px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
 }
 
-.button-33:hover {
-  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
-  transform: scale(1.05) rotate(-1deg);
+.button-60:active {
+  border-color: #4a4a4a;
+  outline: 0;
 }
 
+.button-60:focus {
+  border-color: #485fc7;
+  outline: 0;
+}
+
+.button-60:hover {
+  border-color: #9103e9;
+}
+
+.button-60:focus:not(:active) {
+  box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
+}
 
 .black-ribbon {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: white;
   width: 100vw;
   height: 80px;
 }
@@ -46,8 +63,8 @@
 body, 
 section {
   margin-top: 0;
-  margin-left: 0;
-  margin: 0;
+  margin-left: 4cm;
+  margin: 80;
 }
 
 h1 {
@@ -68,7 +85,7 @@ h1 {
 .menu li {
     position: relative;
     float: left;
-    margin: 0 5%;
+    margin: 0 2%;
     width: auto;
     text-align: center;
     height: 100%;
@@ -78,7 +95,7 @@ h1 {
 .menu li a {
   position: relative;
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 10px 25px;
   font-size: 22px;
