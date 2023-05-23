@@ -1,4 +1,11 @@
 /* secciones */
+
+/* body */
+
+body {
+  margin: 0;
+}
+
 /* HEADER */
 header {
   display: flex;
@@ -7,6 +14,7 @@ header {
   margin: 0;
   padding: 0;
   height: 4rem;
+  justify-content: space-around;
 }
 
 header h1 {
@@ -15,18 +23,18 @@ header h1 {
   margin-right: 2rem;
   font-size: 300%;
   padding: 0;
-  margin: 0;
+  margin-left: 0.5rem;
 }
 
 .menu {
   display: flex;
   gap: 1rem;
   position: relative;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 0;
-  margin: 0;
-  width: 40rem;
-  left: 12rem;
+  margin: auto;
+  width: auto;
+  /* left: 12rem; */
 }
 
 .link {
@@ -112,7 +120,8 @@ header h1 {
 
 .login {
   position: relative;
-  left: 21rem;
+  /* left: 21rem; */
+  margin: 0.5rem;
 }
 
 .login-form>input {
@@ -122,7 +131,7 @@ header h1 {
 
 .botton-new {
   position: relative;
-  left: 22rem;
+  float: right;
 }
 
 
@@ -182,13 +191,7 @@ header h1 {
 
 .subjects {
   position: relative;
-}
-
-.container2 {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  border: 0.09rem solid black;
+  width: auto;
 }
 
 .row {
@@ -199,6 +202,8 @@ header h1 {
 }
 
 .subjects {
+  display: grid;
+  grid-template-columns: auto 20vw;
   text-align: center;
   color: #8c00ff;
 }
@@ -207,17 +212,16 @@ header h1 {
   margin: 1rem 1.3rem;
 }
 
+.container2 {
+  display: flex;
+  flex-direction: column;
+  border: 0.09rem solid black;
+}
+
 .container3 {
   display: flex;
-  position: absolute;
   border: 0.09rem solid black;
-  width: 20%;
-  height: 99%;
-  left: 80%;
-  top: 0;
-  justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 /* footer */
