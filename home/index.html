@@ -86,7 +86,7 @@
             <label for="email">Correo</label>
             <input type="email" name="email" id="email">
             <label for="contraseña">Contraseña</label>
-            <input type="password" name="contraseña" id="contraseña">
+            <input type="password" name="contraseña" id="password">
             <button type="submit">Entrar</button>
           </form>
         </div>
@@ -100,7 +100,40 @@
   </header>
 
   <section class="news">
-    <img src="brayan.jpeg" alt="Brayan" width="100%" height="100%">
+
+    <div class="arrow l" onclick="prev()">
+        <img src="/home/pictures/l.png" alt="l">
+    </div>
+
+    <div class="slide slide-1">
+        <div class="caption">
+          <h3>New York</h3>
+          <p>We love the big Apple!</p>
+        </div>
+    </div>
+
+    <div class="slide slide-2">
+      <div class="caption">
+        <h3>Los Angeles</h3>
+        <p>La is always so much fun!</p>
+      </div>
+    </div>
+
+    <div class="slide slide-3">
+      <div class="caption">
+        <h3>Bahar Dar</h3>
+        <p>Thank you, Bahar Dar!</p>
+      </div>
+    </div>
+
+    <div class="arrow r" onclick="next()">
+      <img src="/home/pictures/r.png" alt="r">
+    </div>
+
+  </section>
+
+  <section class="title">
+    <h2>Bienvenido a Taddume</h2>
   </section>
 
   <section class="container">
@@ -124,7 +157,7 @@
 
     <div class="container2">
       <div class="row">
-        <button class="button-53">MATEMÁTICAS</button>
+        <img src="/home/icons/bx-math.svg" alt="math"/>
         <button class="button-53">IDIOMAS</button>
         <button class="button-53">ARTES</button>
         <button class="button-53">CIENCIAS NATURALES</button>
@@ -145,7 +178,7 @@
   </section>
 
   <footer>
-    <p>PQR</p>
+    <p>© 2023 Taddume. Todos los derechos reservados.</p>
   </footer>
 
 </body>

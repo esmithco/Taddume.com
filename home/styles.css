@@ -23,6 +23,7 @@ header h1 {
   margin-right: 2rem;
   font-size: 300%;
   padding: 0;
+  margin: 0;
   margin-left: 0.5rem;
 }
 
@@ -87,6 +88,7 @@ header h1 {
   pointer-events: none;
   transform: translateY(-2rem);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  z-index: 101;
 }
 
 .dropdown.active>.link+.dropdown-menu {
@@ -128,6 +130,9 @@ header h1 {
   margin-bottom: 1rem;
 }
 
+.login #email, .login #password {
+  width: 11rem;
+}
 
 .botton-new {
   position: relative;
@@ -135,11 +140,109 @@ header h1 {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* NOTICIAS */
 
 .news {
-  border-color: purple;
+  position: relative;
+  background-color: papayawhip;
 }
+
+.slide-1 {
+  background: url(../home/pictures/1.jpg);
+}
+
+.slide-2 {
+  background: url(../home/pictures/2.jpg);
+}
+
+.slide-3 {
+  background: url(../home/pictures/3.jpg);
+}
+
+.slide {
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.caption {
+  background: rgba(0,0,0,0.03);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem 0rem;
+}
+
+.caption h3 {
+  color: white;
+  text-align: center;
+  font-size: 150%;
+  padding: 1rem;
+}
+
+.caption p {
+  max-width: 20rem;
+  width: 90%;
+  margin: 0rem auto;
+  color: papayawhip;
+  text-align: center;
+  font-size: 100%;
+  line-height: 1.5rem;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transform: background 500ms;
+}
+
+.arrow img {
+  width: 5rem;
+}
+
+.arrow:hover {
+  background: gray;
+}
+
+.l {
+  left: 0;
+}
+
+.r {
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -165,16 +268,29 @@ header h1 {
 }
 
 .games {
-  background-color: papayawhip;
+  background-color: white;
 }
 
 .follow {
-  background-color: lightblue;
+  background-color: green;
 }
 
 .exp {
-  background-color: lightpink;
+  background-color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* RECURSOS */
 
@@ -191,7 +307,10 @@ header h1 {
 
 .subjects {
   position: relative;
-  width: auto;
+  display: grid;
+  grid-template-columns: auto 20%;
+  text-align: center;
+  color: #8c00ff;
 }
 
 .row {
@@ -201,11 +320,8 @@ header h1 {
   justify-content: space-between;
 }
 
-.subjects {
-  display: grid;
-  grid-template-columns: auto 20vw;
-  text-align: center;
-  color: #8c00ff;
+.row math {
+  width: 100%;
 }
 
 .button-53 {
@@ -222,13 +338,37 @@ header h1 {
   display: flex;
   border: 0.09rem solid black;
   align-items: center;
+  text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* footer */
 
 .footer p {
   font-size: 300%;
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -399,6 +539,7 @@ header h1 {
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
+  margin: auto;
 }
 
 .button-63:active,
