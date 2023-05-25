@@ -1,13 +1,13 @@
 {
     "data":[{   
-                "image":"/home/pictures/brayan.jpeg",
+                "image":"pictures/brayan.jpeg",
                 "id":1,
                 "name":"Brayan Mendoza",
                 "country":"Colombia",
                 "description":"'Gracias a Taddume pude comprender los temas de matemáticas en mi colegio.'"
             },
             {   
-                "image":"/home/pictures/cat.jpeg",
+                "image":"pictures/cat.jpeg",
                 "id":2,
                 "name":"Daniela",
                 "country":"Ecuador",
