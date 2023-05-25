@@ -1,3 +1,4 @@
+/* funcion para el submenu */
 document.addEventListener('click', e => {
     const isDropdownButton = e.target.matches("[data-dropdown-button]")
     if (!isDropdownButton && e.target.closest('[data-dropdown]') != null) return
@@ -13,6 +14,9 @@ document.addEventListener('click', e => {
         dropdown.classList.remove('active')
     })
 })
+
+
+/* funcion para el deslizador de imagenes */
 
 let slide = document.querySelectorAll('.slide');
         var current = 0;
