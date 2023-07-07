@@ -2,8 +2,17 @@
 
 /* body */
 
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --very-light-purple: purple;
+  --text-input-field: #F7F7F7;
+  --hospital-green: #ACD9B2;
+}
+
 body {
   margin: 0;
+  font-family: 'Quicksand', sans-serif;
 }
 
 /* HEADER */
@@ -137,6 +146,7 @@ header h1 {
 .botton-new {
   position: relative;
   float: right;
+  margin: 0.5rem;
 }
 
 
@@ -275,7 +285,8 @@ header h1 {
 }
 
 .follow {
-  background-color: palegoldenrod;
+  background-color: papayawhip;
+  border-radius: 20%;
 }
 
 .exp {
