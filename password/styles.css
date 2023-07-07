@@ -3,9 +3,9 @@
 :root {
     --white: #FFFFFF;
     --black: #000000;
-    --very-light-purple: rgb(255, 160, 255);
+    --very-light-purple:#C7C7C7;
     --text-input-field: #F7F7F7;
-    --hospital-green: purple;
+    --hospital-purple: purple;
     --sm: 12px;
     --md: 13px;
     --lg: 14px;
@@ -75,7 +75,7 @@ body {
 }
 
 .primary-button {
-    background-color: var(--hospital-green);
+    background-color: var(--hospital-purple);
     border: none;
     border-radius: 8px;
     color: var(--white);
