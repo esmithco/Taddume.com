@@ -22,7 +22,6 @@ header {
     background-color: var(--very-light-gray);
     width: 100%;
     height: 56px;
-    z-index: 2020;
     margin-bottom: 4px;
     display: flex;
     align-items: center;
@@ -88,33 +87,205 @@ header {
 .news {
     background-color: var(--very-light-gray);
     width: 100%;
-    height: 400px;
+    height: 540px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-bottom: 4px;
 }
 
 .news-text {
     background-color: var(--hospital-purple);
-    width: 49%;
-    height: 392px;
+    width: 600px;
+    height: 532px;
     color: var(--white);
     display: grid;
     place-items: center;
     margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .news-img {
     background-color: var(--hospital-purple);
-    width: 49%;
-    height: 392px;
+    width: 600px;
+    height: 532px;
     color: var(--white);
     display: grid;
     place-items: center;
+    margin-left: 4px;
     margin-right: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
-@media (max-width: 650px) {
+/*APRENDER-MATERIAS*/
+
+.learn {
+    background-color: var(--very-light-gray);
+    width: 100%;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 4px;
+}
+
+.title-learn {
+    background-color: var(--hospital-purple);
+    color: var(--white);
+    margin: 0;
+}
+
+.subjects-learn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.subjects {
+    font-size: var(--lg);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.subjects-img {
+    width: 180px;
+    height: 80px;
+    background-color: var(--hospital-purple);
+    display: grid;
+    place-items: center;
+}
+
+.test-button {
+    background-color: var(--hospital-purple);
+    width: 140px;
+    height: 52px;
+    font-size: var(--lg);
+    color: var(--white);
+    display: grid;
+    place-items: center;
+}
+
+/*ACOMPAÑAMIENTO*/
+
+.followup {
+    background-color: var(--very-light-gray);
+    width: 100%;
+    height: 300px;
+    margin-bottom: 4px;
+}
+
+/*HISTORIAS DE USUARIOS*/
+
+.stories-section {
+    background-color: var(--very-light-gray);
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 4px;
+}
+
+.stories {
+    width: 100%;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow-x: scroll;
+    pointer-events: all;
+}
+
+.story {
+    background-color: var(--hospital-purple);
+    width: 300px;
+    height: 300px;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: var(--hospital-purple);
+    width: 100%;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width:1220px) {
+
+    .news-text {
+        background-color: var(--hospital-purple);
+        width: calc(100% - 8px);
+        height: calc(100% - 4px);
+        color: var(--white);
+        display: grid;
+        place-items: center;
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    
+    .news-img {
+        background-color: var(--hospital-purple);
+        width: calc(100% - 8px);
+        height: calc(100% - 4px);
+        color: var(--white);
+        display: grid;
+        place-items: center;
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+}
+
+@media (max-width: 1190px) {
+
+    .subjects-learn {
+        justify-content: space-between;
+    }
+
+    .subjects {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+}
+
+@media (max-width: 1090px) {
+
+    .stories {
+        justify-content: space-between;
+    }
+
+    .story {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+}
+
+@media (max-width: 800px) {
 
     .signup-button {
         display: none;
@@ -127,4 +298,69 @@ header {
     .menu {
         display: none;
     }
+
+    .news {
+        background-color: var(--very-light-gray);
+        width: 100%;
+        height: 440px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .news-img {
+        background-color: var(--hospital-purple);
+        width: 360px;
+        height: calc(100% - 4px);
+        color: var(--white);
+        margin-top: 2px;
+        margin-bottom: 2px;
+        order: 1;
+    }
+
+    .news-text {
+        background-color: var(--hospital-purple);
+        width: 360px;
+        height: calc(100% - 4px);
+        color: var(--white);
+        margin-top: 2px;
+        margin-bottom: 2px;
+        order: 2;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .news {
+        background-color: var(--very-light-gray);
+        width: 100%;
+        height: 440px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .news-img {
+        background-color: var(--hospital-purple);
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        color: var(--white);
+        margin-top: 2px;
+        margin-bottom: 2px;
+        order: 1;
+    }
+
+    .news-text {
+        background-color: var(--hospital-purple);
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        color: var(--white);
+        margin-top: 2px;
+        margin-bottom: 2px;
+        order: 2;
+    }
+
 }
