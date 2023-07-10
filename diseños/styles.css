@@ -1,0 +1,130 @@
+/* body */
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-gray:#C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-purple: purple;
+    --sm: 12px;
+    --md: 13px;
+    --lg: 14px;
+}
+  
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/*HEADER*/
+
+header {
+    background-color: var(--very-light-gray);
+    width: 100%;
+    height: 56px;
+    z-index: 2020;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    background-color: var(--hospital-purple);
+    width: 84px;
+    height: 48px;
+    margin-left: 4px;
+    font-size: var(--lg);
+    color: var(--white);
+    display: grid;
+    place-items: center;
+}
+
+.menu {
+    background-color: var(--hospital-purple);
+    width: 320px;
+    height: 48px;
+    display: flex;
+    place-items: center;
+    justify-content: space-around;
+}
+
+.options {
+    font-size: var(--lg);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.buttons {
+    display: flex;
+    width: 172px;
+    justify-content: space-between;
+    margin-right: 4px;
+}
+
+.login-button {
+    background-color: var(--black);
+    width: 84px;
+    height: 48px;
+    font-size: var(--lg);
+    color: var(--white);
+    display: grid;
+    place-items: center;
+}
+
+.signup-button {
+    background-color: var(--hospital-purple);
+    width: 84px;
+    height: 48px;
+    font-size: var(--lg);
+    color: var(--white);
+    display: grid;
+    place-items: center;
+}
+
+
+/*NOTICIAS*/
+
+.news {
+    background-color: var(--very-light-gray);
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.news-text {
+    background-color: var(--hospital-purple);
+    width: 49%;
+    height: 392px;
+    color: var(--white);
+    display: grid;
+    place-items: center;
+    margin-left: 4px;
+}
+
+.news-img {
+    background-color: var(--hospital-purple);
+    width: 49%;
+    height: 392px;
+    color: var(--white);
+    display: grid;
+    place-items: center;
+    margin-right: 4px;
+}
+
+@media (max-width: 650px) {
+
+    .signup-button {
+        display: none;
+    }
+
+    .buttons {
+        justify-content: flex-end;
+    }
+
+    .menu {
+        display: none;
+    }
+}
