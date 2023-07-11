@@ -137,6 +137,10 @@ header {
     background-color: var(--hospital-purple);
     color: var(--white);
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .subjects-learn {
@@ -180,8 +184,37 @@ header {
 .followup {
     background-color: var(--very-light-gray);
     width: 100%;
-    height: 300px;
+    height: 400px;
     margin-bottom: 4px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.text-button {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.followup-text {
+    background-color: var(--hospital-purple);
+    width: 500px;
+    height: 300px;
+    color: var(--white);
+    display: grid;
+    place-items: center;
+}
+
+.followup-img {
+    background-color: var(--hospital-purple);
+    width: 600px;
+    height: 392px;
+    color: var(--white);
+    display: grid;
+    place-items: center;
+    margin-top: 4px;
 }
 
 /*HISTORIAS DE USUARIOS*/
@@ -217,6 +250,23 @@ header {
     flex-shrink: 0;
 }
 
+/*PRECIOS*/
+
+.prices-section {
+    width: 100%;
+    height: 600px;
+}
+
+.prices-div {
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.prices-box {
+    width: 300px;
+    height: 460px;
+}
+
 /*FOOTER*/
 
 footer {
@@ -230,13 +280,24 @@ footer {
 
 /*MEDIA QUERIES*/
 
+@media (max-width:1360px) {
+
+    .prices-section {
+        justify-content: space-between;
+    }
+
+    .prices-box {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+}
+
 @media (max-width:1220px) {
 
     .news-text {
-        background-color: var(--hospital-purple);
         width: calc(100% - 8px);
         height: calc(100% - 4px);
-        color: var(--white);
         display: grid;
         place-items: center;
         margin-left: 4px;
@@ -246,10 +307,39 @@ footer {
     }
     
     .news-img {
-        background-color: var(--hospital-purple);
         width: calc(100% - 8px);
         height: calc(100% - 4px);
-        color: var(--white);
+        display: grid;
+        place-items: center;
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .text-button {
+        width: calc(50% - 8px);
+        height: calc(100% - 4px);
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .followup-text {
+        width: calc(100% - 8px);
+        height: calc(100% - 4px);
+        display: grid;
+        place-items: center;
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    
+    .followup-img {
+        width: calc(50% - 8px);
+        height: calc(100% - 4px);
         display: grid;
         place-items: center;
         margin-left: 4px;
@@ -300,7 +390,6 @@ footer {
     }
 
     .news {
-        background-color: var(--very-light-gray);
         width: 100%;
         height: 440px;
         display: flex;
@@ -310,7 +399,6 @@ footer {
     }
 
     .news-img {
-        background-color: var(--hospital-purple);
         width: 360px;
         height: calc(100% - 4px);
         color: var(--white);
@@ -320,9 +408,35 @@ footer {
     }
 
     .news-text {
-        background-color: var(--hospital-purple);
         width: 360px;
         height: calc(100% - 4px);
+        color: var(--white);
+        margin-top: 2px;
+        margin-bottom: 2px;
+        order: 2;
+    }
+
+    .followup {
+        width: 100%;
+        height: 440px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .followup-img {
+        width: 360px;
+        height: 206px;
+        color: var(--white);
+        margin-top: 2px;
+        margin-bottom: 2px;
+        order: 1;
+    }
+
+    .text-button {
+        width: 360px;
+        height: 206px;
         color: var(--white);
         margin-top: 2px;
         margin-bottom: 2px;
@@ -334,7 +448,6 @@ footer {
 @media (max-width: 360px) {
 
     .news {
-        background-color: var(--very-light-gray);
         width: 100%;
         height: 440px;
         display: flex;
@@ -344,7 +457,6 @@ footer {
     }
 
     .news-img {
-        background-color: var(--hospital-purple);
         width: calc(100% - 4px);
         height: calc(100% - 4px);
         color: var(--white);
@@ -354,13 +466,44 @@ footer {
     }
 
     .news-text {
-        background-color: var(--hospital-purple);
         width: calc(100% - 4px);
         height: calc(100% - 4px);
         color: var(--white);
         margin-top: 2px;
         margin-bottom: 2px;
         order: 2;
+    }
+
+    .followup {
+        width: 100%;
+        height: 440px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .followup-img {
+        width: calc(100% - 4px);
+        height: 206px;
+        color: var(--white);
+        margin-top: 2px;
+        margin-bottom: 2px;
+        order: 1;
+    }
+
+    .text-button {
+        width: calc(100% - 4px);
+        height: 206px;
+        color: var(--white);
+        margin-top: 2px;
+        margin-bottom: 2px;
+        order: 2;
+    }
+
+    .story-h2 {
+        width: calc(100% - 4px);
+        
     }
 
 }
