@@ -256,11 +256,22 @@ header {
   place-items: center;
 }
 
+/*MANCHA 1*/
+
+.mancha-1 {
+  position: absolute;
+  top: 840px; /* Ajusta la posición vertical según tu necesidad */
+  right: -9%; /* Ajusta la posición horizontal según tu necesidad */
+  transform: translateX(-50%); /* Centra la imagen horizontalmente */
+  width: 160px;
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+}
+
 /*ACOMPAÑAMIENTO*/
 
 .followup {
   width: 100%;
-  height: 440px;
+  height: 412px;
   margin-bottom: 8px;
   display: flex;
   justify-content: center;
@@ -306,52 +317,121 @@ header {
   width: 360px;
 }
 
+/*MANCHA 2*/
+
+.mancha-2 {
+  position: absolute;
+  top: 1280px; /* Ajusta la posición vertical según tu necesidad */
+  left: 1%; /* Ajusta la posición horizontal según tu necesidad */
+  transform: translateX(-50%); /* Centra la imagen horizontalmente */
+  width: 300px;
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+}
+
 /*HISTORIAS DE USUARIOS*/
 
 .stories-section {
-  background-color: var(--very-light-gray);
+  background-color: var(--white);
   width: 100%;
-  height: 500px;
+  height: 780px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  margin-bottom: 4px;
+}
+
+.h2-story {
+  color: var(--yellow);
+  font-size: 44px;
+  margin-bottom: 0;
+}
+
+.p-testimonio {
+  width: 600px;
+  color: var(--dark-blue);
+  font-size: 20px;
+  margin-bottom: 44px;
+  text-align: center;
 }
 
 .stories {
   width: 100%;
-  margin-bottom: 4px;
+  height: 400px;
+  margin-bottom: 28px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   overflow-x: scroll;
   pointer-events: all;
 }
 
 .story {
-  background-color: var(--hospital-purple);
+  position: relative;
   width: 300px;
-  height: 300px;
+  height: 380px;
+  margin-left: 40px;
+  margin-right: 40px;
   display: grid;
-  place-items: center;
-  color: var(--white);
+  flex-direction: column;
+  align-items: center;
   flex-shrink: 0;
+}
+
+.img-story {
+  position: absolute;
+  top: 0;
+  right: 27%;
+  width: 140px;
+}
+
+.square-story {
+  height: 320px;
+  border: 1px solid var(--hospital-purple);
+  border-radius: 10%;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h3-story {
+  color: var(--hospital-purple);
+  font-size: 20px;
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+
+.p-details {
+  display: block;
+  margin: 0;
+  color: var(--dark-blue);
+  font-size: 12px;
+}
+
+.p-story {
+  margin-top: 24px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: var(--dark-blue);
+  font-size: 20px;
+  text-align: center;
 }
 
 /*PRECIOS*/
 
 .prices-section {
+  background-color: var(--very-light-gray);
   width: 100%;
-  height: 600px;
+  height: 800px;
 }
 
 .prices-div {
   width: 100%;
+  height: 600px;
   margin-bottom: 4px;
 }
 
 .prices-box {
+  background-color: var(--hospital-purple);
   width: 300px;
   height: 460px;
 }
@@ -359,13 +439,11 @@ header {
 /*FOOTER*/
 
 footer {
-  background-color: var(--hospital-purple);
+  background-color: var(--dark-blue);
   width: 100%;
-  height: 60px;
-  display: grid;
-  place-items: center;
-  color: var(--white);
+  height: 54px;
 }
+
 
 /*MEDIA QUERIES*/
 
