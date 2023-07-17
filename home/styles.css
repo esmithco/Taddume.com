@@ -18,6 +18,7 @@
 body {
   margin: 0;
   font-family: 'Zen Maru Gothic', sans-serif;
+  background-color: var(--very-light-gray);
 }
 
 /*HEADER*/
@@ -37,7 +38,6 @@ header {
 /*HEADER*/
 
 header {
-  background-color: var(--very-light-gray);
   width: 100%;
   height: 60px;
   display: flex;
@@ -109,11 +109,15 @@ header {
 }
 
 
+.login-button:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
 /*NOTICIAS*/
 
 .news {
   position: relative;
-  background-color: var(--very-light-gray);
   width: 100%;
   height: 540px;
   display: flex;
@@ -152,7 +156,11 @@ header {
 .news-button {
   margin-top: 32px;
   background-color: var(--dark-blue);
-  height: 32px;
+}
+
+.news-button:hover {
+  background-color: var(--yellow);
+  color: var(--dark-blue);
 }
 
 .news-img {
@@ -165,21 +173,20 @@ header {
 
 .banner-woman {
   width: 420px;
-  height: 520px;
-  padding-top: 20.5px;
+  padding-top: 44px;
 }
 
 /*APRENDER-MATERIAS*/
 
 .learn {
-  background-color: var(--very-light-gray);
   width: 100%;
-  height: 300px;
+  height: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding-top: 12px;
+  margin-bottom: 40px;
 }
 
 .title-learn {
@@ -193,7 +200,7 @@ header {
 }
 
 .subjects-learn {
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -205,6 +212,7 @@ header {
 }
 
 .subjects {
+  width: 100px;
   font-size: var(--lg);
   color: var(--white);
   text-decoration: none;
@@ -214,7 +222,7 @@ header {
 }
 
 .subjects-img {
-  width: 180px;
+  width: 100px;
   height: 100px;
   display: grid;
   place-items: center;
@@ -226,7 +234,7 @@ header {
 }
 
 .learn-img {
-  width: 92px;
+  width: 90px;
   height: 90px;
 }
 
@@ -251,39 +259,51 @@ header {
 /*ACOMPAÑAMIENTO*/
 
 .followup {
-  background-color: var(--very-light-gray);
   width: 100%;
-  height: 400px;
-  margin-bottom: 4px;
+  height: 440px;
+  margin-bottom: 8px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .text-button {
   display: flex;
-  width: 50%;
+  width: 500px;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  margin-right: 120px;
 }
 
 .followup-text {
-  background-color: var(--hospital-purple);
   width: 500px;
   height: 300px;
   color: var(--white);
-  display: grid;
-  place-items: center;
+}
+
+#followup-button {
+  margin: 0;
+}
+
+.h2-followup {
+  color: var(--hospital-purple);
+  font-size: 40px;
+}
+
+.p-followup {
+  color: var(--dark-blue);
 }
 
 .followup-img {
-  background-color: var(--hospital-purple);
-  width: 600px;
+  width: 400px;
   height: 392px;
   color: var(--white);
   display: grid;
   place-items: center;
   margin-top: 4px;
+}
+
+.seguimiento-img {
+  width: 360px;
 }
 
 /*HISTORIAS DE USUARIOS*/

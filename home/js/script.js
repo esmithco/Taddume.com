@@ -36,19 +36,17 @@ people.data.forEach(e => {
 })
 */
 
-function changeImage() {
-    document.getElementById('img1').style.display = 'none';
-    document.getElementById('img2').style.display = 'inline-block';
+function changeImage(imgId1,imgId2) {
+    const img1 = document.getElementById(imgId1).style.display = 'none';
+    const img2 = document.getElementById(imgId2).style.display = 'inline-block';
     img1.style.opacity = '0';
     img2.style.opacity = '1';
 }
 
-function restoreImage() {
-    document.getElementById('img1').style.display = 'inline-block';
-    document.getElementById('img2').style.display = 'none';
+function restoreImage(imgId1,imgId2) {
+    const img1 = document.getElementById(imgId1).style.display = 'inline-block';
+    const img2 = document.getElementById(imgId2).style.display = 'none';
     img1.style.opacity = '1';
     img2.style.opacity = '0';
 }
 
-document.getElementById('img1').addEventListener('mouseenter', changeImage);
-document.getElementById('img2').addEventListener('mouseleave', restoreImage);
