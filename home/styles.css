@@ -5,9 +5,11 @@
 :root {
   --white: #FFFFFF;
   --black: #000000;
-  --very-light-purple: #C7C7C7;
+  --very-light-gray:#f6f7f9;
   --text-input-field: #F7F7F7;
-  --hospital-purple: purple;
+  --hospital-purple: #5e37d1;
+  --yellow : #ffbe1a;
+  --dark-blue: #002337;
   --sm: 12px;
   --md: 13px;
   --lg: 14px;
@@ -15,8 +17,10 @@
 
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Zen Maru Gothic', sans-serif;
 }
+
+/*HEADER*/
 
 /* HEADER */
 header {
@@ -29,25 +33,37 @@ header {
   justify-content: space-around;
 }
 
-header h1 {
-  position: relative;
-  color: var(--hospital-purple);
-  margin-right: 4px;
-  font-size: 28px;
-  padding: 0;
-  margin: 0;
+
+/*HEADER*/
+
+header {
+  background-color: var(--very-light-gray);
+  width: 100%;
+  height: 56px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  background-color: var(--hospital-purple);
+  width: 84px;
+  height: 48px;
   margin-left: 4px;
+  font-size: var(--lg);
+  color: var(--white);
+  display: grid;
+  place-items: center;
 }
 
 .menu {
+  background-color: var(--hospital-purple);
+  width: 320px;
+  height: 48px;
   display: flex;
-  gap: 1rem;
-  position: relative;
-  /* justify-content: space-between; */
-  padding: 0;
-  margin: auto;
-  width: auto;
-  /* left: 12rem; */
+  place-items: center;
+  justify-content: space-around;
 }
 
 .link {
