@@ -17,6 +17,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: 'Zen Maru Gothic', sans-serif;
   background-color: var(--very-light-gray);
 }
@@ -91,6 +92,7 @@ header {
   cursor: pointer;
   font-size: 15px;
   height: 36px;
+  z-index: 100;
 }
 
 .signup-button {
@@ -261,9 +263,10 @@ header {
 .mancha-1 {
   position: absolute;
   top: 840px; /* Ajusta la posición vertical según tu necesidad */
-  right: -9%; /* Ajusta la posición horizontal según tu necesidad */
+  left: calc(98% + 10px); /* Ajusta la posición horizontal según tu necesidad */
   transform: translateX(-50%); /* Centra la imagen horizontalmente */
   width: 160px;
+  max-width: 100%;
   overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
 }
 
@@ -416,24 +419,128 @@ header {
   text-align: center;
 }
 
+/*MANCHA 3*/
+
+.mancha-3 {
+  position: absolute;
+  z-index: 100;
+  top: 2098px; /* Ajusta la posición vertical según tu necesidad */
+  left: calc(98% + 10px); /* Ajusta la posición horizontal según tu necesidad */
+  transform: translateX(-50%); /* Centra la imagen horizontalmente */
+  width: 240px;
+  max-width: 100%;
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+}
+
 /*PRECIOS*/
 
 .prices-section {
-  background-color: var(--very-light-gray);
+  position: relative;
   width: 100%;
-  height: 800px;
+  height: 600px;
+}
+
+.prices-img {
+  width: 100%;
+  height: 600px;
 }
 
 .prices-div {
+  z-index: 100;
   width: 100%;
-  height: 600px;
-  margin-bottom: 4px;
+  height: 500px;
+  margin-bottom: 20px;
 }
 
 .prices-box {
-  background-color: var(--hospital-purple);
-  width: 300px;
-  height: 460px;
+  width: 264px;
+  height: 440px;
+}
+
+.box-border {
+  position: relative;
+  width: 99.2%;
+  height: 360px;
+  margin-top: 0;
+  border: 1px solid var(--white); 
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-border {
+  position: absolute;
+  background-color: var(--dark-blue);
+  bottom: 0;
+  width: 164px;
+  height: 48px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.detail-price {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  width: 220px;
+}
+
+.chulito {
+  width: 20px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.p-chulito {
+  color: var(--white);
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+.buy-button {
+  margin-top: 0;
+  width: 100%;
+  height: 80px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 1px solid var(--white); 
+  background-color: var(--white);
+  color: var(--dark-blue);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.h2-price {
+  color: var(--yellow);
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+.buy-button:hover {
+  background-color: var(--yellow);
+  color: var(--dark-blue);
+}
+
+/*MANCHA-4*/
+
+.mancha-4 {
+  position: absolute;
+  z-index: 99;
+  top: 2596px; /* Ajusta la posición vertical según tu necesidad */
+  left: 2%; /* Ajusta la posición horizontal según tu necesidad */
+  transform: translateX(-50%); /* Centra la imagen horizontalmente */
+  width: 200px;
+  max-width: 100%;
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
 }
 
 /*FOOTER*/
