@@ -3,18 +3,22 @@
 :root {
     --white: #FFFFFF;
     --black: #000000;
-    --very-light-purple:#C7C7C7;
+    --very-light-gray:#f6f7f9;
     --text-input-field: #F7F7F7;
-    --hospital-purple: purple;
+    --hospital-purple: #5e37d1;
+    --yellow : #ffbe1a;
+    --dark-blue: #002337;
     --sm: 12px;
     --md: 13px;
-    --lg: 14px;
-}
+    --lg: 16px;
+  }
   
-body {
+  body {
     margin: 0;
-    font-family: 'Quicksand', sans-serif;
-}
+    overflow-x: hidden;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    background-color: var(--very-light-gray);
+  }
 
 /*  clases */
 
@@ -60,8 +64,8 @@ body {
 }
 
 .input {
-    background-color: var(--text-input-field);
-    border: none;
+    background-color: var(--white);
+    border: 1px solid var(--dark-blue);
     border-radius: 8px;
     height: 30px;
     font-size: var(--md);

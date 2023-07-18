@@ -99,6 +99,11 @@ header {
   font-weight: bold;
 }
 
+.signup-button:hover {
+  background-color: var(--yellow);
+  color: var(--hospital-purple);
+}
+
 .secondary-button {
   background-color: var(--white);
   border: 1px solid var(--hospital-purple);
@@ -259,15 +264,19 @@ header {
 }
 
 /*MANCHA 1*/
+.first-container {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  overflow: hidden; 
+  top: 840px; 
+  right: 0; 
+}
 
 .mancha-1 {
-  position: absolute;
-  top: 840px; /* Ajusta la posición vertical según tu necesidad */
-  left: calc(98% + 10px); /* Ajusta la posición horizontal según tu necesidad */
-  transform: translateX(-50%); /* Centra la imagen horizontalmente */
+  object-fit: cover;
   width: 160px;
-  max-width: 100%;
-  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+  padding-left: 68px;
 }
 
 /*ACOMPAÑAMIENTO*/
@@ -321,14 +330,19 @@ header {
 }
 
 /*MANCHA 2*/
+.second-container {
+  position: absolute;
+  width: 204px;
+  height: 380px;
+  overflow: hidden; 
+  top: 1280px;
+  left: 0; 
+}
 
 .mancha-2 {
-  position: absolute;
-  top: 1280px; /* Ajusta la posición vertical según tu necesidad */
-  left: 1%; /* Ajusta la posición horizontal según tu necesidad */
-  transform: translateX(-50%); /* Centra la imagen horizontalmente */
-  width: 300px;
-  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+  object-fit: cover;
+  width: 340px;
+  transform: translateX(-40%); /* Centra la imagen horizontalmente */
 }
 
 /*HISTORIAS DE USUARIOS*/
@@ -421,15 +435,21 @@ header {
 
 /*MANCHA 3*/
 
-.mancha-3 {
+.third-container {
   position: absolute;
+  top: 2062px; 
+  right: 0; 
+  width: 236px;
+  height: 200px;
+  overflow: hidden;
   z-index: 100;
-  top: 2098px; /* Ajusta la posición vertical según tu necesidad */
-  left: calc(98% + 10px); /* Ajusta la posición horizontal según tu necesidad */
-  transform: translateX(-50%); /* Centra la imagen horizontalmente */
-  width: 240px;
-  max-width: 100%;
-  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+}
+
+.mancha-3 {
+  object-fit: cover;
+  width: 320px;
+  padding-left: 20px;
+  padding-bottom: 200px;
 }
 
 /*PRECIOS*/
@@ -449,7 +469,6 @@ header {
   z-index: 100;
   width: 100%;
   height: 500px;
-  margin-bottom: 20px;
 }
 
 .prices-box {
@@ -530,17 +549,26 @@ header {
   color: var(--dark-blue);
 }
 
+#prices-button {
+  margin: 0;
+}
+
 /*MANCHA-4*/
 
-.mancha-4 {
+.fourth-container {
   position: absolute;
+  width: 160px;
+  height: 204px;
+  overflow: hidden; 
+  top: 2548px;
+  left: 0; 
   z-index: 99;
-  top: 2596px; /* Ajusta la posición vertical según tu necesidad */
-  left: 2%; /* Ajusta la posición horizontal según tu necesidad */
-  transform: translateX(-50%); /* Centra la imagen horizontalmente */
-  width: 200px;
-  max-width: 100%;
-  overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+}
+
+.mancha-4 {
+  object-fit: cover;
+  transform: translateX(-35%); /* Centra la imagen horizontalmente */
+  width: 240px;
 }
 
 /*FOOTER*/
