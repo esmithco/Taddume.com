@@ -95,8 +95,55 @@
     margin-bottom: 30px;
 }
 
+/*MANCHA 3*/
+
+.third-container {
+    position: absolute;
+    top: 460px; 
+    right: 0; 
+    width: 236px;
+    height: 200px;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .mancha-3 {
+    object-fit: cover;
+    width: 320px;
+    padding-left: 20px;
+    padding-bottom: 200px;
+  }
+
+  /*MANCHA-4*/
+
+.fourth-container {
+    position: absolute;
+    width: 160px;
+    height: 204px;
+    overflow: hidden; 
+    top: 80px;
+    left: 0; 
+    z-index: -1;
+  }
+  
+  .mancha-4 {
+    object-fit: cover;
+    transform: translateX(-35%); /* Centra la imagen horizontalmente */
+    width: 240px;
+  }
+
+
 @media (max-width: 640px) {
     .logo {
         display: block;
     }
+
+    .third-container {
+        width: calc(100% - 414px);
+      }
+    
+      .fourth-container {
+        left: calc(100% - 640px);
+      }
+    
 }

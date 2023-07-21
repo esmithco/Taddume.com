@@ -164,4 +164,13 @@
         bottom: 0;
         margin-bottom: 24px;
     }
-}
+
+    .third-container {
+      width: calc(100% - 414px);
+    }
+  
+    .fourth-container {
+      left: calc(100% - 640px);
+    }
+  
+  }

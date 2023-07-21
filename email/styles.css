@@ -149,4 +149,12 @@
     .logo {
         display: block;
     }
+
+    .third-container {
+        width: calc(100% - 414px);
+      }
+    
+    .fourth-container {
+    left: calc(100% - 640px);
+    }
 }
