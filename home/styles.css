@@ -171,6 +171,8 @@ header {
 }
 
 .news-img {
+  display: flex;
+  place-items: center;
   width: 420px;
   height: 540px;
   margin-right: 4px;
@@ -594,8 +596,8 @@ footer {
   }
 
 }
-
-@media (max-width:1220px) {
+/*
+@media (max-width:1020px) {
 
   .news-text {
       width: calc(100% - 8px);
@@ -650,7 +652,7 @@ footer {
       margin-bottom: 2px;
   }
 }
-
+*/
 @media (max-width: 1190px) {
 
   .subjects-learn {
@@ -701,21 +703,31 @@ footer {
   }
 
   .news-img {
-      width: 360px;
+      width: 100%;
       height: calc(100% - 4px);
       color: var(--white);
-      margin-top: 2px;
-      margin-bottom: 2px;
-      order: 1;
+      order: 2;
+  }
+
+  .banner-woman {
+    width: 50%;
+    margin: 0;
   }
 
   .news-text {
-      width: 360px;
+      width: 100%;
       height: calc(100% - 4px);
       color: var(--white);
-      margin-top: 2px;
-      margin-bottom: 2px;
-      order: 2;
+      order: 1;
+      padding: 0;
+  }
+
+  .h2-news {
+    font-size: 20px;
+  }
+
+  .news-button {
+    order: 3;
   }
 
   .followup {
