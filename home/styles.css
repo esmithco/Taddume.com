@@ -450,8 +450,7 @@ header {
 .mancha-3 {
   object-fit: cover;
   width: 320px;
-  padding-left: 20px;
-  padding-bottom: 200px;
+  transform: translateX(0%); /* Centra la imagen horizontalmente */
 }
 
 /*PRECIOS*/
@@ -569,8 +568,9 @@ header {
 
 .mancha-4 {
   object-fit: cover;
-  transform: translateX(-35%); /* Centra la imagen horizontalmente */
+  transform: translateX(0%); /* Centra la imagen horizontalmente */
   width: 240px;
+  padding-right: 1px;
 }
 
 /*FOOTER*/
@@ -586,7 +586,7 @@ footer {
 
 @media (max-width:1360px) {
 
-  .prices-section {
+  .prices-div {
       justify-content: space-between;
   }
 
@@ -595,8 +595,16 @@ footer {
       margin-right: 30px;
   }
 
+  .third-container {
+    width: calc(100% - 1124px);
+  }
+
+  .fourth-container {
+    width: calc(100% - 1124px);
+  }
+
 }
-/*
+
 @media (max-width:1020px) {
 
   .news-text {
@@ -652,7 +660,7 @@ footer {
       margin-bottom: 2px;
   }
 }
-*/
+
 @media (max-width: 1190px) {
 
   .subjects-learn {
