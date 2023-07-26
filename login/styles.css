@@ -48,7 +48,7 @@
     flex-direction: column;
 }
 
-.form a {
+.a-forget {
     color: var(--hospital-purple);
     font-size: var(--sm);
     text-align: center;
