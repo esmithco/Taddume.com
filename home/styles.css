@@ -3,12 +3,12 @@
 /* body */
 
 :root {
-  --white: #FFFFFF;
+  --white: #ffffff;
   --black: #000000;
-  --very-light-gray:#f6f7f9;
-  --text-input-field: #F7F7F7;
+  --very-light-gray: #f6f7f9;
+  --text-input-field: #f7f7f7;
   --hospital-purple: #5e37d1;
-  --yellow : #ffbe1a;
+  --yellow: #ffbe1a;
   --dark-blue: #002337;
   --sm: 12px;
   --md: 13px;
@@ -18,7 +18,7 @@
 body {
   margin: 0;
   overflow-x: hidden;
-  font-family: 'Zen Maru Gothic', sans-serif;
+  font-family: "Zen Maru Gothic", sans-serif;
   background-color: var(--very-light-gray);
 }
 
@@ -34,7 +34,6 @@ header {
   height: 52px;
   justify-content: space-around;
 }
-
 
 /*HEADER*/
 
@@ -61,12 +60,17 @@ header {
   height: 80%;
 }
 
-.menu {
+.menu, .ul-header{
   width: 460px;
   height: 52px;
   display: flex;
   place-items: center;
   justify-content: space-around;
+  padding: 0;
+}
+
+.ul-header {
+  list-style: none;
 }
 
 .options {
@@ -114,7 +118,6 @@ header {
   font-size: 15px;
   height: 36px;
 }
-
 
 .login-button:hover {
   background-color: var(--dark-blue);
@@ -177,7 +180,7 @@ header {
   height: 540px;
   margin-right: 4px;
   margin-left: 100px;
-  z-index: 100
+  z-index: 100;
 }
 
 .banner-woman {
@@ -270,9 +273,9 @@ header {
   position: absolute;
   width: 160px;
   height: 160px;
-  overflow: hidden; 
-  top: 840px; 
-  right: 0; 
+  overflow: hidden;
+  top: 840px;
+  right: 0;
 }
 
 .mancha-1 {
@@ -338,9 +341,9 @@ header {
   position: absolute;
   width: 204px;
   height: 380px;
-  overflow: hidden; 
+  overflow: hidden;
   top: 1280px;
-  left: 0; 
+  left: 0;
 }
 
 .mancha-2 {
@@ -441,8 +444,8 @@ header {
 
 .third-container {
   position: absolute;
-  top: 2062px; 
-  right: 0; 
+  top: 2062px;
+  right: 0;
   width: 236px;
   height: 200px;
   overflow: hidden;
@@ -484,7 +487,7 @@ header {
   width: 99.2%;
   height: 360px;
   margin-top: 0;
-  border: 1px solid var(--white); 
+  border: 1px solid var(--white);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   margin-bottom: 0;
@@ -533,7 +536,7 @@ header {
   height: 80px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  border: 1px solid var(--white); 
+  border: 1px solid var(--white);
   background-color: var(--white);
   color: var(--dark-blue);
   font-size: 20px;
@@ -562,15 +565,15 @@ header {
   position: absolute;
   width: 160px;
   height: 204px;
-  overflow: hidden; 
+  overflow: hidden;
   top: 2548px;
-  left: 0; 
+  left: 0;
   z-index: 99;
 }
 
 .mancha-4 {
   object-fit: cover;
-  transform: translateX(-35%); 
+  transform: translateX(-35%);
   width: 240px;
 }
 
@@ -582,18 +585,16 @@ footer {
   height: 54px;
 }
 
-
 /*MEDIA QUERIES*/
 
-@media (max-width:1360px) {
-
+@media (max-width: 1360px) {
   .prices-div {
-      justify-content: space-between;
+    justify-content: space-between;
   }
 
   .prices-box {
-      margin-left: 30px;
-      margin-right: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   .first-container {
@@ -611,79 +612,71 @@ footer {
   .fourth-container {
     left: calc(100% - 1360px);
   }
-
 }
 
 @media (max-width: 1190px) {
-
   .subjects-learn {
-      justify-content: space-between;
+    justify-content: space-between;
   }
 
   .subjects {
-      margin-left: 30px;
-      margin-right: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   .menu {
     display: none;
   }
 
-  .news, .followup {
+  .news,
+  .followup {
     justify-content: center;
   }
-
 }
 
-
 @media (max-width: 1110px) {
-
   .stories {
-      justify-content: space-between;
+    justify-content: space-between;
   }
 
   .story {
-      margin-left: 30px;
-      margin-right: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
-
 }
 
 @media (max-width: 1090px) {
-
   .logo {
     margin-left: 40px;
   }
-  
+
   .buttons {
     margin-right: 40px;
   }
 
-  .news-text, .text-button {
+  .news-text,
+  .text-button {
     margin-right: 0;
   }
 
-  .news-img, .followup-img {
+  .news-img,
+  .followup-img {
     margin-left: 0;
   }
-
 }
 
-
 @media (max-width: 900px) {
-
   .signup-button {
-      display: none;
+    display: none;
   }
 
   .buttons {
-      justify-content: flex-end;
+    justify-content: flex-end;
   }
 
   .menu {
-      display: none;
+    display: none;
   }
-
 
   .news {
     height: 540px;
@@ -697,7 +690,8 @@ footer {
     height: 640px;
   }
 
-  .news-img, .followup-img {
+  .news-img,
+  .followup-img {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -706,7 +700,7 @@ footer {
     order: 1;
   }
 
-  .banner-woman{
+  .banner-woman {
     width: 60%;
     margin: 0;
     padding-top: 20px;
@@ -717,7 +711,8 @@ footer {
     width: 70%;
   }
 
-  .news-text, .text-button {
+  .news-text,
+  .text-button {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -740,25 +735,23 @@ footer {
   }
 
   .followup {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .followup-img {
-      order: 1;
+    order: 1;
   }
 
   .text-button {
-      color: var(--white);
-      margin-right: 0;
-      order: 2;
+    color: var(--white);
+    margin-right: 0;
+    order: 2;
   }
-
 }
 
 @media (max-width: 700px) {
-  
   .followup {
     width: 100%;
     height: 700px;
@@ -779,7 +772,11 @@ footer {
     align-items: center;
   }
 
-  .p-testimonio, .p-followup, .p-news, .h2-followup, .p-followup {
+  .p-testimonio,
+  .p-followup,
+  .p-news,
+  .h2-followup,
+  .p-followup {
     width: 80%;
   }
 
@@ -787,11 +784,9 @@ footer {
     margin-left: 0;
     margin-right: 0;
   }
-
 }
 
 @media (max-width: 560px) {
-
   .followup {
     height: 800px;
     margin-bottom: 0;
@@ -808,7 +803,7 @@ footer {
   .followup-img {
     height: 40%;
   }
-  
+
   .h2-followup {
     margin-bottom: 0;
   }
@@ -817,10 +812,10 @@ footer {
     display: flex;
   }
 
-  .prices-section, .prices-div {
+  .prices-section,
+  .prices-div {
     width: 100%;
   }
-
 }
 
 @media (max-width: 391px) {
@@ -852,8 +847,12 @@ footer {
   .logo {
     margin-left: 4px;
   }
-  
-  .subjects-learn, .stories, .prices-div, .followup-img, .news-img {
+
+  .subjects-learn,
+  .stories,
+  .prices-div,
+  .followup-img,
+  .news-img {
     max-width: 100%;
     width: 100%;
     margin-right: 0;
@@ -863,4 +862,3 @@ footer {
     width: 260px;
   }
 }
-
