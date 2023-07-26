@@ -330,6 +330,7 @@ header {
 
 .seguimiento-img {
   width: 360px;
+  object-fit: cover;
 }
 
 /*MANCHA 2*/
@@ -709,6 +710,7 @@ footer {
     width: 60%;
     margin: 0;
     padding-top: 20px;
+    object-fit: cover;
   }
 
   .seguimiento-img {
@@ -821,7 +823,7 @@ footer {
 
 }
 
-@media (max-width: 389px) {
+@media (max-width: 391px) {
   .logo {
     width: 240px;
   }
@@ -830,15 +832,12 @@ footer {
     width: 100%;
   }
 
-  .prices-section, .prices-div {
-    width: 100%;
-  }
-
   .p-news {
     font-size: 16px;
   }
 
   .followup {
+    width: 100%;
     height: 860px;
   }
 
@@ -853,6 +852,15 @@ footer {
   .logo {
     margin-left: 4px;
   }
+  
+  .subjects-learn, .stories, .prices-div, .followup-img, .news-img {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0;
+  }
 
+  .story {
+    width: 260px;
+  }
 }
 
