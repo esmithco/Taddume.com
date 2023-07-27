@@ -60,7 +60,8 @@ header {
   height: 80%;
 }
 
-.menu, .ul-header{
+.menu,
+.ul-header {
   width: 460px;
   height: 52px;
   display: flex;
@@ -77,6 +78,11 @@ header {
   font-size: var(--lg);
   color: var(--dark-blue);
   text-decoration: none;
+}
+
+.options:hover {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .buttons {
@@ -110,9 +116,9 @@ header {
 
 .secondary-button {
   background-color: var(--white);
-  border: 1px solid var(--hospital-purple);
+  border: 1px solid var(--dark-blue);
   border-radius: 25px;
-  color: var(--hospital-purple);
+  color: var(--dark-blue);
   width: 120px;
   cursor: pointer;
   font-size: 15px;
@@ -248,6 +254,12 @@ header {
 .learn-img {
   width: 90px;
   height: 90px;
+}
+
+.subjects:hover p {
+  font-size: 24px;
+  color: var(--dark-blue);
+  font-weight: bold;
 }
 
 #img1:hover + #img2 {

@@ -1,0 +1,62 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --very-light-gray: #f6f7f9;
+    --text-input-field: #f7f7f7;
+    --hospital-purple: #5e37d1;
+    --yellow: #ffbe1a;
+    --dark-blue: #002337;
+    --sm: 12px;
+    --md: 13px;
+    --lg: 16px;
+  }
+  
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Zen Maru Gothic", sans-serif;
+    background-color: var(--white);
+  }
+
+.desktop-menu {
+    width: 160px;
+    height: 200px;
+    background-color: var(--very-light-gray);
+    border-radius: 6px;
+}
+
+.desktop-menu ul {
+    list-style: none;
+    padding: 10px 20px 10px 20px;
+}
+
+.desktop-menu a {
+    display: inline-block;
+    color: var(--dark-blue);
+    font-size: 16px;
+    margin-bottom: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.desktop-menu ul li:last-child {
+    padding-top: 12px;
+    border-top: 1px solid var(--yellow);
+}
+
+.desktop-menu ul li:last-child a{
+    color: var(--hospital-purple);
+    font-size: 16px;
+}
+
+.desktop-menu a:hover {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--yellow);
+  }
+
+  .desktop-menu ul li:last-child a:hover {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
