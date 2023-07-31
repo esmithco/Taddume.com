@@ -1,62 +1,57 @@
 :root {
-    --white: #ffffff;
-    --black: #000000;
-    --very-light-gray: #f6f7f9;
-    --text-input-field: #f7f7f7;
-    --hospital-purple: #5e37d1;
-    --yellow: #ffbe1a;
-    --dark-blue: #002337;
-    --sm: 12px;
-    --md: 13px;
-    --lg: 16px;
-  }
-  
-  body {
-    margin: 0;
-    overflow-x: hidden;
-    font-family: "Zen Maru Gothic", sans-serif;
-    background-color: var(--white);
-  }
-
-.desktop-menu {
-    width: 160px;
-    height: 200px;
-    background-color: var(--very-light-gray);
-    border-radius: 6px;
+  --white: #ffffff;
+  --black: #000000;
+  --very-light-gray: #f6f7f9;
+  --text-input-field: #f7f7f7;
+  --hospital-purple: #5e37d1;
+  --yellow: #ffbe1a;
+  --dark-blue: #002337;
+  --sm: 12px;
+  --md: 13px;
+  --lg: 16px;
 }
 
-.desktop-menu ul {
-    list-style: none;
-    padding: 10px 20px 10px 20px;
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Zen Maru Gothic", sans-serif;
+  background-color: var(--white);
 }
 
-.desktop-menu a {
-    display: inline-block;
-    color: var(--dark-blue);
-    font-size: 16px;
-    margin-bottom: 16px;
-    text-decoration: none;
-    font-weight: bold;
+.mobile-menu {
+  padding: 24px 24px 0 24px;
 }
 
-.desktop-menu ul li:last-child {
-    padding-top: 12px;
-    border-top: 1px solid var(--yellow);
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--dark-blue);
+  font-weight: bold;
 }
 
-.desktop-menu ul li:last-child a{
-    color: var(--hospital-purple);
-    font-size: 16px;
+.mobile-menu ul {
+  padding: 0;
+  list-style: none;
+  margin-top: 24px 0 0;
 }
 
-.desktop-menu a:hover {
-    font-weight: bold;
-    font-size: 20px;
-    color: var(--yellow);
-  }
+.mobile-menu ul li {
+  margin-bottom: 24px;
+}
 
-  .desktop-menu ul li:last-child a:hover {
-    font-weight: bold;
-    font-size: 18px;
-  }
+.info-box {
+  margin-top: 360px;
+}
 
+.email {
+  font-size: 14px;
+  font-weight: 300 !important;
+}
+
+.mobile-menu ul:nth-child(1) {
+  border-bottom: 1px solid var(--hospital-purple);
+}
+
+.sign-out {
+  color: var(--hospital-purple) !important;
+  font-size: 6;
+}
