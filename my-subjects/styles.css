@@ -95,13 +95,16 @@ header {
 .buttons button {
   border: none;
   background-color: var(--very-light-gray);
-  margin-top: 8px
+  margin-top: 8px;
 }
 
 .buttons img {
   transform: rotate(90deg);
 }
 
+.buttons img:hover {
+  cursor: pointer;
+}
 
 /* MATERIAS */
 
@@ -120,7 +123,7 @@ header {
 .my-subject-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  width:800px;
+  width: 800px;
 }
 
 .my-subject-content {
@@ -129,28 +132,28 @@ header {
 }
 
 .info-subject {
-    padding-left: 10px;
-    display: grid;
-    grid-template-columns: 120px 200px 160px 200px 100px ;
-    align-items: center;
-    background-color: var(--very-light-gray);
-    border-radius: 8px;
+  padding-left: 10px;
+  display: grid;
+  grid-template-columns: 120px 200px 160px 200px 100px;
+  align-items: center;
+  background-color: var(--very-light-gray);
+  border-radius: 8px;
 }
 
-.info-subject span{
-    font-weight: bold;
+.info-subject span {
+  font-weight: bold;
 }
 
 .subjects-list {
-    display: grid;
-    grid-template-columns: 140px 220px 80px 210px auto;
+  display: grid;
+  grid-template-columns: 140px 220px 80px 210px auto;
 }
 
 .subjects-list figure {
-    width: 70px;
-    height: 70px;
-    margin: 20px 0 20px 0;
-  }
+  width: 70px;
+  height: 70px;
+  margin: 20px 0 20px 0;
+}
 
 .subjects-list figure img {
   width: 70px;
@@ -162,7 +165,8 @@ header {
   color: var(--dark-blue);
 }
 
-.subjects-list a, p{
+.subjects-list a,
+p {
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -174,64 +178,66 @@ header {
 }
 
 .progress-box {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .progress {
-    margin-left: 30px;
-    background-color: var(--yellow);
-    width: 100px;
-    height: 28px;
-    border-radius: 10px;
-    position: relative;
+  margin-left: 30px;
+  background-color: var(--yellow);
+  width: 100px;
+  height: 28px;
+  border-radius: 10px;
+  position: relative;
 }
 
 .progress h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    color: var(--white);
-    text-align: center;
-    line-height: 28px; /* Centrar verticalmente el contenido dentro de .progress */
-    width: 100%; /* Asegurarse de que el contenido ocupe todo el ancho */
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  color: var(--white);
+  text-align: center;
+  line-height: 28px; /* Centrar verticalmente el contenido dentro de .progress */
+  width: 100%; /* Asegurarse de que el contenido ocupe todo el ancho */
+}
 
 /* Establecer el color de fondo blanco */
 .progress:before {
-    content: "";
-    display: block;
-    background-color: var(--hospital-purple);
-    width: 80%; /* Ajustar el porcentaje para el progreso deseado */
-    height: 100%;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  /* Agregar el degradado para el progreso */
-  .progress:after {
-    content: "";
-    display: block;
-    background-color: var(--purple); /* Cambiar esto por el color morado deseado */
-    width: 80%; /* Ajustar el mismo porcentaje que en .progress:before */
-    height: 100%;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  content: "";
+  display: block;
+  background-color: var(--hospital-purple);
+  width: 80%; /* Ajustar el porcentaje para el progreso deseado */
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Agregar el degradado para el progreso */
+.progress:after {
+  content: "";
+  display: block;
+  background-color: var(
+    --purple
+  ); /* Cambiar esto por el color morado deseado */
+  width: 80%; /* Ajustar el mismo porcentaje que en .progress:before */
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 .more {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .more a:nth-child(2) {
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--hospital-purple);
-  }
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--hospital-purple);
+}
