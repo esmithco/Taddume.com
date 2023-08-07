@@ -267,14 +267,15 @@ header {
   height: 90px;
 }
 
-/*
-.p-learn:hover {
-  color: var(--yellow);
+
+.hover { 
+  color: var(--hospital-purple);
   font-weight: bold;
   font-size: 24px;
 }
-*/
 
+
+/*
 #img1:hover + #img2 {
   display: inline-block;
 }
@@ -282,7 +283,7 @@ header {
 #img2 {
   display: none;
 }
-
+*/
 .test-button {
   background-color: var(--hospital-purple);
   width: 140px;
