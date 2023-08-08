@@ -35,21 +35,25 @@ people.data.forEach(e => {
 
 })
 */
+function showSubMenu(id){
+    let subMenu = document.getElementById(id);
+    subMenu.style.display = "inline-block";
+    
+};
 
+function hideSubMenu(id){
+    let subMenu = document.getElementById(id);
+    subMenu.style.display = "none";
+};
 
-function changeImage(imgId1,imgId2, pId) {
-    const img1 = document.getElementById(imgId1).style.display = 'none';
-    const img2 = document.getElementById(imgId2).style.display = 'inline-block';
-    const plearn = document.getElementById(pId).classList.add('hover');
-    //img1.style.opacity = '1';
-    //img2.style.opacity = '0';
-}
+function changeImage(imgId1, imgId2, pId) {
+    document.getElementById(imgId1).style.display = "none";
+    document.getElementById(imgId2).style.display = "inline-block";
+    document.getElementById(pId).classList.add("hover");
+};
 
-function restoreImage(imgId1,imgId2, pId) {
-    const img1 = document.getElementById(imgId1).style.display = 'inline-block';
-    const img2 = document.getElementById(imgId2).style.display = 'none';
-    const plearn = document.getElementById(pId).classList.remove('hover');
-    //img1.style.opacity = '0';
-    //img2.style.opacity = '1';
-}
-
+function restoreImage(imgId1, imgId2, pId) {
+    document.getElementById(imgId1).style.display = "inline-block";
+    document.getElementById(imgId2).style.display = "none";
+    document.getElementById(pId).classList.remove("hover");
+};

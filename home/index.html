@@ -1,594 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="/home/js/script.js" defer></script>
-    <link rel="stylesheet" href="styles.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taddume</title>
-    <link rel="icon" href="/icons/LOGO-ICO.ico" type="image/x-icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <header>
-      <div class="logo">
-        <img class="header-logo" src="/PNG/TADDUME_LOGO COLOR.png" alt="logo" />
-      </div>
+<head>
+  <script src="/home/js/script.js" defer></script>
+  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taddume</title>
+  <link rel="icon" href="/icons/LOGO-ICO.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+</head>
 
-      <nav class="menu">
-        <ul class="ul-header">
-          <li class="li-header"><a href="#" class="options">Contáctanos</a></li>
-          <li class="li-header">
-            <a href="#" class="options">Sobre nosotros</a>
-          </li>
-          <li class="li-header"><a href="#" class="options">Noticias</a></li>
-          <li class="li-header"><a href="#" class="options">Contenido</a></li>
-        </ul>
-      </nav>
-
-      <div class="buttons">
-        <a href="/login/index.html">
-          <button class="secondary-button login-button">Ingresar</button>
-        </a>
-
-        <a href="/signup/index.html">
-          <button class="primary-button signup-button">Crear cuenta</button>
-        </a>
-
-        <button class="icon-menu">
-          <img src="/icons/icon_menu.svg" alt="icon-menu" />
-        </button>
-      </div>
-    </header>
-
-    <section class="news">
-      <img class="banner" src="/PNG/TADDUME_FONDO BANNER.png" alt="banner" />
-
-      <div class="news-text">
-        <h2 class="h2-news">Lorem ipsum dolor sit amet</h2>
-        <p class="p-news">
-          Lorem ipsum Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-          sed diam nonummy Lorem ipsum dolor sit amet.
-        </p>
-
-        <button class="primary-button news-button">Lorem ipsum</button>
-      </div>
-
-      <div class="news-img">
-        <img
-          class="banner-woman"
-          src="/PNG/TADDUME_IMAGEN BANNER-05.png"
-          alt="banner-woman"
-        />
-      </div>
-    </section>
-
-    <section class="learn">
-      <h2 class="title-learn">Aprende</h2>
-
-      <nav class="subjects-learn">
-        <a href="#" class="subjects">
-          <div class="subjects-img"
-            onmouseover="changeImage('img1-quimica','img2-quimica', 'qhe')"
-            onmouseout="restoreImage('img1-quimica','img2-quimica', 'qhe')">
-            <img
-              class="learn-img"
-              src="/PNG/TADDUME_ICONOS-08.png"
-              alt="quimica"
-              id="img1-quimica"
-            />
-            <img
-              class="learn-img"
-              src="/PNG/TADDUME_ICONOS-09.png"
-              alt="quimica"
-              id="img2-quimica"
-              style="display: none"
-            />
-          </div>
-
-          <p class="p-learn" id="qhe">Química</p>
-        </a>
-
-        <a href="#" class="subjects">
-          <div class="subjects-img"
-            onmouseover="changeImage('img1-fisica','img2-fisica', 'phy')"
-            onmouseout="restoreImage('img1-fisica','img2-fisica', 'phy')">
-            <img
-              class="learn-img"
-              src="/PNG/TADDUME_ICONOS-11.png"
-              alt="fisica"
-              id="img1-fisica"
-            />
-            <img
-              class="learn-img"
-              src="/PNG/TADDUME_ICONOS-13.png"
-              alt="fisica"
-              id="img2-fisica"
-              style="display: none"
-            />
-          </div>
-
-          <p class="p-learn" id="phy">Física</p>
-        </a>
-
-        <a href="#" class="subjects">
-          <div class="subjects-img"
-            onmouseover="changeImage('img1-matematicas','img2-matematicas', 'math')"
-            onmouseout="restoreImage('img1-matematicas','img2-matematicas','math')">
-            <img
-              class="learn-img"
-              src="/PNG/TADDUME_ICONOS-12.png"
-              alt="matematicas"
-              id="img1-matematicas"
-            />
-            <img
-              class="learn-img"
-              src="/PNG/TADDUME_ICONOS-14.png"
-              alt="matematicas"
-              id="img2-matematicas"
-              style="display: none"
-            />
-          </div>
-
-          <p class="p-learn" id="math">Matemáticas</p>
-        </a>
-
-        <a href="#" class="subjects">
-          <div class="subjects-img"
-            onmouseover="changeImage('img1-español','img2-español', 'leng')"
-            onmouseout="restoreImage('img1-español','img2-español', 'leng')">
-            <img
-              class="learn-img"
-              src="/PNG/TADDUME_ICONOS-15.png"
-              alt="español"
-              id="img1-español"
-            />
-            <img
-              class="learn-img"
-              src="/PNG/TADDUME_ICONOS-16.png"
-              alt="español"
-              id="img2-español"
-              style="display: none"
-            />
-          </div>
-
-          <p class="p-learn" id="leng">Lenguaje</p>
-        </a>
-
-        <a href="#" class="subjects">
-          <div class="subjects-img"
-            onmouseover="changeImage('img1-estadistica','img2-estadistica', 'est')"
-            onmouseout="restoreImage('img1-estadistica','img2-estadistica', 'est')">
-            <img
-              class="learn-img"
-              src="/PNG/TADDUME_ICONOS-17.png"
-              alt="estadistica"
-              id="img1-estadistica"
-            />
-            <img
-              class="learn-img"
-              src="/PNG/TADDUME_ICONOS-18.png"
-              alt="estadistica"
-              id="img2-estadistica"
-              style="display: none"
-            />
-          </div>
-
-          <p class="p-learn" id="est">Estadística</p>
-        </a>
-      </nav>
-
-      <button class="primary-button news-button">Tomar test</button>
-    </section>
-
-    <div class="first-container">
-      <img
-        class="mancha-1"
-        src="/PNG/TADDUME_FORMAS FONDO-22.png"
-        alt="mancha-1"
-      />
+<body>
+  <header>
+    <div class="logo">
+      <img class="header-logo" src="/PNG/TADDUME_LOGO COLOR.png" alt="logo" />
     </div>
 
-    <section class="followup">
-      <div class="text-button">
-        <div class="followup-text">
-          <h2 class="h2-followup">Nuestro acompañamiento</h2>
+    <nav class="menu">
+      <ul class="ul-header">
+        <li class="li-header">
+          <a href="#" class="options" onmouseover="showSubMenu('cId')" onmouseout="hideSubMenu('cId')">Contáctanos</a>
+          <nav class="desktop-menu" id="cId" onmouseover="showSubMenu('cId')" onmouseout="hideSubMenu('cId')" >
+            <ul>
+              <li>
+                <a href="/">Instagram</a>
+              </li>
 
-          <p class="p-followup">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet Lorem ipsum dolor sit
-            amet, consectetuer adipiscing elit.
-          </p>
+              <li>
+                <a href="/">Facebook</a>
+              </li>
 
-          <p class="p-followup">
-            sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-            aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
-            exerci tation.
-          </p>
-        </div>
+              <li>
+                <a href="/">LinkedIn</a>
+              </li>
 
-        <button class="primary-button news-button" id="followup-button">
-          Saber más
-        </button>
-      </div>
+              <li>
+                <a href="/">Gmail</a>
+              </li>
+            </ul>
+          </nav>
+        </li>
+        <li class="li-header">
+          <a href="#" class="options" onmouseover="showSubMenu('usId')" onmouseout="hideSubMenu('usId')">Sobre nosotros</a>
+          <nav class="desktop-menu" id="usId" onmouseover="showSubMenu('usId')" onmouseout="hideSubMenu('usId')">
+            <ul>
+              <li>
+                <a href="/">Historia</a>
+              </li>
 
-      <div class="followup-img">
-        <img
-          class="seguimiento-img"
-          src="/PNG/TADDUME_IMAGEN ACOMPANAMIENTOS-19.png"
-          alt="seguimiento-img"
-        />
-      </div>
-    </section>
+              <li>
+                <a href="/">Equipo</a>
+              </li>
 
-    <div class="second-container">
-      <img
-        class="mancha-2"
-        src="/PNG/TADDUME_FORMAS FONDO-23.png"
-        alt="mancha-2"
-      />
+              <li>
+                <a href="/">Misión y Visión</a>
+              </li>
+
+              <li>
+                <a href="/">Reconocimientos</a>
+              </li>
+            </ul>
+          </nav>
+        </li>
+        <li class="li-header">
+          <a href="#" class="options" onmouseover="showSubMenu('news')" onmouseout="hideSubMenu('news')">Noticias</a>
+          <nav class="desktop-menu" id="news" onmouseover="showSubMenu('news')" onmouseout="hideSubMenu('news')">
+            <ul>
+                <li>
+                    <a href="/">Comunidad</a>
+                </li>
+    
+                <li>
+                    <a href="/">Eventos</a>
+                </li>
+    
+                <li>
+                    <a href="/">Entrevistas</a>
+                </li>
+    
+                <li>
+                    <a href="/">Actualizaciones</a>
+                </li>
+            </ul>
+        </nav>
+        </li>
+        <li class="li-header">
+          <a href="#" class="options" onmouseover="showSubMenu('con')" onmouseout="hideSubMenu('con')">Contenido</a>
+          <nav class="desktop-menu" id="con" onmouseover="showSubMenu('con')" onmouseout="hideSubMenu('con')">
+            <ul>
+                <li>
+                    <a href="/">Blog</a>
+                </li>
+    
+                <li>
+                    <a href="/">Guías</a>
+                </li>
+    
+                <li>
+                    <a href="/">Preguntas Frecuentes</a>
+                </li>
+    
+                <li>
+                    <a href="/">Asignaturas</a>
+                </li>
+            </ul>
+        </nav>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="buttons">
+      <a href="/login/index.html">
+        <button class="secondary-button login-button">Ingresar</button>
+      </a>
+
+      <a href="/signup/index.html">
+        <button class="primary-button signup-button">Crear cuenta</button>
+      </a>
+
+      <button class="icon-menu">
+        <img src="/icons/icon_menu.svg" alt="icon-menu" />
+      </button>
     </div>
+  </header>
 
-    <section class="stories-section">
-      <h2 class="h2-story">Testimonios</h2>
+  <section class="news">
+    <img class="banner" src="/PNG/TADDUME_FONDO BANNER.png" alt="banner" />
 
-      <p class="p-testimonio">
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-        nonummy nibh euismod tincidunt ut laoreet
+    <div class="news-text">
+      <h2 class="h2-news">La mejor plataforma para aprender</h2>
+      <p class="p-news">
+        Obten mejores resultados en tu examen de estado y se de los mejores en tus clases.
       </p>
 
-      <div class="stories">
-        <div class="story">
-          <img
-            class="img-story"
-            src="/PNG/TADDUME_TESTIMONIAL.png"
-            alt="testimonio"
-          />
+      <button class="primary-button news-button">Registrarme</button>
+    </div>
 
-          <div class="square-story">
-            <h3 class="h3-story">Nombre</h3>
+    <div class="news-img">
+      <img class="banner-woman" src="/PNG/TADDUME_IMAGEN BANNER-05.png" alt="banner-woman" />
+    </div>
+  </section>
 
-            <p class="p-details">Grado</p>
+  <section class="learn">
+    <h2 class="title-learn">Aprende</h2>
 
-            <p class="p-details">País</p>
-
-            <p class="p-story">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet
-            </p>
-          </div>
+    <nav class="subjects-learn">
+      <a href="#" class="subjects">
+        <div class="subjects-img" onmouseover="changeImage('img1-quimica','img2-quimica', 'qhe')"
+          onmouseout="restoreImage('img1-quimica','img2-quimica', 'qhe')">
+          <img class="learn-img" src="/PNG/TADDUME_ICONOS-08.png" alt="quimica" id="img1-quimica" />
+          <img class="learn-img img2" src="/PNG/TADDUME_ICONOS-09.png" alt="quimica" id="img2-quimica" />
         </div>
 
-        <div class="story">
-          <img
-            class="img-story"
-            src="/PNG/TADDUME_TESTIMONIAL.png"
-            alt="testimonio"
-          />
+        <p class="p-learn" id="qhe">Química</p>
+      </a>
 
-          <div class="square-story">
-            <h3 class="h3-story">Nombre</h3>
-
-            <p class="p-details">Grado</p>
-
-            <p class="p-details">País</p>
-
-            <p class="p-story">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet
-            </p>
-          </div>
+      <a href="#" class="subjects">
+        <div class="subjects-img" onmouseover="changeImage('img1-fisica','img2-fisica', 'phy')"
+          onmouseout="restoreImage('img1-fisica','img2-fisica', 'phy')">
+          <img class="learn-img" src="/PNG/TADDUME_ICONOS-11.png" alt="fisica" id="img1-fisica" />
+          <img class="learn-img img2" src="/PNG/TADDUME_ICONOS-13.png" alt="fisica" id="img2-fisica" />
         </div>
 
-        <div class="story">
-          <img
-            class="img-story"
-            src="/PNG/TADDUME_TESTIMONIAL.png"
-            alt="testimonio"
-          />
+        <p class="p-learn" id="phy">Física</p>
+      </a>
 
-          <div class="square-story">
-            <h3 class="h3-story">Nombre</h3>
-
-            <p class="p-details">Grado</p>
-
-            <p class="p-details">País</p>
-
-            <p class="p-story">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet
-            </p>
-          </div>
+      <a href="#" class="subjects">
+        <div class="subjects-img" onmouseover="changeImage('img1-matematicas','img2-matematicas', 'math')"
+          onmouseout="restoreImage('img1-matematicas','img2-matematicas','math')">
+          <img class="learn-img" src="/PNG/TADDUME_ICONOS-12.png" alt="matematicas" id="img1-matematicas" />
+          <img class="learn-img img2" src="/PNG/TADDUME_ICONOS-14.png" alt="matematicas" id="img2-matematicas" />
         </div>
+
+        <p class="p-learn" id="math">Matemáticas</p>
+      </a>
+
+      <a href="#" class="subjects">
+        <div class="subjects-img" onmouseover="changeImage('img1-español','img2-español', 'leng')"
+          onmouseout="restoreImage('img1-español','img2-español', 'leng')">
+          <img class="learn-img" src="/PNG/TADDUME_ICONOS-15.png" alt="español" id="img1-español" />
+          <img class="learn-img img2" src="/PNG/TADDUME_ICONOS-16.png" alt="español" id="img2-español" />
+        </div>
+
+        <p class="p-learn" id="leng">Lenguaje</p>
+      </a>
+
+      <a href="#" class="subjects">
+        <div class="subjects-img" onmouseover="changeImage('img1-estadistica','img2-estadistica', 'est')"
+          onmouseout="restoreImage('img1-estadistica','img2-estadistica', 'est')">
+          <img class="learn-img" src="/PNG/TADDUME_ICONOS-17.png" alt="estadistica" id="img1-estadistica" />
+          <img class="learn-img img2" src="/PNG/TADDUME_ICONOS-18.png" alt="estadistica" id="img2-estadistica" />
+        </div>
+
+        <p class="p-learn" id="est">Estadística</p>
+      </a>
+    </nav>
+
+    <button class="primary-button news-button">Tomar test</button>
+  </section>
+
+  <div class="first-container">
+    <img class="mancha-1" src="/PNG/TADDUME_FORMAS FONDO-22.png" alt="mancha-1" />
+  </div>
+
+  <section class="followup">
+    <div class="text-button">
+      <div class="followup-text">
+        <h2 class="h2-followup">Nuestro acompañamiento</h2>
+
+        <p class="p-followup">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet Lorem ipsum dolor sit
+          amet, consectetuer adipiscing elit.
+        </p>
+
+        <p class="p-followup">
+          sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+          aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+          exerci tation.
+        </p>
       </div>
 
       <button class="primary-button news-button" id="followup-button">
-        Tu historia
-      </button>
-    </section>
-
-    <div class="third-container">
-      <img
-        class="mancha-3"
-        src="/PNG/TADDUME_FORMAS FONDO-24.png"
-        alt="mancha-3"
-      />
-    </div>
-
-    <section class="stories-section prices-section">
-      <img
-        class="banner prices-img"
-        src="/PNG/TADDUME_FONDO PLANES.png"
-        alt="fondo-planes"
-      />
-
-      <div class="stories prices-div">
-        <div class="story prices-box">
-          <div class="box-border">
-            <h3 class="h2-price">Básico</h3>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-border">$000.000</div>
-          </div>
-
-          <button class="buy-button">Suscríbete</button>
-        </div>
-
-        <div class="story prices-box">
-          <div class="box-border">
-            <h3 class="h2-price">Básico</h3>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-border">$000.000</div>
-          </div>
-
-          <button class="buy-button">Suscríbete</button>
-        </div>
-
-        <div class="story prices-box">
-          <div class="box-border">
-            <h3 class="h2-price">Básico</h3>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-border">$000.000</div>
-          </div>
-
-          <button class="buy-button">Suscríbete</button>
-        </div>
-
-        <div class="story prices-box">
-          <div class="box-border">
-            <h3 class="h2-price">Básico</h3>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-details">
-              <div class="detail-price">
-                <img
-                  class="chulito"
-                  src="/PNG/TADDUME_CHULITO.png"
-                  alt="chulito"
-                />
-
-                <p class="p-chulito">Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-
-            <div class="price-border">$000.000</div>
-          </div>
-
-          <button class="buy-button">Suscríbete</button>
-        </div>
-      </div>
-
-      <button class="primary-button news-button" id="prices-button">
         Saber más
       </button>
-    </section>
-
-    <div class="fourth-container">
-      <img
-        class="mancha-4"
-        src="/PNG/TADDUME_FORMAS FONDO-25.png"
-        alt="mancha-4"
-      />
     </div>
 
-    <footer>
-      <div class="logo">
-        <img
-          class="header-logo"
-          src="/PNG/TADDUME_LOGO BLANCO.png"
-          alt="footer-logo"
-        />
+    <div class="followup-img">
+      <img class="seguimiento-img" src="/PNG/TADDUME_IMAGEN ACOMPANAMIENTOS-19.png" alt="seguimiento-img" />
+    </div>
+  </section>
 
-        <img
-          class="small-logo"
-          src="/PNG/TADDUME_LOGO SOLO BLANCO.png"
-          alt="small-logo"
-        />
+  <div class="second-container">
+    <img class="mancha-2" src="/PNG/TADDUME_FORMAS FONDO-23.png" alt="mancha-2" />
+  </div>
+
+  <section class="stories-section">
+    <h2 class="h2-story">Testimonios</h2>
+
+    <p class="p-testimonio">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+      nonummy nibh euismod tincidunt ut laoreet
+    </p>
+
+    <div class="stories">
+      <div class="story">
+        <img class="img-story" src="/PNG/TADDUME_TESTIMONIAL.png" alt="testimonio" />
+
+        <div class="square-story">
+          <h3 class="h3-story">Nombre</h3>
+
+          <p class="p-details">Grado</p>
+
+          <p class="p-details">País</p>
+
+          <p class="p-story">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet
+          </p>
+        </div>
       </div>
-    </footer>
-  </body>
+
+      <div class="story">
+        <img class="img-story" src="/PNG/TADDUME_TESTIMONIAL.png" alt="testimonio" />
+
+        <div class="square-story">
+          <h3 class="h3-story">Nombre</h3>
+
+          <p class="p-details">Grado</p>
+
+          <p class="p-details">País</p>
+
+          <p class="p-story">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet
+          </p>
+        </div>
+      </div>
+
+      <div class="story">
+        <img class="img-story" src="/PNG/TADDUME_TESTIMONIAL.png" alt="testimonio" />
+
+        <div class="square-story">
+          <h3 class="h3-story">Nombre</h3>
+
+          <p class="p-details">Grado</p>
+
+          <p class="p-details">País</p>
+
+          <p class="p-story">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <button class="primary-button news-button" id="followup-button">
+      Tu historia
+    </button>
+  </section>
+
+  <div class="third-container">
+    <img class="mancha-3" src="/PNG/TADDUME_FORMAS FONDO-24.png" alt="mancha-3" />
+  </div>
+
+  <section class="stories-section prices-section">
+    <img class="banner prices-img" src="/PNG/TADDUME_FONDO PLANES.png" alt="fondo-planes" />
+
+    <div class="stories prices-div">
+      <div class="story prices-box">
+        <div class="box-border">
+          <h3 class="h2-price">Básico</h3>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-border">$000.000</div>
+        </div>
+
+        <button class="buy-button">Suscríbete</button>
+      </div>
+
+      <div class="story prices-box">
+        <div class="box-border">
+          <h3 class="h2-price">Básico</h3>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-border">$000.000</div>
+        </div>
+
+        <button class="buy-button">Suscríbete</button>
+      </div>
+
+      <div class="story prices-box">
+        <div class="box-border">
+          <h3 class="h2-price">Básico</h3>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-border">$000.000</div>
+        </div>
+
+        <button class="buy-button">Suscríbete</button>
+      </div>
+
+      <div class="story prices-box">
+        <div class="box-border">
+          <h3 class="h2-price">Básico</h3>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-details">
+            <div class="detail-price">
+              <img class="chulito" src="/PNG/TADDUME_CHULITO.png" alt="chulito" />
+
+              <p class="p-chulito">Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+
+          <div class="price-border">$000.000</div>
+        </div>
+
+        <button class="buy-button">Suscríbete</button>
+      </div>
+    </div>
+
+    <button class="primary-button news-button" id="prices-button">
+      Saber más
+    </button>
+  </section>
+
+  <div class="fourth-container">
+    <img class="mancha-4" src="/PNG/TADDUME_FORMAS FONDO-25.png" alt="mancha-4" />
+  </div>
+
+  <footer>
+    <div class="logo">
+      <img class="header-logo" src="/PNG/TADDUME_LOGO BLANCO.png" alt="footer-logo" />
+
+      <img class="small-logo" src="/PNG/TADDUME_LOGO SOLO BLANCO.png" alt="small-logo" />
+    </div>
+  </footer>
+</body>
+
 </html>

@@ -86,7 +86,6 @@ header {
 
 .options:hover {
   font-weight: bold;
-  font-size: 20px;
 }
 
 .buttons {
@@ -115,7 +114,7 @@ header {
 
 .signup-button:hover {
   background-color: var(--yellow);
-  color: var(--hospital-purple);
+  color: var(--dark-blue);
 }
 
 .secondary-button {
@@ -139,6 +138,60 @@ header {
   background-color: var(--very-light-gray);
   display: none;
   transform: rotate(180deg);
+}
+
+/* submenus */
+
+.li-header {
+  position: relative;
+}
+
+.li-header:hover > a{
+  font-weight: bold;
+}
+
+.desktop-menu {
+  position: absolute;
+  width: 160px;
+  height: 220px;
+  background-color: var(--very-light-gray);
+  border-radius: 6px;
+  left: -20px;
+  top: 20px;
+  z-index: 101;
+  display: none;
+}
+
+.desktop-menu ul {
+  list-style: none;
+  padding: 30px 20px 10px 20px;
+}
+
+.desktop-menu a {
+  display: inline-block;
+  color: var(--dark-blue);
+  font-size: 16px;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.desktop-menu ul li:last-child {
+  padding-top: 12px;
+  border-top: 1px solid var(--yellow);
+}
+
+.desktop-menu ul li:last-child a {
+  color: var(--hospital-purple);
+  font-size: 16px;
+}
+
+.desktop-menu a:hover {
+  font-weight: bold;
+  color: var(--yellow);
+}
+
+.desktop-menu ul li:last-child a:hover {
+  font-weight: bold;
 }
 
 /*NOTICIAS*/
@@ -170,7 +223,7 @@ header {
 .h2-news {
   margin: 0;
   color: var(--yellow);
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .p-news {
@@ -267,12 +320,18 @@ header {
   height: 90px;
 }
 
+.img2 {
+  display: none;
+  width: 100px;
+  height: 100px;
+}
 
-.hover { 
+
+.hover {
   color: var(--hospital-purple);
   font-weight: bold;
-  font-size: 24px;
 }
+
 
 
 /*
@@ -375,7 +434,8 @@ header {
 .mancha-2 {
   object-fit: cover;
   width: 340px;
-  transform: translateX(-40%); /* Centra la imagen horizontalmente */
+  transform: translateX(-40%);
+  /* Centra la imagen horizontalmente */
 }
 
 /*HISTORIAS DE USUARIOS*/
@@ -481,7 +541,8 @@ header {
 .mancha-3 {
   object-fit: cover;
   width: 320px;
-  transform: translateX(0%); /* Centra la imagen horizontalmente */
+  transform: translateX(0%);
+  /* Centra la imagen horizontalmente */
 }
 
 /*PRECIOS*/
@@ -855,6 +916,7 @@ footer {
   .buttons {
     margin: 0;
   }
+
   .logo {
     width: 200px;
   }
