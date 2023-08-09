@@ -35,6 +35,10 @@ people.data.forEach(e => {
 
 })
 */
+const menuIcon = document.querySelector('.icon-menu');
+const mobileMenu = document.querySelector('.mobile-menu');
+menuIcon.addEventListener('click', toggleMobileMenu);
+
 function showSubMenu(id){
     let subMenu = document.getElementById(id);
     subMenu.style.display = "inline-block";
@@ -44,6 +48,10 @@ function showSubMenu(id){
 function hideSubMenu(id){
     let subMenu = document.getElementById(id);
     subMenu.style.display = "none";
+};
+
+function toggleMobileMenu() {
+    mobileMenu.classList.toggle('inactive');
 };
 
 function changeImage(imgId1, imgId2, pId) {
