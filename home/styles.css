@@ -242,8 +242,9 @@ header {
 }
 
 .email {
-  font-size: 14px;
-  font-weight: 300 !important;
+  font-size: 18px;
+  font-weight: bold !important;
+  color: var(--hospital-purple) !important;
 }
 
 .mobile-menu ul:nth-child(1) {
@@ -251,7 +252,7 @@ header {
 }
 
 .sign-out {
-  color: var(--hospital-purple) !important;
+  color: var(--dark-blue) !important;
   font-size: 6;
 }
 
