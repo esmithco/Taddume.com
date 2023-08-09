@@ -215,7 +215,7 @@ header {
   position: absolute;
   background-color: var(--very-light-gray);
   width: 87.5%;
-  height: 90%;
+  height: 100%;
   top: 50px;
   z-index: 105;
   padding: 24px 24px 0 24px;
@@ -238,7 +238,7 @@ header {
 }
 
 .info-box {
-  margin-top: 280px;
+  margin-top: 70%;
 }
 
 .email {
