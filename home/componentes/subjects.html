@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.learn {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 12px;
+  margin-bottom: 40px;
+}
+
+.title-learn {
+  color: var(--yellow);
+  font-size: 48px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.subjects-learn {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.subjects {
+  width: 100px;
+  font-size: var(--lg);
+  color: var(--white);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subjects-img {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+}
+
+.p-learn {
+  color: var(--dark-blue);
+  font-size: 18px;
+}
+
+.learn-img {
+  width: 90px;
+  height: 90px;
+}
+
+.img2 {
+  display: none;
+  width: 100px;
+  height: 100px;
+}
+
+
+.hover {
+  color: var(--hospital-purple);
+  font-weight: bold;
+}
+
+
+
+/*
+#img1:hover + #img2 {
+  display: inline-block;
+}
+
+#img2 {
+  display: none;
+}
+*/
+.test-button {
+  background-color: var(--hospital-purple);
+  width: 140px;
+  height: 52px;
+  font-size: var(--lg);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+}
+    </style>
+</head>
+<body>
+
+    <section class="learn">
+        <h2 class="title-learn">Aprende</h2>
+    
+        <nav class="subjects-learn">
+          <!-- 
+            aqui se inserta el codigo javascript de las materias
+          -->
+          <a href="#" class="subjects">
+              <div class="subjects-img" onmouseover="changeImage('img1-quimica','img2-quimica', 'qhe')"
+                onmouseout="restoreImage('img1-quimica','img2-quimica', 'qhe')">
+                <img class="learn-img" src="../../PNG/TADDUME_ICONOS-08.png" alt="quimica" id="img1-quimica" />
+                <img class="learn-img img2" src="../../PNG/TADDUME_ICONOS-09.png" alt="quimica" id="img2-quimica" />
+              </div>
+        
+              <p class="p-learn" id="qhe">Química</p>
+              <a href="#" class="subjects">
+              <div class="subjects-img" onmouseover="changeImage('img1-fisica','img2-fisica', 'phy')"
+                onmouseout="restoreImage('img1-fisica','img2-fisica', 'phy')">
+                <img class="learn-img" src="../../PNG/TADDUME_ICONOS-11.png" alt="fisica" id="img1-fisica" />
+                <img class="learn-img img2" src="../../PNG/TADDUME_ICONOS-13.png" alt="fisica" id="img2-fisica" />
+              </div>
+      
+              <p class="p-learn" id="phy">Física</p>
+            </a>
+      
+            <a href="#" class="subjects">
+              <div class="subjects-img" onmouseover="changeImage('img1-matematicas','img2-matematicas', 'math')"
+                onmouseout="restoreImage('img1-matematicas','img2-matematicas','math')">
+                <img class="learn-img" src="../../PNG/TADDUME_ICONOS-12.png" alt="matematicas" id="img1-matematicas" />
+                <img class="learn-img img2" src="../..//PNG/TADDUME_ICONOS-14.png" alt="matematicas" id="img2-matematicas" />
+              </div>
+      
+              <p class="p-learn" id="math">Matemáticas</p>
+            </a>
+      
+            <a href="#" class="subjects">
+              <div class="subjects-img" onmouseover="changeImage('img1-español','img2-español', 'leng')"
+                onmouseout="restoreImage('img1-español','img2-español', 'leng')">
+                <img class="learn-img" src="../../PNG/TADDUME_ICONOS-15.png" alt="español" id="img1-español" />
+                <img class="learn-img img2" src="../../PNG/TADDUME_ICONOS-16.png" alt="español" id="img2-español" />
+              </div>
+      
+              <p class="p-learn" id="leng">Lenguaje</p>
+            </a>
+      
+            <a href="#" class="subjects">
+              <div class="subjects-img" onmouseover="changeImage('img1-estadistica','img2-estadistica', 'est')"
+                onmouseout="restoreImage('img1-estadistica','img2-estadistica', 'est')">
+                <img class="learn-img" src="../../PNG/TADDUME_ICONOS-17.png" alt="estadistica" id="img1-estadistica" />
+                <img class="learn-img img2" src="../../PNG/TADDUME_ICONOS-18.png" alt="estadistica" id="img2-estadistica" />
+              </div>
+      
+              <p class="p-learn" id="est">Estadística</p>
+            </a>
+      
+            </a>
+              </nav>
+    
+        <button class="primary-button news-button">Tomar test</button>
+      </section>
+    
+<script>
+    function changeImage(imgId1, imgId2, pId) {
+    document.getElementById(imgId1).style.display = "none";
+    document.getElementById(imgId2).style.display = "inline-block";
+    document.getElementById(pId).classList.add("hover");
+};
+
+function restoreImage(imgId1, imgId2, pId) {
+    document.getElementById(imgId1).style.display = "inline-block";
+    document.getElementById(imgId2).style.display = "none";
+    document.getElementById(pId).classList.remove("hover");
+};
+</script>
+
+</body>
+</html>

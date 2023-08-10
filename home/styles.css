@@ -158,7 +158,7 @@ header {
   position: relative;
 }
 
-.li-header:hover > a{
+.li-header:hover>a {
   font-weight: bold;
 }
 
