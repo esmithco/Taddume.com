@@ -970,13 +970,13 @@ footer {
   }
 }
 
-@media (min-width: 392px) {
+@media (min-width: 411px) {
   .mobile-menu {
     display: none;
   }
 }
 
-@media (max-width: 391px) {
+@media (max-width: 410px) {
   header {
     display: flex;
     justify-content: space-between;
