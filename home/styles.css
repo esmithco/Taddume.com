@@ -207,7 +207,7 @@ header {
   position: absolute;
   background-color: var(--very-light-gray);
   width: 100%;
-  height: 100%;
+  height: calc(100% - 60px);
   top: 58px;
   z-index: 105;
 }
@@ -223,7 +223,7 @@ header {
 }
 
 .categories-menu {
-  padding: 0 0 33% 0;
+  padding: 0 0 30% 0;
   list-style: none;
   margin: 24px 24px 0 24px;
   border-bottom: 1px solid var(--hospital-purple);
@@ -387,16 +387,6 @@ header {
 }
 
 
-
-/*
-#img1:hover + #img2 {
-  display: inline-block;
-}
-
-#img2 {
-  display: none;
-}
-*/
 .test-button {
   background-color: var(--hospital-purple);
   width: 140px;
