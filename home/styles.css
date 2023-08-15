@@ -1028,7 +1028,22 @@ footer {
     margin-right: 0;
   }
 
+  .subjects {
+    margin-left: calc((100% - 200px) / 4);
+    margin-right: calc((100% - 200px) / 4);
+  }
+
+  .stories {
+    width: 100%;
+  }
+
   .story {
     width: 260px;
+    margin-left: calc((100% - 260px) / 2);
+    margin-right: calc((100% - 260px) / 2);
+  }
+
+  .img-story {
+    right: 22%;
   }
 }

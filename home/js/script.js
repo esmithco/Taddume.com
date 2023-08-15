@@ -3,26 +3,26 @@ const menuIcon = document.querySelector('.icon-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const navSubjects = document.querySelector('.subjects-learn');
 const ulSubMenus = document.querySelector('.ul-header');
+const storiesBox = document.querySelector('.stories');
 
-
+menuIcon.addEventListener('click', toggleMobileMenu);
 
 // funciones
-const showSubMenu = id => {
+function showSubMenu(id) {
     let subMenu = document.getElementById(id);
     subMenu.style.display = "inline-block";
 };
 
-const hideSubMenu = id => {
+function hideSubMenu(id) {
     let subMenu = document.getElementById(id);
     subMenu.style.display = "none";
 };
 
-const toggleMobileMenu = () => {
+function toggleMobileMenu() {
     mobileMenu.classList.toggle('inactive');
     mobileMenu.classList.toggle('active-menu');
     console.log("quepasa");
 };
-menuIcon.addEventListener('click', toggleMobileMenu);
 
 function changeImage(imgId1, imgId2, pId) {
     document.getElementById(imgId1).style.display = "none";
@@ -36,7 +36,7 @@ function restoreImage(imgId1, imgId2, pId) {
     document.getElementById(pId).classList.remove("hover");
 };
 
-function createMenuLinks(arr) {
+const createMenuLinks = arr => {
     const linksContainer = document.createElement('ul');
     for (link of arr) {
         const aLink = document.createElement('a');
@@ -51,9 +51,9 @@ function createMenuLinks(arr) {
 
     return linksContainer;
 
-}
+};
 
-function renderSubject(arr) {
+const renderSubject = arr => {
     for (subject of arr) {
         const aSubject = document.createElement('a');
         aSubject.classList.add('subjects');
@@ -106,9 +106,9 @@ function renderSubject(arr) {
 
         navSubjects.appendChild(aSubject);
     };
-}
+};
 
-function renderSubmenus(arr) {
+const renderSubmenus = arr => {
     for (menu of arr) {
         const liMenu = document.createElement('li');
         liMenu.classList.add('li-header');
@@ -146,7 +146,49 @@ function renderSubmenus(arr) {
 
         ulSubMenus.appendChild(liMenu);
     };
-}
+};
+
+const renderStory = arr => {
+    for (story of arr) {
+        const storyDiv = document.createElement('div');
+        storyDiv.classList.add('story'); 
+
+        const imgStory = document.createElement('img');
+        imgStory.classList.add('img-story');
+        imgStory.setAttribute('src', story.img);
+
+        const infoBox = document.createElement('div');
+        infoBox.classList.add('square-story');
+        
+        const nameInfo = document.createElement('h3');
+        nameInfo.classList.add('h3-story');
+        nameInfo.innerText = story.name;
+
+        const gradeInfo = document.createElement('p');
+        gradeInfo.classList.add('p-details');
+        gradeInfo.innerText = story.grade;
+
+        const countryInfo = document.createElement('p');
+        countryInfo.classList.add('p-details');
+        countryInfo.innerText = story.country;
+
+        const commentInfo = document.createElement('p');
+        commentInfo.classList.add('p-story');
+        commentInfo.innerText = story.comment;
+
+        infoBox.appendChild(nameInfo);
+        infoBox.appendChild(gradeInfo);
+        infoBox.appendChild(countryInfo);
+        infoBox.appendChild(commentInfo);
+
+        storyDiv.appendChild(imgStory);
+        storyDiv.appendChild(infoBox);
+
+        storiesBox.appendChild(storyDiv);
+
+        console.log("hello")
+    }
+};
 
 
 // listas
@@ -217,8 +259,33 @@ menuList.push({
 });
 
 
+const storyList = [];
+storyList.push({
+    img: '../PNG/TADDUME_TESTIMONIAL.png',
+    name: 'Brayan',
+    grade: 9,
+    country: 'Colombia',
+    comment: 'orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet'
+});
+storyList.push({
+    img: '../PNG/TADDUME_TESTIMONIAL.png',
+    name: 'Daniela',
+    grade: 10,
+    country: 'Chile',
+    comment: 'orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet'
+});
+storyList.push({
+    img: '../PNG/TADDUME_TESTIMONIAL.png',
+    name: 'Nala',
+    grade: 11,
+    country: 'Ecuador',
+    comment: 'orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet'
+});
+
+
 //ejecuciones de funciones
 renderSubject(subjectList);
 renderSubmenus(menuList);
+renderStory(storyList);
 
 
