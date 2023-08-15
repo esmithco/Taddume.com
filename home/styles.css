@@ -336,6 +336,7 @@ header {
 }
 
 .subjects-learn {
+  position: relative;
   width: 80%;
   display: flex;
   align-items: center;
@@ -395,6 +396,32 @@ header {
   color: var(--white);
   display: grid;
   place-items: center;
+}
+
+.scroll-indicator {
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(90%);
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  animation: scrollAnimation 2s ease-in-out 0.5s forwards; /* Inicia la animación después de 0.5 segundos */
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(90%) scale(1);
+  }
+  100% {
+    transform: translateX(-90%) scale(1);
+  }
+}
+
+.learn.played .scroll-indicator {
+  display: none; /* Oculta el círculo después de que se ha reproducido */
 }
 
 /*MANCHA 1*/
@@ -1046,4 +1073,5 @@ footer {
   .img-story {
     right: 22%;
   }
+
 }

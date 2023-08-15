@@ -7,6 +7,32 @@ const storiesBox = document.querySelector('.stories');
 
 menuIcon.addEventListener('click', toggleMobileMenu);
 
+const learnElement = document.querySelector(".learn");
+const scrollIndicator = learnElement.querySelector(".scroll-indicator");
+let animationPlayed = false;
+
+const mediaQuery = window.matchMedia('(max-width: 450px)'); 
+
+const handleMouseOver = () => {
+  if (!animationPlayed) {
+    scrollIndicator.style.display = 'block';
+    scrollIndicator.style.animation = "scrollAnimation 2s ease-in-out 0.5s forwards";
+    animationPlayed = true;
+
+    scrollIndicator.addEventListener('animationend', () => {
+      scrollIndicator.style.display = 'none';
+    });
+  }
+};
+
+if (mediaQuery.matches) {
+  learnElement.addEventListener('mouseover', handleMouseOver);
+}
+
+function toggleMobileMenu() {
+  // Código para mostrar/ocultar el menú móvil
+}
+
 // funciones
 function showSubMenu(id) {
     let subMenu = document.getElementById(id);
@@ -186,8 +212,6 @@ const renderStory = arr => {
         storyDiv.appendChild(infoBox);
 
         storiesBox.appendChild(storyDiv);
-
-        console.log("hello")
     }
 };
 
