@@ -57,6 +57,7 @@ const renderSubject = arr => {
     for (subject of arr) {
         const aSubject = document.createElement('a');
         aSubject.classList.add('subjects');
+        aSubject.setAttribute('href', subject.link);
 
         const imgSubject = document.createElement('div');
         imgSubject.classList.add('subjects-img')
@@ -196,27 +197,32 @@ const subjectList = [];
 subjectList.push({
     img1: '../PNG/TADDUME_ICONOS-08.png',
     img2: '../PNG/TADDUME_ICONOS-09.png',
-    name: 'Química'
+    name: 'Química',
+    link: '../notWorking/index.html'
 });
 subjectList.push({
     img1: '../PNG/TADDUME_ICONOS-11.png',
     img2: '../PNG/TADDUME_ICONOS-13.png',
-    name: 'Física'
+    name: 'Física',
+    link: '../notWorking/index.html'
 });
 subjectList.push({
     img1: '../PNG/TADDUME_ICONOS-12.png',
     img2: '../PNG/TADDUME_ICONOS-14.png',
-    name: 'Matemáticas'
+    name: 'Matemáticas',
+    link: '../notWorking/index.html'
 });
 subjectList.push({
     img1: '../PNG/TADDUME_ICONOS-15.png',
     img2: '../PNG/TADDUME_ICONOS-16.png',
-    name: 'Lenguaje'
+    name: 'Lenguaje',
+    link: '../notWorking/index.html'
 });
 subjectList.push({
     img1: '../PNG/TADDUME_ICONOS-17.png',
     img2: '../PNG/TADDUME_ICONOS-18.png',
-    name: 'Estadística'
+    name: 'Estadística',
+    link: '../notWorking/index.html'
 });
 
 
