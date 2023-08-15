@@ -8,26 +8,39 @@ const storiesBox = document.querySelector('.stories');
 menuIcon.addEventListener('click', toggleMobileMenu);
 
 const learnElement = document.querySelector(".learn");
-const scrollIndicator = learnElement.querySelector(".scroll-indicator");
-let animationPlayed = false;
+const learnscrollIndicator = document.querySelector(".learn-scroll");
+let learnAnimationPlayed = false;
+
+
+const storyScrollIndicator = document.querySelector(".stories-scroll");
+let storyAnimationPlayed = false;
 
 const mediaQuery = window.matchMedia('(max-width: 450px)'); 
 
-const handleMouseOver = () => {
-  if (!animationPlayed) {
-    scrollIndicator.style.display = 'block';
-    scrollIndicator.style.animation = "scrollAnimation 2s ease-in-out 0.5s forwards";
-    animationPlayed = true;
+const handleAnimation = (scrollIndicator, animationPlayed) => {
+    if (!animationPlayed) {
+      scrollIndicator.style.display = 'block';
+      scrollIndicator.style.animation = "scrollAnimation 0.8s ease-in-out 0.2s forwards";
 
-    scrollIndicator.addEventListener('animationend', () => {
+      scrollIndicator.addEventListener('animationend', () => {
       scrollIndicator.style.display = 'none';
+
+      });
+      
+    }
+};
+  
+  if (mediaQuery.matches) {
+    storiesBox.addEventListener("touchstart", () => {
+      handleAnimation(storyScrollIndicator, storyAnimationPlayed);
+      storyAnimationPlayed = true;
+    });
+  
+    learnElement.addEventListener("touchstart", () => {
+      handleAnimation(learnscrollIndicator, learnAnimationPlayed);
+      learnAnimationPlayed = true;
     });
   }
-};
-
-if (mediaQuery.matches) {
-  learnElement.addEventListener('mouseover', handleMouseOver);
-}
 
 function toggleMobileMenu() {
   // Código para mostrar/ocultar el menú móvil
