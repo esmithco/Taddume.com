@@ -4,10 +4,12 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const navSubjects = document.querySelector('.subjects-learn');
 const ulSubMenus = document.querySelector('.ul-header');
 const storiesBox = document.querySelector('.stories');
+const pricesBox = document.querySelector('.prices-div');
+const learnElement = document.querySelector(".learn");
 
 menuIcon.addEventListener('click', toggleMobileMenu);
 
-const learnElement = document.querySelector(".learn");
+
 const learnscrollIndicator = document.querySelector(".learn-scroll");
 let learnAnimationPlayed = false;
 
@@ -15,38 +17,48 @@ let learnAnimationPlayed = false;
 const storyScrollIndicator = document.querySelector(".stories-scroll");
 let storyAnimationPlayed = false;
 
-const mediaQuery = window.matchMedia('(max-width: 450px)'); 
+const priceScrollIndicator = document.querySelector(".prices-scroll");
+let priceAnimationPlayed = false;
+
+const mediaQuery = window.matchMedia('(max-width: 450px)');
 
 const handleAnimation = (scrollIndicator, animationPlayed) => {
     if (!animationPlayed) {
-      scrollIndicator.style.display = 'block';
-      scrollIndicator.style.animation = "scrollAnimation 0.8s ease-in-out 0.2s forwards";
+        scrollIndicator.style.display = 'block';
+        scrollIndicator.style.animation = "scrollAnimation 0.8s ease-in-out 0.2s forwards";
 
-      scrollIndicator.addEventListener('animationend', () => {
-      scrollIndicator.style.display = 'none';
+        scrollIndicator.addEventListener('animationend', () => {
+            scrollIndicator.style.display = 'none';
 
-      });
-      
+        });
+
     }
 };
-  
-  if (mediaQuery.matches) {
-    storiesBox.addEventListener("touchstart", () => {
-      handleAnimation(storyScrollIndicator, storyAnimationPlayed);
-      storyAnimationPlayed = true;
-    });
-  
-    learnElement.addEventListener("touchstart", () => {
-      handleAnimation(learnscrollIndicator, learnAnimationPlayed);
-      learnAnimationPlayed = true;
-    });
-  }
 
-function toggleMobileMenu() {
-  // Código para mostrar/ocultar el menú móvil
+if (mediaQuery.matches) {
+    storiesBox.addEventListener("touchstart", () => {
+        handleAnimation(storyScrollIndicator, storyAnimationPlayed);
+        storyAnimationPlayed = true;
+    });
+
+    learnElement.addEventListener("touchstart", () => {
+        handleAnimation(learnscrollIndicator, learnAnimationPlayed);
+        learnAnimationPlayed = true;
+    });
+
+    pricesBox.addEventListener("touchstart", () => {
+        handleAnimation(priceScrollIndicator, priceAnimationPlayed);
+        priceAnimationPlayed = true;
+    });
 }
 
+
 // funciones
+
+function toggleMobileMenu() {
+    // Código para mostrar/ocultar el menú móvil
+};
+
 function showSubMenu(id) {
     let subMenu = document.getElementById(id);
     subMenu.style.display = "inline-block";
@@ -191,7 +203,7 @@ const renderSubmenus = arr => {
 const renderStory = arr => {
     for (story of arr) {
         const storyDiv = document.createElement('div');
-        storyDiv.classList.add('story'); 
+        storyDiv.classList.add('story');
 
         const imgStory = document.createElement('img');
         imgStory.classList.add('img-story');
@@ -199,7 +211,7 @@ const renderStory = arr => {
 
         const infoBox = document.createElement('div');
         infoBox.classList.add('square-story');
-        
+
         const nameInfo = document.createElement('h3');
         nameInfo.classList.add('h3-story');
         nameInfo.innerText = story.name;
@@ -227,6 +239,63 @@ const renderStory = arr => {
         storiesBox.appendChild(storyDiv);
     }
 };
+
+const createChecksPrice = arr => {
+    const checkContainer = document.createElement('div');
+    for (check of arr) {
+        const divCheck = document.createElement('div');
+        divCheck.classList.add('detail-price');
+
+        const imgCheck = document.createElement('img');
+        imgCheck.classList.add('chulito');
+        imgCheck.setAttribute('src', check.img);
+
+        const pCheck = document.createElement('p');
+        pCheck.classList.add('p-chulito');
+        pCheck.innerText = check.subject;
+
+        divCheck.appendChild(imgCheck);
+        divCheck.appendChild(pCheck);
+
+        checkContainer.appendChild(divCheck);
+    };
+
+    return checkContainer;
+
+};
+
+const renderPriceBox = arr => {
+    for (price of priceList) {
+        const priceDiv = document.createElement('div');
+        priceDiv.classList.add('story');
+        priceDiv.classList.add('prices-box');
+
+        const boxBorder = document.createElement('div');
+        boxBorder.classList.add('box-border');
+
+        const namePrice = document.createElement('h3');
+        namePrice.classList.add('h2-price');
+        namePrice.innerText = price.plan;
+
+        const priceLabel = document.createElement('div');
+        priceLabel.classList.add('price-border');
+        priceLabel.innerHTML = price.price;
+
+        const priceButton = document.createElement('button');
+        priceButton.classList.add('buy-button');
+        priceButton.innerText = 'Suscríbete';
+
+        boxBorder.appendChild(namePrice);
+        boxBorder.appendChild(createChecksPrice(price.checks));
+        boxBorder.appendChild(priceLabel);
+
+        priceDiv.appendChild(boxBorder);
+        priceDiv.appendChild(priceButton);
+
+        pricesBox.appendChild(priceDiv);
+    }
+};
+
 
 
 // listas
@@ -326,9 +395,45 @@ storyList.push({
 });
 
 
+const priceList = [];
+priceList.push({
+    plan: 'Basic',
+    checks: [
+        { subject: 'Matemáticas', img: '../PNG/TADDUME_CHULITO.png' },
+        { subject: 'Actividades', img: '../PNG/TADDUME_CHULITO.png' }
+    ],
+    price: '$500.000'
+});
+priceList.push({
+    plan: 'Basic',
+    checks: [
+        { subject: 'Matemáticas', img: '../PNG/TADDUME_CHULITO.png' },
+        { subject: 'Actividades', img: '../PNG/TADDUME_CHULITO.png' }
+    ],
+    price: '$500.000'
+});
+priceList.push({
+    plan: 'Basic',
+    checks: [
+        { subject: 'Matemáticas', img: '../PNG/TADDUME_CHULITO.png' },
+        { subject: 'Actividades', img: '../PNG/TADDUME_CHULITO.png' }
+    ],
+    price: '$500.000'
+});
+priceList.push({
+    plan: 'Basic',
+    checks: [
+        { subject: 'Matemáticas', img: '../PNG/TADDUME_CHULITO.png' },
+        { subject: 'Actividades', img: '../PNG/TADDUME_CHULITO.png' }
+    ],
+    price: '$500.000'
+});
+
+
 //ejecuciones de funciones
 renderSubject(subjectList);
 renderSubmenus(menuList);
 renderStory(storyList);
+renderPriceBox(priceList);
 
 
