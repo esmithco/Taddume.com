@@ -1,0 +1,73 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --very-light-gray: #f6f7f9;
+    --dark-gray: darkgray;
+    --text-input-field: #f7f7f7;
+    --hospital-purple: #5e37d1;
+    --yellow: #ffbe1a;
+    --dark-blue: #002337;
+    --sm: 12px;
+    --md: 13px;
+    --lg: 16px;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Zen Maru Gothic", sans-serif;
+    background-color: var(--white);
+}
+
+.inactive {
+    background-color: var(--dark-gray);
+}
+
+
+
+.activity {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.circle {
+    background-color: var(--dark-gray);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.blue-color {
+    background-color: var(--dark-blue);
+}
+
+.yellow-color {
+    background-color: var(--yellow);
+}
+
+.purple-color {
+    background-color: var(--hospital-purple);
+}
+
+.black-color {
+    background-color: var(--black);
+}
+
+.button-options {
+    width: 60px;
+    height: 40px;
+    background-color: var(--white);
+    border: 1px solid var(--yellow);
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+@media (max-width: 450px) {
+    .activity {
+        margin-top: 40%;
+    }
+}

@@ -55,10 +55,6 @@ if (mediaQuery.matches) {
 
 // funciones
 
-function toggleMobileMenu() {
-    // Código para mostrar/ocultar el menú móvil
-};
-
 function showSubMenu(id) {
     let subMenu = document.getElementById(id);
     subMenu.style.display = "inline-block";
@@ -72,7 +68,6 @@ function hideSubMenu(id) {
 function toggleMobileMenu() {
     mobileMenu.classList.toggle('inactive');
     mobileMenu.classList.toggle('active-menu');
-    console.log("quepasa");
 };
 
 function changeImage(imgId1, imgId2, pId) {
