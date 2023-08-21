@@ -310,13 +310,13 @@ subjectList.push({
 subjectList.push({
     img1: '../PNG/TADDUME_ICONOS-12.png',
     img2: '../PNG/TADDUME_ICONOS-14.png',
-    name: 'Matemáticas',
+    name: 'Mate',
     link: '../notWorking/index.html'
 });
 subjectList.push({
     img1: '../PNG/TADDUME_ICONOS-15.png',
     img2: '../PNG/TADDUME_ICONOS-16.png',
-    name: 'Lenguaje',
+    name: 'Lectura',
     link: '../notWorking/index.html'
 });
 subjectList.push({
