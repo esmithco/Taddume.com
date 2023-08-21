@@ -3,8 +3,6 @@ const menuIcon = document.querySelector('.icon-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const navSubjects = document.querySelector('.subjects-learn');
 const ulSubMenus = document.querySelector('.ul-header');
-const storiesBox = document.querySelector('.stories');
-const pricesBox = document.querySelector('.prices-div');
 const learnElement = document.querySelector(".learn");
 
 menuIcon.addEventListener('click', toggleMobileMenu);
@@ -13,12 +11,6 @@ menuIcon.addEventListener('click', toggleMobileMenu);
 const learnscrollIndicator = document.querySelector(".learn-scroll");
 let learnAnimationPlayed = false;
 
-
-const storyScrollIndicator = document.querySelector(".stories-scroll");
-let storyAnimationPlayed = false;
-
-const priceScrollIndicator = document.querySelector(".prices-scroll");
-let priceAnimationPlayed = false;
 
 const mediaQuery = window.matchMedia('(max-width: 450px)');
 
@@ -36,19 +28,9 @@ const handleAnimation = (scrollIndicator, animationPlayed) => {
 };
 
 if (mediaQuery.matches) {
-    storiesBox.addEventListener("touchstart", () => {
-        handleAnimation(storyScrollIndicator, storyAnimationPlayed);
-        storyAnimationPlayed = true;
-    });
-
     learnElement.addEventListener("touchstart", () => {
         handleAnimation(learnscrollIndicator, learnAnimationPlayed);
         learnAnimationPlayed = true;
-    });
-
-    pricesBox.addEventListener("touchstart", () => {
-        handleAnimation(priceScrollIndicator, priceAnimationPlayed);
-        priceAnimationPlayed = true;
     });
 }
 
@@ -195,136 +177,9 @@ const renderSubmenus = arr => {
     };
 };
 
-const renderStory = arr => {
-    for (story of arr) {
-        const storyDiv = document.createElement('div');
-        storyDiv.classList.add('story');
-
-        const imgStory = document.createElement('img');
-        imgStory.classList.add('img-story');
-        imgStory.setAttribute('src', story.img);
-
-        const infoBox = document.createElement('div');
-        infoBox.classList.add('square-story');
-
-        const nameInfo = document.createElement('h3');
-        nameInfo.classList.add('h3-story');
-        nameInfo.innerText = story.name;
-
-        const gradeInfo = document.createElement('p');
-        gradeInfo.classList.add('p-details');
-        gradeInfo.innerText = story.grade;
-
-        const countryInfo = document.createElement('p');
-        countryInfo.classList.add('p-details');
-        countryInfo.innerText = story.country;
-
-        const commentInfo = document.createElement('p');
-        commentInfo.classList.add('p-story');
-        commentInfo.innerText = story.comment;
-
-        infoBox.appendChild(nameInfo);
-        infoBox.appendChild(gradeInfo);
-        infoBox.appendChild(countryInfo);
-        infoBox.appendChild(commentInfo);
-
-        storyDiv.appendChild(imgStory);
-        storyDiv.appendChild(infoBox);
-
-        storiesBox.appendChild(storyDiv);
-    }
-};
-
-const createChecksPrice = arr => {
-    const checkContainer = document.createElement('div');
-    for (check of arr) {
-        const divCheck = document.createElement('div');
-        divCheck.classList.add('detail-price');
-
-        const imgCheck = document.createElement('img');
-        imgCheck.classList.add('chulito');
-        imgCheck.setAttribute('src', check.img);
-
-        const pCheck = document.createElement('p');
-        pCheck.classList.add('p-chulito');
-        pCheck.innerText = check.subject;
-
-        divCheck.appendChild(imgCheck);
-        divCheck.appendChild(pCheck);
-
-        checkContainer.appendChild(divCheck);
-    };
-
-    return checkContainer;
-
-};
-
-const renderPriceBox = arr => {
-    for (price of priceList) {
-        const priceDiv = document.createElement('div');
-        priceDiv.classList.add('story');
-        priceDiv.classList.add('prices-box');
-
-        const boxBorder = document.createElement('div');
-        boxBorder.classList.add('box-border');
-
-        const namePrice = document.createElement('h3');
-        namePrice.classList.add('h2-price');
-        namePrice.innerText = price.plan;
-
-        const priceLabel = document.createElement('div');
-        priceLabel.classList.add('price-border');
-        priceLabel.innerHTML = price.price;
-
-        const priceButton = document.createElement('button');
-        priceButton.classList.add('buy-button');
-        priceButton.innerText = 'Suscríbete';
-
-        boxBorder.appendChild(namePrice);
-        boxBorder.appendChild(createChecksPrice(price.checks));
-        boxBorder.appendChild(priceLabel);
-
-        priceDiv.appendChild(boxBorder);
-        priceDiv.appendChild(priceButton);
-
-        pricesBox.appendChild(priceDiv);
-    }
-};
-
 
 
 // listas
-const subjectList = [];
-subjectList.push({
-    img1: '../PNG/TADDUME_ICONOS-08.png',
-    img2: '../PNG/TADDUME_ICONOS-09.png',
-    name: 'Química',
-    link: '../notWorking/index.html'
-});
-subjectList.push({
-    img1: '../PNG/TADDUME_ICONOS-11.png',
-    img2: '../PNG/TADDUME_ICONOS-13.png',
-    name: 'Física',
-    link: '../notWorking/index.html'
-});
-subjectList.push({
-    img1: '../PNG/TADDUME_ICONOS-12.png',
-    img2: '../PNG/TADDUME_ICONOS-14.png',
-    name: 'Matemáticas',
-    link: '../notWorking/index.html'
-});
-subjectList.push({
-    img1: '../PNG/TADDUME_ICONOS-15.png',
-    img2: '../PNG/TADDUME_ICONOS-16.png',
-    name: 'Lenguaje',
-    link: '../notWorking/index.html'
-});
-subjectList.push({
-    img1: '../PNG/TADDUME_ICONOS-17.png',
-    img2: '../PNG/TADDUME_ICONOS-18.png',
-    name: 'Estadística',
-    link: '../notWorking/index.html'
-});
 
 
 const menuList = [];
@@ -365,70 +220,17 @@ menuList.push({
     ],
 });
 
-
-const storyList = [];
-storyList.push({
-    img: '../PNG/TADDUME_TESTIMONIAL.png',
-    name: 'Brayan',
-    grade: 9,
-    country: 'Colombia',
-    comment: 'orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet'
-});
-storyList.push({
-    img: '../PNG/TADDUME_TESTIMONIAL.png',
-    name: 'Daniela',
-    grade: 10,
-    country: 'Chile',
-    comment: 'orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet'
-});
-storyList.push({
-    img: '../PNG/TADDUME_TESTIMONIAL.png',
-    name: 'Nala',
-    grade: 11,
-    country: 'Ecuador',
-    comment: 'orem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet'
-});
-
-
-const priceList = [];
-priceList.push({
-    plan: 'Basic',
-    checks: [
-        { subject: 'Matemáticas', img: '../PNG/TADDUME_CHULITO.png' },
-        { subject: 'Actividades', img: '../PNG/TADDUME_CHULITO.png' }
-    ],
-    price: '$500.000'
-});
-priceList.push({
-    plan: 'Basic',
-    checks: [
-        { subject: 'Matemáticas', img: '../PNG/TADDUME_CHULITO.png' },
-        { subject: 'Actividades', img: '../PNG/TADDUME_CHULITO.png' }
-    ],
-    price: '$500.000'
-});
-priceList.push({
-    plan: 'Basic',
-    checks: [
-        { subject: 'Matemáticas', img: '../PNG/TADDUME_CHULITO.png' },
-        { subject: 'Actividades', img: '../PNG/TADDUME_CHULITO.png' }
-    ],
-    price: '$500.000'
-});
-priceList.push({
-    plan: 'Basic',
-    checks: [
-        { subject: 'Matemáticas', img: '../PNG/TADDUME_CHULITO.png' },
-        { subject: 'Actividades', img: '../PNG/TADDUME_CHULITO.png' }
-    ],
-    price: '$500.000'
+const subjectList = [];
+subjectList.push({
+    img1: '../PNG/TADDUME_ICONOS-12.png',
+    img2: '../PNG/TADDUME_ICONOS-14.png',
+    name: 'Matemáticas',
+    link: '../notWorking/index.html'
 });
 
 
 //ejecuciones de funciones
 renderSubject(subjectList);
 renderSubmenus(menuList);
-renderStory(storyList);
-renderPriceBox(priceList);
 
 
