@@ -428,6 +428,6 @@ priceList.push({
 renderSubject(subjectList);
 renderSubmenus(menuList);
 renderStory(storyList);
-renderPriceBox(priceList);
+renderPriceBox(priceList); 
 
 
