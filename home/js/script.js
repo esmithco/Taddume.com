@@ -349,7 +349,7 @@ subjectList.push({
 subjectList.push({
     img1: '../PNG/TADDUME_ICONOS-12.png',
     img2: '../PNG/TADDUME_ICONOS-14.png',
-    name: 'Mates',
+    name: 'Matemáticas',
     link: '../notWorking/index.html'
 });
 subjectList.push({

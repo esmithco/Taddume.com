@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Círculo Dividido en Triángulos</title>
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .circulo {
+    width: 200px; /* Diámetro del círculo */
+    height: 200px; /* Diámetro del círculo */
+    position: relative;
+    background-color: transparent;
+    border-radius: 50%; /* Hace que el div tenga bordes redondeados para formar un círculo */
+  }
+
+  .triangulo {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: bottom center;
+    background-color: transparent;
+  }
+
+  .triangulo:nth-child(1) {
+    transform: rotate(60deg);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid #3498db; /* Color del triángulo */
+  }
+
+  .triangulo:nth-child(2) {
+    transform: rotate(60deg);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid #e74c3c; /* Color del triángulo */
+  }
+
+  .triangulo:nth-child(3) {
+    transform: rotate(60deg);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid #27ae60; /* Color del triángulo */
+  }
+
+  .triangulo:nth-child(4) {
+    transform: rotate(60deg);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid #f39c12; /* Color del triángulo */
+  }
+
+  .triangulo:nth-child(5) {
+    transform: rotate(60deg);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid #9b59b6; /* Color del triángulo */
+  }
+</style>
+</head>
+<body>
+  <div class="circulo">
+    <div class="triangulo"></div>
+    <div class="triangulo"></div>
+    <div class="triangulo"></div>
+    <div class="triangulo"></div>
+    <div class="triangulo"></div>
+  </div>
+</body>
+</html>
