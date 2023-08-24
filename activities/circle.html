@@ -5,76 +5,83 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Círculo Dividido en Triángulos</title>
 <style>
-  body {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-  }
 
-  .circulo {
-    width: 200px; /* Diámetro del círculo */
-    height: 200px; /* Diámetro del círculo */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --very-light-gray: #f6f7f9;
+  --text-input-field: #f7f7f7;
+  --hospital-purple: #5e37d1;
+  --yellow: #ffbe1a;
+  --dark-blue: #002337;
+  --diameter: 300px;
+  --heigth: calc( calc(var(--diameter) - 20px) / 2);
+  --lg: 16px;
+}
+
+.circle {
     position: relative;
-    background-color: transparent;
-    border-radius: 50%; /* Hace que el div tenga bordes redondeados para formar un círculo */
-  }
+    width: var(--diameter);
+    height: var(--diameter);
+    background-color: gray;
+    border-radius: 50%;
+}
 
-  .triangulo {
+.triangle-tip {
+    position: relative;
+    top: 0;
+    left: 50%;
     width: 0;
     height: 0;
+    border: solid;
+    border-width: calc(var(--diameter)/2) calc(var(--diameter)/2) calc(var(--diameter)/2) calc(var(--diameter)/2);
+    border-color: red blue black green;
+    border-radius: 50%;
+}
+
+.cono {
     position: absolute;
-    top: 0;
-    left: 0;
-    transform-origin: bottom center;
-    background-color: transparent;
-  }
+    width: 0;
+    height: 0;
+    border: solid;
+    border-width: var(--heigth) var(--heigth) var(--heigth) var(--heigth);
+    border-color: red transparent transparent transparent;
+    border-radius: 50%;
+}
 
-  .triangulo:nth-child(1) {
-    transform: rotate(60deg);
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 200px solid #3498db; /* Color del triángulo */
-  }
+.uno {
+    top: 4px;
+    left: 10px;
+}
+.dos {
+    top: 8px;
+    right: 6px;
+    rotate: 90deg;
+}
 
-  .triangulo:nth-child(2) {
-    transform: rotate(60deg);
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 200px solid #e74c3c; /* Color del triángulo */
-  }
+.tres {
+    rotate: 180deg;
+    bottom: 6px;
+    left: 10px;
+}
 
-  .triangulo:nth-child(3) {
-    transform: rotate(60deg);
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 200px solid #27ae60; /* Color del triángulo */
-  }
+.cuatro {
+    rotate: 270deg;
+    top: 8px;
+    left: 6px;
+}
 
-  .triangulo:nth-child(4) {
-    transform: rotate(60deg);
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 200px solid #f39c12; /* Color del triángulo */
-  }
-
-  .triangulo:nth-child(5) {
-    transform: rotate(60deg);
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 200px solid #9b59b6; /* Color del triángulo */
-  }
 </style>
 </head>
 <body>
-  <div class="circulo">
-    <div class="triangulo"></div>
-    <div class="triangulo"></div>
-    <div class="triangulo"></div>
-    <div class="triangulo"></div>
-    <div class="triangulo"></div>
+        <div class="triangle-tip"></div>
+
+        <div class="circle">
+        <div class="cono uno"></div>
+        <div class="cono dos"></div>
+        <div class="cono tres"></div>
+        <div class="cono cuatro"></div>
+    </div>
   </div>
 </body>
 </html>

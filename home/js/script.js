@@ -86,7 +86,7 @@ const createMenuLinks = arr => {
     const linksContainer = document.createElement('ul');
     for (link of arr) {
         const aLink = document.createElement('a');
-        aLink.setAttribute('href', link.enlHerf)
+        aLink.setAttribute('href', link.enlHref)
         aLink.innerText = link.enlName;
 
         const liMenu = document.createElement('li');
@@ -299,10 +299,10 @@ const menuList = [];
 menuList.push({
     name: "Contáctanos",
     links: [
-        { enlName: "Instagram", enlHref: "/" },
-        { enlName: "Facebook", enlHref: "/" },
-        { enlName: "LinkedIn", enlHref: "/" },
-        { enlName: "Gmail", enlHref: "/" },
+        { enlName: "Instagram", enlHref: "https://www.instagram.com/taddume/" },
+        { enlName: "Twitter", enlHref: "https://twitter.com/taddume" },
+        { enlName: "LinkedIn", enlHref: "https://www.linkedin.com/company/taddume-sas/about/?viewAsMember=true" },
+        { enlName: "Gmail", enlHref: "https://www.instagram.com/taddume/" },
     ],
 });
 menuList.push({
