@@ -1,87 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Círculo Dividido en Triángulos</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Círculo Dividido en Triángulos</title>
+    <style>
+        :root {
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-gray: #f6f7f9;
+            --text-input-field: #f7f7f7;
+            --hospital-purple: #5e37d1;
+            --yellow: #ffbe1a;
+            --dark-blue: #002337;
+            --diameter: 300px;
+            --heigth: calc(calc(var(--diameter) - 20px) / 2);
+            --lg: 16px;
+        }
 
-:root {
-  --white: #ffffff;
-  --black: #000000;
-  --very-light-gray: #f6f7f9;
-  --text-input-field: #f7f7f7;
-  --hospital-purple: #5e37d1;
-  --yellow: #ffbe1a;
-  --dark-blue: #002337;
-  --diameter: 300px;
-  --heigth: calc( calc(var(--diameter) - 20px) / 2);
-  --lg: 16px;
-}
+        .circle {
+            position: relative;
+            width: var(--diameter);
+            height: var(--diameter);
+            background-color: gray;
+            border-radius: 50%;
+        }
 
-.circle {
-    position: relative;
-    width: var(--diameter);
-    height: var(--diameter);
-    background-color: gray;
-    border-radius: 50%;
-}
+        .triangle-tip {
+            position: relative;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: solid;
+            border-width: calc(var(--diameter)/2) calc(var(--diameter)/2) calc(var(--diameter)/2) calc(var(--diameter)/2);
+            border-color: red blue black green;
+            border-radius: 50%;
+        }
 
-.triangle-tip {
-    position: relative;
-    top: 0;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border: solid;
-    border-width: calc(var(--diameter)/2) calc(var(--diameter)/2) calc(var(--diameter)/2) calc(var(--diameter)/2);
-    border-color: red blue black green;
-    border-radius: 50%;
-}
+        .cono {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: solid;
+            border-width: var(--heigth) var(--heigth) var(--heigth) var(--heigth);
+            border-color: red transparent transparent transparent;
+            border-radius: 50%;
+        }
 
-.cono {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: solid;
-    border-width: var(--heigth) var(--heigth) var(--heigth) var(--heigth);
-    border-color: red transparent transparent transparent;
-    border-radius: 50%;
-}
+        .uno {
+            top: 4px;
+            left: 10px;
+        }
 
-.uno {
-    top: 4px;
-    left: 10px;
-}
-.dos {
-    top: 8px;
-    right: 6px;
-    rotate: 90deg;
-}
+        .dos {
+            top: 8px;
+            right: 6px;
+            rotate: 90deg;
+        }
 
-.tres {
-    rotate: 180deg;
-    bottom: 6px;
-    left: 10px;
-}
+        .tres {
+            rotate: 180deg;
+            bottom: 6px;
+            left: 10px;
+        }
 
-.cuatro {
-    rotate: 270deg;
-    top: 8px;
-    left: 6px;
-}
-
-</style>
+        .cuatro {
+            rotate: 270deg;
+            top: 8px;
+            left: 6px;
+        }
+    </style>
 </head>
-<body>
-        <div class="triangle-tip"></div>
 
-        <div class="circle">
+<body>
+    <div class="triangle-tip"></div>
+
+    <div class="circle">
         <div class="cono uno"></div>
         <div class="cono dos"></div>
         <div class="cono tres"></div>
         <div class="cono cuatro"></div>
     </div>
-  </div>
 </body>
+
 </html>
