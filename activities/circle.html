@@ -27,17 +27,6 @@
     border-radius: 50%;
 }
 
-.triangle-tip {
-    position: relative;
-    top: 0;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border: solid;
-    border-width: calc(var(--diameter)/2) calc(var(--diameter)/2) calc(var(--diameter)/2) calc(var(--diameter)/2);
-    border-color: red blue black green;
-    border-radius: 50%;
-}
 
 .cono {
     position: absolute;
@@ -45,43 +34,90 @@
     height: 0;
     border: solid;
     border-width: var(--heigth) var(--heigth) var(--heigth) var(--heigth);
-    border-color: red transparent transparent transparent;
+    border-color: var(--white) transparent transparent transparent;
     border-radius: 50%;
 }
 
-.uno {
-    top: 4px;
+.button {
+    position: absolute;
+    background-color: transparent;
+    z-index: 10;
+    width: calc( var(--heigth) - 30px);
+    height: calc( var(--heigth) - 30px);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.b-uno {
+    top: 5px;
+    left: 90px;
+}
+
+.b-dos {
+    top: 95px;
+    right: 5px;
+  }
+
+  .b-tres {
+    bottom: 5px;
+    left: 90px;
+  }
+
+  .b-cuatro {
+    top: 95px;
+    left: 5px;
+  }
+
+.uno{
+    top: 5px;
     left: 10px;
 }
 .dos {
-    top: 8px;
-    right: 6px;
+    top: 10px;
+    right: 5px;
     rotate: 90deg;
 }
 
 .tres {
     rotate: 180deg;
-    bottom: 6px;
+    bottom: 5px;
     left: 10px;
 }
 
 .cuatro {
     rotate: 270deg;
-    top: 8px;
-    left: 6px;
+    top: 10px;
+    left: 5px;
+}
+
+.color-cono {
+    border-color: var(--dark-blue) transparent transparent transparent;
 }
 
 </style>
 </head>
 <body>
-        <div class="triangle-tip"></div>
+    <div class="circle">
+        <button class="button b-uno" onclick="changeColor('uno')"></button>
+        <div class="cono uno" id="uno"></div>
+    
+        <button class="button b-dos" onclick="changeColor('dos')"></button>
+        <div class="cono dos" id="dos"></div>
+    
+        <button class="button b-tres" onclick="changeColor('tres')"></button>
+        <div class="cono tres" id="tres"></div>
+    
+        <button class="button b-cuatro" onclick="changeColor('cuatro')"></button>
+        <div class="cono cuatro" id="cuatro"></div>
+      </div>
 
-        <div class="circle">
-        <div class="cono uno"></div>
-        <div class="cono dos"></div>
-        <div class="cono tres"></div>
-        <div class="cono cuatro"></div>
-    </div>
+    <script>
+        function changeColor(id) {
+            const cono = document.getElementById(id);
+            cono.classList.toggle('color-cono');
+        }
+    </script>
   </div>
 </body>
 </html>
