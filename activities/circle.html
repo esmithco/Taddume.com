@@ -14,9 +14,9 @@
             --hospital-purple: #5e37d1;
             --yellow: #ffbe1a;
             --dark-blue: #002337;
-            --diameter: 300px;
+            --diameter: 200px;
             --heigth: calc(calc(var(--diameter) - 20px) / 2);
-            --lg: 16px;
+            --size-button: calc(var(--heigth) - calc(var(--diameter)/10));
         }
 
         .circle {
@@ -27,102 +27,91 @@
             border-radius: 50%;
         }
 
-        .triangle-tip {
-            position: relative;
-            top: 0;
-            left: 50%;
+
+        .cono {
+            position: absolute;
             width: 0;
             height: 0;
             border: solid;
-            border-width: calc(var(--diameter)/2) calc(var(--diameter)/2) calc(var(--diameter)/2) calc(var(--diameter)/2);
-            border-color: red blue black green;
+            border-width: var(--heigth) var(--heigth) var(--heigth) var(--heigth);
+            border-color: var(--white) transparent transparent transparent;
             border-radius: 50%;
         }
 
+        .button {
+            position: absolute;
+            background-color: transparent;
+            z-index: 10;
+            width: var(--size-button);
+            height: var(--size-button);
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
 
-.cono {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: solid;
-    border-width: var(--heigth) var(--heigth) var(--heigth) var(--heigth);
-    border-color: var(--white) transparent transparent transparent;
-    border-radius: 50%;
-}
+        .b-uno {
+            top: 8px;
+            left: calc(50% - calc(var(--size-button) / 2 ) );
+        }
 
-.button {
-    position: absolute;
-    background-color: transparent;
-    z-index: 10;
-    width: calc( var(--heigth) - 30px);
-    height: calc( var(--heigth) - 30px);
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-}
+        .b-dos {
+            top: calc(50% - calc(var(--size-button) / 2 ) );
+            right: 8px;
+        }
 
-.b-uno {
-    top: 5px;
-    left: 90px;
-}
+        .b-tres {
+            bottom: 8px;
+            left: calc(50% - calc(var(--size-button) / 2 ) );
+        }
 
-.b-dos {
-    top: 95px;
-    right: 5px;
-  }
+        .b-cuatro {
+            top: calc(50% - calc(var(--size-button) / 2 ) );
+            left: 8px;
+        }
 
-  .b-tres {
-    bottom: 5px;
-    left: 90px;
-  }
+        .uno {
+            top: 5px;
+            left: 10px;
+        }
 
-  .b-cuatro {
-    top: 95px;
-    left: 5px;
-  }
+        .dos {
+            top: 10px;
+            right: 5px;
+            rotate: 90deg;
+        }
 
-.uno{
-    top: 5px;
-    left: 10px;
-}
-.dos {
-    top: 10px;
-    right: 5px;
-    rotate: 90deg;
-}
+        .tres {
+            rotate: 180deg;
+            bottom: 5px;
+            left: 10px;
+        }
 
-.tres {
-    rotate: 180deg;
-    bottom: 5px;
-    left: 10px;
-}
+        .cuatro {
+            rotate: 270deg;
+            top: 10px;
+            left: 5px;
+        }
 
-.cuatro {
-    rotate: 270deg;
-    top: 10px;
-    left: 5px;
-}
-
-.color-cono {
-    border-color: var(--dark-blue) transparent transparent transparent;
-}
-
-</style>
+        .color-cono {
+            border-color: var(--dark-blue) transparent transparent transparent;
+        }
+    </style>
 </head>
+
 <body>
     <div class="circle">
         <button class="button b-uno" onclick="changeColor('uno')"></button>
         <div class="cono uno" id="uno"></div>
-    
+
         <button class="button b-dos" onclick="changeColor('dos')"></button>
         <div class="cono dos" id="dos"></div>
-    
+
         <button class="button b-tres" onclick="changeColor('tres')"></button>
         <div class="cono tres" id="tres"></div>
-    
+
         <button class="button b-cuatro" onclick="changeColor('cuatro')"></button>
         <div class="cono cuatro" id="cuatro"></div>
-      </div>
+    </div>
 
     <script>
         function changeColor(id) {
@@ -130,7 +119,7 @@
             cono.classList.toggle('color-cono');
         }
     </script>
-  </div>
+    </div>
 </body>
 
 </html>

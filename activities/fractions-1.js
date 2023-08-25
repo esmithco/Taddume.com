@@ -1,5 +1,6 @@
 const buttonOptions = document.querySelectorAll('.button-options');
 const circle = document.querySelector('.circle');
+const circle2 = document.querySelector('.circle-2');
 
 buttonOptions.forEach((buttonOption) => {
   buttonOption.addEventListener('click', divideCircle);
@@ -14,6 +15,7 @@ function divideCircle(event) {
     circle.classList.remove('yellow-color');
     circle.classList.remove('purple-color');
     circle.classList.remove('black-color');
+    circle2.classList.toggle('c-none');
   } else if (parts === 5) {
     circle.classList.remove('blue-color');
     circle.classList.toggle('yellow-color');
@@ -30,4 +32,9 @@ function divideCircle(event) {
     circle.classList.remove('purple-color');
     circle.classList.toggle('black-color');
   } 
+}
+
+function changeColor(id) {
+    const cono = document.getElementById(id);
+    cono.classList.toggle('color-cono');
 }

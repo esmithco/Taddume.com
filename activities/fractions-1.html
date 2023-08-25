@@ -5,12 +5,28 @@
     <script src="fractions-1.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../PNG/TADDUME_LOGO-SOLO-COLOR-MORADO.png" type="image/x-icon" />
     <title>Fracción 1</title>
 </head>
 <body>
     <section class="activity">
         <h2>Selecciona 4/5 partes del siguiente circulo</h2>
-        <div class="circle"></div>
+        <div class="circle-box">
+            <div class="circle-2"></div>
+            <div class="circle">
+                <button class="button b-uno" onclick="changeColor('uno')"></button>
+                <div class="cono uno" id="uno"></div>
+        
+                <button class="button b-dos" onclick="changeColor('dos')"></button>
+                <div class="cono dos" id="dos"></div>
+        
+                <button class="button b-tres" onclick="changeColor('tres')"></button>
+                <div class="cono tres" id="tres"></div>
+        
+                <button class="button b-cuatro" onclick="changeColor('cuatro')"></button>
+                <div class="cono cuatro" id="cuatro"></div>
+            </div>
+        </div>
 
         <div class="options">
             <h3>Dividir el círculo en</h3>
@@ -21,6 +37,5 @@
           </div>
     </section>
 
-    <a href="circle.html">prueba de 4</a>
 </body>
 </html>

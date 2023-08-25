@@ -2,14 +2,13 @@
     --white: #ffffff;
     --black: #000000;
     --very-light-gray: #f6f7f9;
-    --dark-gray: darkgray;
     --text-input-field: #f7f7f7;
     --hospital-purple: #5e37d1;
     --yellow: #ffbe1a;
     --dark-blue: #002337;
-    --sm: 12px;
-    --md: 13px;
-    --lg: 16px;
+    --diameter: 200px;
+    --heigth: calc(calc(var(--diameter) - 20px) / 2);
+    --size-button: calc(var(--heigth) - calc(var(--diameter)/10));
 }
 
 body {
@@ -23,7 +22,18 @@ body {
     background-color: var(--dark-gray);
 }
 
+.circle-2 {
+    width: var(--diameter);
+    height: var(--diameter);
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
 
+.c-none {
+    display: none;
+}
 
 .activity {
     margin-top: 10%;
@@ -35,9 +45,10 @@ body {
 }
 
 .circle {
-    background-color: var(--dark-gray);
-    width: 200px;
-    height: 200px;
+    position: relative;
+    width: var(--diameter);
+    height: var(--diameter);
+    background-color: gray;
     border-radius: 50%;
 }
 
@@ -64,6 +75,74 @@ body {
     border: 1px solid var(--yellow);
     cursor: pointer;
     border-radius: 8px;
+}
+
+.cono {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid;
+    border-width: var(--heigth) var(--heigth) var(--heigth) var(--heigth);
+    border-color: var(--white) transparent transparent transparent;
+    border-radius: 50%;
+}
+
+.button {
+    position: absolute;
+    background-color: transparent;
+    z-index: 10;
+    width: var(--size-button);
+    height: var(--size-button);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.b-uno {
+    top: 8px;
+    left: calc(50% - calc(var(--size-button) / 2 ) );
+}
+
+.b-dos {
+    top: calc(50% - calc(var(--size-button) / 2 ) );
+    right: 8px;
+}
+
+.b-tres {
+    bottom: 8px;
+    left: calc(50% - calc(var(--size-button) / 2 ) );
+}
+
+.b-cuatro {
+    top: calc(50% - calc(var(--size-button) / 2 ) );
+    left: 8px;
+}
+
+.uno {
+    top: 5px;
+    left: 10px;
+}
+
+.dos {
+    top: 10px;
+    right: 5px;
+    rotate: 90deg;
+}
+
+.tres {
+    rotate: 180deg;
+    bottom: 5px;
+    left: 10px;
+}
+
+.cuatro {
+    rotate: 270deg;
+    top: 10px;
+    left: 5px;
+}
+
+.color-cono {
+    border-color: var(--dark-blue) transparent transparent transparent;
 }
 
 @media (max-width: 450px) {
