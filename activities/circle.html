@@ -15,7 +15,7 @@
             --yellow: #ffbe1a;
             --dark-blue: #002337;
             --diameter: 500px;
-            --height: calc(calc(var(--diameter) / 2) - 0px);
+            --height: calc(calc(var(--diameter) / 2) );
             --size-button: calc(2 * var(--height)*0.37);
         }
 
@@ -25,7 +25,6 @@
             height: var(--diameter);
             background-color: red;
             border-radius: 50%;
-            overflow: hidden;
         }
 
 
@@ -41,9 +40,8 @@
         .button {
             position: absolute;
             background-color: black;
-            z-index: 10;
-            width: var(--size-button);
-            height: var(--size-button);
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             cursor: pointer;
             border: none;
@@ -51,32 +49,29 @@
         }
 
         .b-uno {
-            top: 0;
-            left: calc(50% - calc(var(--size-button) / 2 ) );
+            top: calc((var(--diameter) / 2)* ( 1 - 1) ) ;
+            right: calc((var(--diameter) / 2)* ( 1 - 0));
         }
 
         .b-dos {
-            top: calc(40% - calc(var(--size-button) / 2 ) );
-            left: calc(80% - calc(var(--size-button) / 2 ));
+            top: calc(((var(--diameter) / 2) * ( 1 - 0.31)) );
+            right: calc((var(--diameter) / 2) * ( 1 - 0.95) );
         }
 
         .b-tres {
-            bottom: calc(25% - calc(var(--size-button) / 2 ) );
-            left: calc(68% - calc(var(--size-button) / 2 ));
+            bottom: calc((var(--diameter) / 2)* ( 1 - 0.80) );
+            right: calc((var(--diameter) / 2)* ( 1 - 0.58));
         }
 
-        .b-cuatro {
-            bottom: calc(25% - calc(var(--size-button) / 2 ) );
-            left: calc(32% - calc(var(--size-button) / 2 ) );
-        }
+        
 
-        .b-cinco {
-            top: calc(40% - calc(var(--size-button) / 2 ) );
-            left: calc(20% - calc(var(--size-button) / 2 ) );
-        }
-       
-        .uno, .dos, .tres, .cuatro, .cinco {
-            left: calc(50% - calc(var(--height) * 0.75) );
+
+        .uno,
+        .dos,
+        .tres,
+        .cuatro,
+        .cinco {
+            left: calc(50% - calc(var(--height) * 0.75));
         }
 
         .dos {
@@ -104,20 +99,19 @@
 
 <body>
     <div class="circle">
-        <button class="button b-uno" onclick="changeColor('uno')"></button>
+
         <div class="cono uno" id="uno"></div>
-
-        <button class="button b-dos" onclick="changeColor('dos')"></button>
         <div class="cono dos" id="dos"></div>
-
-        <button class="button b-tres" onclick="changeColor('tres')"></button>
         <div class="cono tres" id="tres"></div>
-
-        <button class="button b-cuatro" onclick="changeColor('cuatro')"></button>
         <div class="cono cuatro" id="cuatro"></div>
-
-        <button class="button b-cinco" onclick="changeColor('cinco')"></button>
         <div class="cono cinco" id="cinco"></div>
+
+        <button class="button b-uno" onclick="changeColor('uno')"></button>
+        <button class="button b-dos" onclick="changeColor('dos')"></button>
+        <button class="button b-tres" onclick="changeColor('tres')"></button>
+        <button class="button b-cuatro" onclick="changeColor('cuatro')"></button>
+        <button class="button b-cinco" onclick="changeColor('cinco')"></button>
+
     </div>
 
     <script>

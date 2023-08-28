@@ -7,8 +7,8 @@
     --yellow: #ffbe1a;
     --dark-blue: #002337;
     --diameter: 200px;
-    --heigth: calc(calc(var(--diameter) / 2) - 2px);
-    --size-button: calc(var(--heigth) * 0.75);
+    --height: calc(calc(var(--diameter) / 2) - 2px);
+    --size-button: calc(2 * var(--height)*0.37);
 }
 
 body {
@@ -83,7 +83,7 @@ body {
     width: 0;
     height: 0;
     border: solid;
-    border-width: var(--heigth) var(--heigth) var(--heigth) var(--heigth);
+    border-width: var(--height) var(--height) var(--height) var(--height);
     border-color: var(--white) transparent transparent transparent;
     border-radius: 50%;
 }
@@ -115,13 +115,13 @@ body {
 }
 
 .b-cuatro {
-    top: calc(50% - calc(var(--size-button) / 2 ) );
+    top: 0;
     left: 8px;
 }
 
 .uno, .dos, .tres, .cuatro {
     top: 2px;
-    left: calc(50% - var(--heigth) );
+    left: calc(50% - var(--height) );
 }
 
 .dos {
