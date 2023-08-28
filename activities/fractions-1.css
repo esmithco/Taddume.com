@@ -7,8 +7,8 @@
     --yellow: #ffbe1a;
     --dark-blue: #002337;
     --diameter: 200px;
-    --heigth: calc(calc(var(--diameter) - 20px) / 2);
-    --size-button: calc(var(--heigth) - calc(var(--diameter)/10));
+    --heigth: calc(calc(var(--diameter) / 2) - 2px);
+    --size-button: calc(var(--heigth) * 0.75);
 }
 
 body {
@@ -25,7 +25,7 @@ body {
 .circle-2 {
     width: var(--diameter);
     height: var(--diameter);
-    background-color: gray;
+    background-color: var(--yellow);
     border-radius: 50%;
     position: absolute;
     z-index: 1;
@@ -50,10 +50,11 @@ body {
     height: var(--diameter);
     background-color: gray;
     border-radius: 50%;
+    overflow: hidden;
 }
 
 .blue-color {
-    background-color: var(--dark-blue);
+    background-color: var(--yellow);
 }
 
 .yellow-color {
@@ -118,31 +119,25 @@ body {
     left: 8px;
 }
 
-.uno {
-    top: 5px;
-    left: 10px;
+.uno, .dos, .tres, .cuatro {
+    top: 2px;
+    left: calc(50% - var(--heigth) );
 }
 
 .dos {
-    top: 10px;
-    right: 5px;
-    rotate: 90deg;
+    transform: rotate(90deg);
 }
 
 .tres {
-    rotate: 180deg;
-    bottom: 5px;
-    left: 10px;
+    transform: rotate(180deg);
 }
 
 .cuatro {
-    rotate: 270deg;
-    top: 10px;
-    left: 5px;
+    transform: rotate(270deg);
 }
 
 .color-cono {
-    border-color: var(--dark-blue) transparent transparent transparent;
+    border-color: var(--yellow) transparent transparent transparent;
 }
 
 @media (max-width: 450px) {

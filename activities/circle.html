@@ -14,16 +14,16 @@
             --hospital-purple: #5e37d1;
             --yellow: #ffbe1a;
             --dark-blue: #002337;
-            --diameter: 200px;
-            --heigth: calc(calc(var(--diameter) - 20px) / 2);
-            --size-button: calc(var(--heigth) - calc(var(--diameter)/10));
+            --diameter: 500px;
+            --heigth: calc(calc(var(--diameter) / 2) - 0px);
+            --size-button: calc((var(--diameter))*0.38);
         }
 
         .circle {
             position: relative;
             width: var(--diameter);
             height: var(--diameter);
-            background-color: gray;
+            background-color: red;
             border-radius: 50%;
         }
 
@@ -33,67 +33,70 @@
             width: 0;
             height: 0;
             border: solid;
-            border-width: var(--heigth) var(--heigth) var(--heigth) var(--heigth);
-            border-color: var(--white) transparent transparent transparent;
-            border-radius: 50%;
+            border-width: var(--heigth) calc(var(--heigth) * 0.75) var(--heigth) calc(var(--heigth) * 0.75);
+            border-color: transparent transparent transparent transparent;
         }
 
         .button {
             position: absolute;
-            background-color: transparent;
+            background-color: black;
             z-index: 10;
             width: var(--size-button);
             height: var(--size-button);
             border-radius: 50%;
             cursor: pointer;
             border: none;
+            padding: 0;
         }
 
         .b-uno {
-            top: 8px;
+            top: 0;
             left: calc(50% - calc(var(--size-button) / 2 ) );
         }
 
         .b-dos {
-            top: calc(50% - calc(var(--size-button) / 2 ) );
-            right: 8px;
+            top: calc(40% - calc(var(--size-button) / 2 ) );
+            left: calc(80% - calc(var(--size-button) / 2 ));
         }
 
         .b-tres {
-            bottom: 8px;
-            left: calc(50% - calc(var(--size-button) / 2 ) );
+            bottom: calc(25% - calc(var(--size-button) / 2 ) );
+            left: calc(68% - calc(var(--size-button) / 2 ));
         }
 
         .b-cuatro {
-            top: calc(50% - calc(var(--size-button) / 2 ) );
-            left: 8px;
+            bottom: calc(25% - calc(var(--size-button) / 2 ) );
+            left: calc(32% - calc(var(--size-button) / 2 ) );
         }
 
-        .uno {
-            top: 5px;
-            left: 10px;
+        .b-cinco {
+            top: calc(40% - calc(var(--size-button) / 2 ) );
+            left: calc(20% - calc(var(--size-button) / 2 ) );
+        }
+       
+        .uno, .dos, .tres, .cuatro, .cinco {
+            left: calc(50% - calc(var(--heigth) * 0.75) );
         }
 
         .dos {
-            top: 10px;
-            right: 5px;
-            rotate: 90deg;
+            transform: rotate(72deg);
         }
 
         .tres {
-            rotate: 180deg;
-            bottom: 5px;
-            left: 10px;
+            transform: rotate(144deg);
         }
 
         .cuatro {
-            rotate: 270deg;
-            top: 10px;
-            left: 5px;
+            transform: rotate(216deg);
         }
 
+        .cinco {
+            transform: rotate(288deg);
+        }
+
+
         .color-cono {
-            border-color: var(--dark-blue) transparent transparent transparent;
+            border-color: var(--yellow) transparent transparent transparent;
         }
     </style>
 </head>
@@ -111,6 +114,9 @@
 
         <button class="button b-cuatro" onclick="changeColor('cuatro')"></button>
         <div class="cono cuatro" id="cuatro"></div>
+
+        <button class="button b-cinco" onclick="changeColor('cinco')"></button>
+        <div class="cono cinco" id="cinco"></div>
     </div>
 
     <script>
