@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,20 +13,19 @@
             --hospital-purple: #5e37d1;
             --yellow: #ffbe1a;
             --dark-blue: #002337;
-            --diameter: 500px;
+            --diameter: 400px;
             --height: calc(calc(var(--diameter) / 2) );
-            --size-button: calc(2 * var(--height)*0.37);
+            --size-button: calc(2 * var(--diameter) * 0.5 *0.371);
         }
-
         .circle {
             position: relative;
             width: var(--diameter);
             height: var(--diameter);
-            background-color: red;
+            background-color: white;
             border-radius: 50%;
+            overflow: hidden;
+            border: solid;
         }
-
-
         .cono {
             position: absolute;
             width: 0;
@@ -35,37 +33,48 @@
             border: solid;
             border-width: var(--height) calc(var(--height) * 0.75) var(--height) calc(var(--height) * 0.75);
             border-color: transparent transparent transparent transparent;
+            overflow: hidden;
+        }
+
+        .cono2 {
+            height: 200px;
+            width: 200px;
+            background-color: #000000;
         }
 
         .button {
             position: absolute;
-            background-color: black;
-            width: 200px;
-            height: 200px;
+            background-color: transparent;
+            width: var(--size-button);
+            height: var(--size-button);
             border-radius: 50%;
             cursor: pointer;
             border: none;
             padding: 0;
         }
-
+        /*formula (mitad del lado del cuadro * (1 - sen(x)) o cos(x)*/
         .b-uno {
             top: calc((var(--diameter) / 2)* ( 1 - 1) ) ;
-            right: calc((var(--diameter) / 2)* ( 1 - 0));
+            right: calc((var(--diameter) / 2)* ( 1 - 0) - (var(--size-button) / 2));
         }
 
         .b-dos {
-            top: calc(((var(--diameter) / 2) * ( 1 - 0.31)) );
-            right: calc((var(--diameter) / 2) * ( 1 - 0.95) );
+            top: calc(((var(--diameter) / 2) * ( 1 - 0.31)) - ((var(--size-button) / 2) * 0.7 ));
+            right: calc((var(--diameter) / 2) * ( 1 - 0.95) - ((var(--size-button) / 2) * 0.06 ) );
         }
 
         .b-tres {
-            bottom: calc((var(--diameter) / 2)* ( 1 - 0.80) );
-            right: calc((var(--diameter) / 2)* ( 1 - 0.58));
+            bottom: calc((var(--diameter) / 2)* ( 1 - 0.80) - ((var(--size-button) / 2) * 0.225 ));
+            right: calc((var(--diameter) / 2)* ( 1 - 0.58) - ((var(--size-button) / 2) * 0.405 ));
         }
-
-        
-
-
+        .b-cuatro {
+            bottom: calc((var(--diameter) / 2)* ( 1 - 0.80) - ((var(--size-button) / 2) * 0.180 ));
+            left: calc((var(--diameter) / 2)* ( 1 - 0.58) - ((var(--size-button) / 2) * 0.45 ));
+        }
+        .b-cinco {
+            top: calc((var(--diameter) / 2)* ( 1 - 0.30) - ((var(--size-button) / 2) * 0.738 ));
+            left: calc((var(--diameter) / 2)* ( 1 - 0.95) - ((var(--size-button) / 2) * 0.045 ));
+        }
         .uno,
         .dos,
         .tres,
@@ -73,27 +82,23 @@
         .cinco {
             left: calc(50% - calc(var(--height) * 0.75));
         }
-
         .dos {
             transform: rotate(72deg);
         }
-
         .tres {
             transform: rotate(144deg);
         }
-
         .cuatro {
             transform: rotate(216deg);
         }
-
         .cinco {
             transform: rotate(288deg);
         }
-
-
         .color-cono {
             border-color: var(--yellow) transparent transparent transparent;
         }
+       
+
     </style>
 </head>
 
@@ -113,14 +118,12 @@
         <button class="button b-cinco" onclick="changeColor('cinco')"></button>
 
     </div>
-
     <script>
         function changeColor(id) {
             const cono = document.getElementById(id);
             cono.classList.toggle('color-cono');
         }
     </script>
-    </div>
 </body>
 
 </html>

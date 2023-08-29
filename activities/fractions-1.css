@@ -6,9 +6,9 @@
     --hospital-purple: #5e37d1;
     --yellow: #ffbe1a;
     --dark-blue: #002337;
-    --diameter: 200px;
+    --diameter: 400px;
     --height: calc(calc(var(--diameter) / 2) - 2px);
-    --size-button: calc(2 * var(--height)*0.37);
+    --size-button: calc(2 * var(--diameter) * 0.5 *0.41);
 }
 
 body {
@@ -54,7 +54,7 @@ body {
 }
 
 .blue-color {
-    background-color: var(--yellow);
+    background-color: var(--dark-blue);
 }
 
 .yellow-color {
@@ -96,27 +96,28 @@ body {
     height: var(--size-button);
     border-radius: 50%;
     cursor: pointer;
+    padding: 0;
     border: none;
 }
 
 .b-uno {
-    top: 8px;
+    top: 0;
     left: calc(50% - calc(var(--size-button) / 2 ) );
 }
 
 .b-dos {
     top: calc(50% - calc(var(--size-button) / 2 ) );
-    right: 8px;
+    right: 0;
 }
 
 .b-tres {
-    bottom: 8px;
+    bottom: 0;
     left: calc(50% - calc(var(--size-button) / 2 ) );
 }
 
 .b-cuatro {
-    top: 0;
-    left: 8px;
+    top: calc(50% - calc(var(--size-button) / 2 ) );
+    left: 0;
 }
 
 .uno, .dos, .tres, .cuatro {
