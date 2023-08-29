@@ -7,8 +7,8 @@
     --yellow: #ffbe1a;
     --dark-blue: #002337;
     --diameter: 400px;
-    --height: calc(calc(var(--diameter) / 2) - 2px);
-    --size-button: calc(2 * var(--diameter) * 0.5 *0.41);
+    --height: calc(calc(var(--diameter) / 2) );
+    --size-button: calc(2 * var(--height) * 0.41);
 }
 
 body {
@@ -25,10 +25,11 @@ body {
 .circle-2 {
     width: var(--diameter);
     height: var(--diameter);
-    background-color: var(--yellow);
+    background-color: var(--very-light-gray);
     border-radius: 50%;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
+    border: 1px var(--dark-blue) solid;
 }
 
 .c-none {
@@ -51,6 +52,7 @@ body {
     background-color: gray;
     border-radius: 50%;
     overflow: hidden;
+    border: 1px var(--dark-blue) solid;
 }
 
 .blue-color {
@@ -83,15 +85,14 @@ body {
     width: 0;
     height: 0;
     border: solid;
-    border-width: var(--height) var(--height) var(--height) var(--height);
+    border-width: var(--height) var(--height) 0 var(--height);
     border-color: var(--white) transparent transparent transparent;
-    border-radius: 50%;
+    transform-origin: bottom center;
 }
 
 .button {
     position: absolute;
     background-color: transparent;
-    z-index: 10;
     width: var(--size-button);
     height: var(--size-button);
     border-radius: 50%;
@@ -120,10 +121,7 @@ body {
     left: 0;
 }
 
-.uno, .dos, .tres, .cuatro {
-    top: 2px;
-    left: calc(50% - var(--height) );
-}
+
 
 .dos {
     transform: rotate(90deg);
@@ -139,6 +137,31 @@ body {
 
 .color-cono {
     border-color: var(--yellow) transparent transparent transparent;
+}
+
+.line {
+    position: absolute;
+    top: calc(50% - 0.5px);
+    width: var(--height);
+    height: 0.5px;
+    background-color: var(--dark-blue);
+    transform-origin: bottom right;
+}
+
+.l-1 {
+transform: rotate(135deg);
+}
+
+.l-2 {
+transform: rotate(225deg);
+}
+
+.l-3 {
+transform: rotate(315deg);
+}
+
+.l-4 {
+transform: rotate(405deg);
 }
 
 @media (max-width: 450px) {
