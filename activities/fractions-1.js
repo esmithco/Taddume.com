@@ -10,14 +10,16 @@ button4.addEventListener('click', circle4);
 const button5 = document.getElementById('button-5');
 button5.addEventListener('click', circle5);
 const button1 = document.getElementById('button-1');
+button1.addEventListener('click', circle1);
 const button2 = document.getElementById('button-2');
 
 let isCircle4Visible = false;
 let isCircle5Visible = false;
+let isCircle1Visible = false;
 
-buttonOptions.forEach((buttonOption) => {
-  buttonOption.addEventListener('click', divideCircle);
-});
+// buttonOptions.forEach((buttonOption) => {
+//   buttonOption.addEventListener('click', divideCircle);
+// });
 
 // function divideCircle(event) {
 //   const clickedButton = event.target;
@@ -45,6 +47,11 @@ function changeColor(id) {
   cono.classList.toggle('color-cono');
 }
 
+function changeColorC(id) {
+  const boton = document.querySelector('.b1-uno');
+  boton.classList.toggle('color-cono-b');
+  boton.classList.toggle('color-white');
+}
 
 function circle4() {
   if (isCircle4Visible) {
@@ -146,6 +153,7 @@ function circle4() {
 
     isCircle4Visible = true;
     isCircle5Visible = false;
+    isCircle1Visible = false;
   }
 }
 
@@ -271,6 +279,37 @@ function circle5() {
 
     isCircle5Visible = true;
     isCircle4Visible = false;
+    isCircle1Visible = false;
+  }
+}
+
+function circle1() {
+  if (isCircle1Visible) {
+    clearCircle();
+    circle2.classList.remove('c-none');
+    isCircle1Visible = false;
+  } else {
+    clearCircle();
+    circle2.classList.add('c-none')
+    
+    const cono1 = document.createElement('div');
+    cono1.classList.add('cono-1');
+    cono1.setAttribute('id', 'uno');
+
+    const button1 = document.createElement('button');
+    button1.classList.add('b1-uno');
+    button1.classList.add('color-white');
+    button1.addEventListener('click', () => {
+      changeColorC('uno');
+    });
+
+    circle.appendChild(cono1);
+
+    circle.appendChild(button1);
+
+    isCircle4Visible = false;
+    isCircle5Visible = false;
+    isCircle1Visible = true;
   }
 }
 

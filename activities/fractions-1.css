@@ -6,10 +6,11 @@
     --hospital-purple: #5e37d1;
     --yellow: #ffbe1a;
     --dark-blue: #002337;
-    --diameter: 400px;
+    --diameter: 300px;
     --height: calc(calc(var(--diameter) / 2) );
     --size-button-4: calc(2 * var(--height) * 0.41);
     --size-button-5: calc(2 * var(--height) * 0.371);
+    --size-button-1: var(--diameter)
 }
 
 body {
@@ -23,14 +24,33 @@ body {
     background-color: var(--dark-gray);
 }
 
+.options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .circle-2 {
     width: var(--diameter);
     height: var(--diameter);
-    background-color: var(--very-light-gray);
+    background-color: var(--dark-blue);
     border-radius: 50%;
     position: absolute;
     z-index: 10;
     border: 1px var(--dark-blue) solid;
+}
+
+h1 {
+    margin-top: 60px;
+    text-align: center;
+    color: var(--hospital-purple)
 }
 
 .c-none {
@@ -54,22 +74,6 @@ body {
     border-radius: 50%;
     overflow: hidden;
     border: 1px var(--dark-blue) solid;
-}
-
-.blue-color {
-    background-color: var(--dark-blue);
-}
-
-.yellow-color {
-    background-color: var(--yellow);
-}
-
-.purple-color {
-    background-color: var(--hospital-purple);
-}
-
-.black-color {
-    background-color: var(--black);
 }
 
 .button-options {
@@ -141,6 +145,14 @@ body {
 
 .color-cono {
     border-color: var(--yellow) transparent transparent transparent;
+}
+
+.color-white {
+    background-color: var(--white);
+}
+
+.color-cono-b {
+    background-color: var(--yellow);
 }
 
 .line {
@@ -257,8 +269,38 @@ transform: rotate(342deg);
 transform: rotate(414deg);
 }
 
+/**DIVIDIDO EN 1*/
+
+.cono-1 {
+    position: absolute;
+    width: var(--diameter);
+    height: var(--diameter);
+}
+
+.b1-uno {
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    width: var(--diameter);
+    height: var(--diameter);
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    padding: 0;
+}
+
+h3 {
+    text-align: center;
+}
+
+
 @media (max-width: 450px) {
     .activity {
-        margin-top: 40%;
+        margin-top: 20%;
+    }
+
+    h2, h3 {
+        width: 80%;
+        text-align: center;
     }
 }
