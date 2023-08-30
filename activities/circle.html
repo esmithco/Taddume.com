@@ -15,7 +15,7 @@
             --dark-blue: #002337;
             --diameter: 600px;
             --height: calc(var(--diameter) / 2);
-            --size-button: calc(2 * var(--height) * 0.371);
+            --size-button-5: calc(2 * var(--height) * 0.371);
         }
         .circle {
             position: relative;
@@ -26,7 +26,17 @@
             overflow: hidden;
             border: 2px solid var(--dark-blue);
         }
-        .cono {
+        .button {
+            position: absolute;
+            background-color: transparent;
+            width: var(--size-button-5);
+            height: var(--size-button-5);
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            padding: 0;
+        }
+        .cono-5 {
             position: absolute;
             width: 0;
             height: 0;
@@ -36,56 +46,47 @@
             transform-origin: bottom center;
         }
 
-        .button {
-            position: absolute;
-            background-color: transparent;
-            width: var(--size-button);
-            height: var(--size-button);
-            border-radius: 50%;
-            cursor: pointer;
-            border: none;
-            padding: 0;
-        }
+        
         /*formula (mitad del lado del cuadro * (1 - sen(x)) o cos(x)*/
-        .b-uno {
+        .b5-uno {
             top: calc(var(--height) * ( 1 - 1) ) ;
-            right: calc(var(--height) * ( 1 - 0) - (var(--size-button) / 2));
+            right: calc(var(--height) * ( 1 - 0) - (var(--size-button-5) / 2));
         }
 
-        .b-dos {
-            top: calc((var(--height) * ( 1 - 0.31)) - ((var(--size-button) / 2) * 0.7 ));
-            right: calc((var(--height) * ( 1 - 0.95)) - ((var(--size-button) / 2) * 0.06 ) );
+        .b5-dos {
+            top: calc((var(--height) * ( 1 - 0.31)) - ((var(--size-button-5) / 2) * 0.7 ));
+            right: calc((var(--height) * ( 1 - 0.95)) - ((var(--size-button-5) / 2) * 0.06 ) );
         }
 
-        .b-tres {
-            bottom: calc((var(--height) * ( 1 - 0.80)) - ((var(--size-button) / 2) * 0.225 ));
-            right: calc((var(--diameter) / 2)* ( 1 - 0.58) - ((var(--size-button) / 2) * 0.405 ));
+        .b5-tres {
+            bottom: calc((var(--height) * ( 1 - 0.80)) - ((var(--size-button-5) / 2) * 0.225 ));
+            right: calc((var(--diameter) / 2)* ( 1 - 0.58) - ((var(--size-button-5) / 2) * 0.405 ));
         }
-        .b-cuatro {
-            bottom: calc((var(--height) * ( 1 - 0.80)) - ((var(--size-button) / 2) * 0.180 ));
-            left: calc((var(--height) * ( 1 - 0.58)) - ((var(--size-button) / 2) * 0.45 ));
+        .b5-cuatro {
+            bottom: calc((var(--height) * ( 1 - 0.80)) - ((var(--size-button-5) / 2) * 0.180 ));
+            left: calc((var(--height) * ( 1 - 0.58)) - ((var(--size-button-5) / 2) * 0.45 ));
         }
-        .b-cinco {
-            top: calc((var(--height) * ( 1 - 0.30)) - ((var(--size-button) / 2) * 0.738 ));
-            left: calc((var(--height) * ( 1 - 0.95)) - ((var(--size-button) / 2) * 0.045 ));
+        .b5-cinco {
+            top: calc((var(--height) * ( 1 - 0.30)) - ((var(--size-button-5) / 2) * 0.738 ));
+            left: calc((var(--height) * ( 1 - 0.95)) - ((var(--size-button-5) / 2) * 0.045 ));
         }
-        .uno,
-        .dos,
-        .tres,
-        .cuatro,
-        .cinco {
+        .uno-5,
+        .dos-5,
+        .tres-5,
+        .cuatro-5,
+        .cinco-5 {
             left: calc(50% - calc(var(--height) * 0.7265));
         }
-        .dos {
+        .dos-5 {
             transform: rotate(72deg);
         }
-        .tres {
+        .tres-5 {
             transform: rotate(144deg);
         }
-        .cuatro {
+        .cuatro-5 {
             transform: rotate(216deg);
         }
-        .cinco {
+        .cinco-5 {
             transform: rotate(288deg);
         }
         .color-cono {
@@ -101,23 +102,23 @@
             transform-origin: bottom right;
         }
 
-    .l-1 {
+    .l5-1 {
         transform: rotate(126deg);
     }
 
-    .l-2 {
+    .l5-2 {
         transform: rotate(198deg);
     }
 
-    .l-3 {
+    .l5-3 {
         transform: rotate(270deg);
     }
 
-    .l-4 {
+    .l5-4 {
         transform: rotate(342deg);
     }
 
-    .l-5 {
+    .l5-5 {
         transform: rotate(414deg);
     }
 
@@ -129,23 +130,23 @@
 
         
 
-        <div class="cono uno" id="uno"></div>
-        <div class="cono dos" id="dos"></div>
-        <div class="cono tres" id="tres"></div>
-        <div class="cono cuatro" id="cuatro"></div>
-        <div class="cono cinco" id="cinco"></div>
+        <div class="cono-5 uno-5" id="uno"></div>
+        <div class="cono-5 dos-5" id="dos"></div>
+        <div class="cono-5 tres-5" id="tres"></div>
+        <div class="cono-5 cuatro-5" id="cuatro"></div>
+        <div class="cono-5 cinco-5" id="cinco"></div>
 
-        <button class="button b-uno" onclick="changeColor('uno')"></button>
-        <button class="button b-dos" onclick="changeColor('dos')"></button>
-        <button class="button b-tres" onclick="changeColor('tres')"></button>
-        <button class="button b-cuatro" onclick="changeColor('cuatro')"></button>
-        <button class="button b-cinco" onclick="changeColor('cinco')"></button>
+        <button class="button b5-uno" onclick="changeColor('uno')"></button>
+        <button class="button b5-dos" onclick="changeColor('dos')"></button>
+        <button class="button b5-tres" onclick="changeColor('tres')"></button>
+        <button class="button b5-cuatro" onclick="changeColor('cuatro')"></button>
+        <button class="button b5-cinco" onclick="changeColor('cinco')"></button>
 
-        <div class="line l-1"></div>
-        <div class="line l-2"></div>
-        <div class="line l-3"></div>
-        <div class="line l-4"></div>
-        <div class="line l-5"></div>
+        <div class="line l5-1"></div>
+        <div class="line l5-2"></div>
+        <div class="line l5-3"></div>
+        <div class="line l5-4"></div>
+        <div class="line l5-5"></div>
     </div>
     <script>
         function changeColor(id) {

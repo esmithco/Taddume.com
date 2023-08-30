@@ -8,7 +8,8 @@
     --dark-blue: #002337;
     --diameter: 400px;
     --height: calc(calc(var(--diameter) / 2) );
-    --size-button: calc(2 * var(--height) * 0.41);
+    --size-button-4: calc(2 * var(--height) * 0.41);
+    --size-button-5: calc(2 * var(--height) * 0.371);
 }
 
 body {
@@ -80,7 +81,21 @@ body {
     border-radius: 8px;
 }
 
-.cono {
+.button {
+    position: absolute;
+    background-color: transparent;
+    width: var(--size-button-4);
+    height: var(--size-button-4);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+}
+
+
+/* DIVIDIDO EN 4*/
+
+.cono-4 {
     position: absolute;
     width: 0;
     height: 0;
@@ -90,48 +105,37 @@ body {
     transform-origin: bottom center;
 }
 
-.button {
-    position: absolute;
-    background-color: transparent;
-    width: var(--size-button);
-    height: var(--size-button);
-    border-radius: 50%;
-    cursor: pointer;
-    padding: 0;
-    border: none;
-}
-
-.b-uno {
+.b4-uno {
     top: 0;
-    left: calc(50% - calc(var(--size-button) / 2 ) );
+    left: calc(50% - calc(var(--size-button-4) / 2 ) );
 }
 
-.b-dos {
-    top: calc(50% - calc(var(--size-button) / 2 ) );
+.b4-dos {
+    top: calc(50% - calc(var(--size-button-4) / 2 ) );
     right: 0;
 }
 
-.b-tres {
+.b4-tres {
     bottom: 0;
-    left: calc(50% - calc(var(--size-button) / 2 ) );
+    left: calc(50% - calc(var(--size-button-4) / 2 ) );
 }
 
-.b-cuatro {
-    top: calc(50% - calc(var(--size-button) / 2 ) );
+.b4-cuatro {
+    top: calc(50% - calc(var(--size-button-4) / 2 ) );
     left: 0;
 }
 
 
 
-.dos {
+.dos-4 {
     transform: rotate(90deg);
 }
 
-.tres {
+.tres-4 {
     transform: rotate(180deg);
 }
 
-.cuatro {
+.cuatro-4 {
     transform: rotate(270deg);
 }
 
@@ -148,20 +152,109 @@ body {
     transform-origin: bottom right;
 }
 
-.l-1 {
+.l4-1 {
 transform: rotate(135deg);
 }
 
-.l-2 {
+.l4-2 {
 transform: rotate(225deg);
 }
 
-.l-3 {
+.l4-3 {
 transform: rotate(315deg);
 }
 
-.l-4 {
+.l4-4 {
 transform: rotate(405deg);
+}
+
+
+/**DIVIDIDO EN 5*/
+
+.cono-5 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: solid;
+    border-width: var(--height) calc(0.7265 * var(--height) ) 0 calc(0.7265 * var(--height) );
+    border-color: var(--white) transparent transparent transparent;
+    transform-origin: bottom center;
+}
+
+
+/*formula (mitad del lado del cuadro * (1 - sen(x)) o cos(x)*/
+.b5-uno {
+    top: calc(var(--height) * ( 1 - 1) ) ;
+    right: calc(var(--height) * ( 1 - 0) - (var(--size-button-5) / 2));
+}
+
+.b5-dos {
+    top: calc((var(--height) * ( 1 - 0.31)) - ((var(--size-button-5) / 2) * 0.7 ));
+    right: calc((var(--height) * ( 1 - 0.95)) - ((var(--size-button-5) / 2) * 0.06 ) );
+}
+
+.b5-tres {
+    bottom: calc((var(--height) * ( 1 - 0.80)) - ((var(--size-button-5) / 2) * 0.225 ));
+    right: calc((var(--diameter) / 2)* ( 1 - 0.58) - ((var(--size-button-5) / 2) * 0.405 ));
+}
+.b5-cuatro {
+    bottom: calc((var(--height) * ( 1 - 0.80)) - ((var(--size-button-5) / 2) * 0.180 ));
+    left: calc((var(--height) * ( 1 - 0.58)) - ((var(--size-button-5) / 2) * 0.45 ));
+}
+.b5-cinco {
+    top: calc((var(--height) * ( 1 - 0.30)) - ((var(--size-button-5) / 2) * 0.738 ));
+    left: calc((var(--height) * ( 1 - 0.95)) - ((var(--size-button-5) / 2) * 0.045 ));
+}
+.uno-5,
+.dos-5,
+.tres-5,
+.cuatro-5,
+.cinco-5 {
+    left: calc(50% - calc(var(--height) * 0.7265));
+}
+.dos-5 {
+    transform: rotate(72deg);
+}
+.tres-5 {
+    transform: rotate(144deg);
+}
+.cuatro-5 {
+    transform: rotate(216deg);
+}
+.cinco-5 {
+    transform: rotate(288deg);
+}
+.color-cono {
+    border-color: var(--yellow) transparent transparent transparent;
+}
+
+.line {
+    position: absolute;
+    top: calc(50% - 0.5px);
+    width: var(--height);
+    height: 0.5px;
+    background-color: var(--dark-blue);
+    transform-origin: bottom right;
+}
+
+.l5-1 {
+transform: rotate(126deg);
+}
+
+.l5-2 {
+transform: rotate(198deg);
+}
+
+.l5-3 {
+transform: rotate(270deg);
+}
+
+.l5-4 {
+transform: rotate(342deg);
+}
+
+.l5-5 {
+transform: rotate(414deg);
 }
 
 @media (max-width: 450px) {
