@@ -23,7 +23,6 @@
             height: var(--diameter);
             background-color: white;
             border-radius: 50%;
-            overflow: hidden;
             border: 2px solid var(--dark-blue);
         }
         .button {
@@ -47,28 +46,28 @@
         }
 
         
-        /*formula (mitad del lado del cuadro * (1 - sen(x)) o cos(x)*/
+        /*formula (0.67 * mitad del lado del cuadro * (1 - sen(x)) o cos(x)*/
         .b5-uno {
-            top: calc(var(--height) * ( 1 - 1) ) ;
-            right: calc(var(--height) * ( 1 - 0) - (var(--size-button-5) / 2));
+            top: calc( 0.63 * var(--height) * ( 1 - 1) ) ;
+            right: calc(  0.63 * var(--height) * ( 1 - 0) );
         }
 
         .b5-dos {
-            top: calc((var(--height) * ( 1 - 0.31)) - ((var(--size-button-5) / 2) * 0.7 ));
-            right: calc((var(--height) * ( 1 - 0.95)) - ((var(--size-button-5) / 2) * 0.06 ) );
+            top: calc( 0.63 * var(--height) * ( 1 - 0.31));
+            right: calc( 0.63 * var(--height) * ( 1 - 0.95));
         }
 
         .b5-tres {
-            bottom: calc((var(--height) * ( 1 - 0.80)) - ((var(--size-button-5) / 2) * 0.225 ));
-            right: calc((var(--diameter) / 2)* ( 1 - 0.58) - ((var(--size-button-5) / 2) * 0.405 ));
+            bottom: calc( 0.63 * var(--height) * ( 1 - 0.81));
+            right: calc( 0.63 * var(--height) * ( 1 - 0.58) );
         }
         .b5-cuatro {
-            bottom: calc((var(--height) * ( 1 - 0.80)) - ((var(--size-button-5) / 2) * 0.180 ));
-            left: calc((var(--height) * ( 1 - 0.58)) - ((var(--size-button-5) / 2) * 0.45 ));
+            bottom: calc( 0.63 * var(--height) * ( 1 - 0.81));
+            left: calc( 0.63 * var(--height) * ( 1 - 0.58));
         }
         .b5-cinco {
-            top: calc((var(--height) * ( 1 - 0.30)) - ((var(--size-button-5) / 2) * 0.738 ));
-            left: calc((var(--height) * ( 1 - 0.95)) - ((var(--size-button-5) / 2) * 0.045 ));
+            top: calc( 0.63 * var(--height) * ( 1 - 0.30));
+            left: calc( 0.63 * var(--height) * ( 1 - 0.95));
         }
         .uno-5,
         .dos-5,
@@ -122,6 +121,16 @@
         transform: rotate(414deg);
     }
 
+    .div {
+        position: absolute;
+        width: var(--size-button-5);
+        height: var(--size-button-5);
+        background-color: transparent;
+        top: calc( 0.63 *  (var(--height) ) *  (1 - 0.31));
+        right: calc( 0.63 * (var(--height) * (1 - 0.95)) );
+    }
+
+ 
     </style>
 </head>
 
@@ -137,6 +146,8 @@
         <div class="cono-5 cinco-5" id="cinco"></div>
 
         <button class="button b5-uno" onclick="changeColor('uno')"></button>
+        <div class="div"><div class="cir"></div></div>
+        <div class="div2"></div>
         <button class="button b5-dos" onclick="changeColor('dos')"></button>
         <button class="button b5-tres" onclick="changeColor('tres')"></button>
         <button class="button b5-cuatro" onclick="changeColor('cuatro')"></button>

@@ -379,8 +379,13 @@ function circle_2() {
       changeColorC('.b-2d');
     });
 
+    const line1 = document.createElement('div');
+    line1.classList.add('line');
+    line1.classList.add('l2');
+
     circle.appendChild(button1);
     circle.appendChild(button2);
+    circle.appendChild(line1);
 
     isCircle4Visible = false;
     isCircle5Visible = false;
