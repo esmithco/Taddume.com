@@ -42,30 +42,7 @@ mostrarPopUpButton.addEventListener("click", () => {
 cerrarPopUpButton.addEventListener("click", () => {
   popUp.classList.remove('popdis');
 });
-// buttonOptions.forEach((buttonOption) => {
-//   buttonOption.addEventListener('click', divideCircle);
-// });
 
-// function divideCircle(event) {
-//   const clickedButton = event.target;
-//   const parts = parseFloat(clickedButton.value);
-
-//   if (parts === 4) {
-//     console.log("c");
-//   } else if (parts === 5) {
-//     console.log("5");
-//   } else if (parts === 1) {
-//     circle.classList.remove('blue-color');
-//     circle.classList.remove('yellow-color');
-//     circle.classList.toggle('purple-color');
-//     circle.classList.remove('black-color');
-//   } else if (parts === 2) {
-//     circle.classList.remove('blue-color');
-//     circle.classList.remove('yellow-color');
-//     circle.classList.remove('purple-color');
-//     circle.classList.toggle('black-color');
-//   }
-// }
 function changeColor(id) {
   const cono = document.getElementById(id);
   cono.classList.toggle('color-cono');
@@ -103,6 +80,11 @@ function changeColorC(clas) {
 }
 
 function circle4() {
+  b1 = 0;
+  b2 = 0;
+  b3 = 0;
+  b4 = 0;
+  b5 = 0;
   if (isCircle4Visible) {
     clearCircle();
     circle2.classList.remove('c-none');
@@ -208,15 +190,15 @@ function circle4() {
 }
 
 function circle5() {
+  b1 = 0;
+  b2 = 0;
+  b3 = 0;
+  b4 = 0;
+  b5 = 0;
   if (isCircle5Visible) {
     clearCircle();
     circle2.classList.remove('c-none');
     isCircle5Visible = false;
-    b1 = 0;
-    b2 = 0;
-    b3 = 0;
-    b4 = 0;
-    b5 = 0;
   } else {
     clearCircle();
     circle2.classList.add('c-none');
@@ -328,6 +310,11 @@ function circle5() {
 }
 
 function circle1() {
+  b1 = 0;
+  b2 = 0;
+  b3 = 0;
+  b4 = 0;
+  b5 = 0;
   if (isCircle1Visible) {
     clearCircle();
     circle2.classList.remove('c-none');
@@ -355,6 +342,11 @@ function circle1() {
 }
 
 function circle_2() {
+  b1 = 0;
+  b2 = 0;
+  b3 = 0;
+  b4 = 0;
+  b5 = 0;
   if (isCircle2Visible) {
     clearCircle();
     circle2.classList.remove('c-none');
