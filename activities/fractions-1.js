@@ -27,20 +27,27 @@ let isCircle2Visible = false;
 
 const mostrarPopUpButton = document.getElementById("pop-up");
 const popUp = document.getElementById("popUp");
+const popUp2 = document.getElementById("popUp2");
 const diaSiguienteButton = document.getElementById("diaSiguiente");
+const vervideoButton = document.getElementById("vervideo");
 const cerrarPopUpButton = document.getElementById("cerrarPopUp");
+const cerrarPopUpButton2 = document.getElementById("cerrarPopUp2");
 
 mostrarPopUpButton.addEventListener("click", () => {
     if(b1+b2+b3+b4+b5 === 4) {
       popUp.classList.toggle('popdis');
     } else {
-      alert('wrong!');
+      popUp2.classList.toggle('popdis');
     }
     
 });
 
 cerrarPopUpButton.addEventListener("click", () => {
   popUp.classList.remove('popdis');
+});
+
+cerrarPopUpButton2.addEventListener("click", () => {
+  popUp2.classList.remove('popdis');
 });
 
 function changeColor(id) {
