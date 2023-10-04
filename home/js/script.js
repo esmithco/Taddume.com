@@ -10,47 +10,47 @@ const learnElement = document.querySelector(".learn");
 menuIcon.addEventListener('click', toggleMobileMenu);
 
 
-const learnscrollIndicator = document.querySelector(".learn-scroll");
-let learnAnimationPlayed = false;
+// const learnscrollIndicator = document.querySelector(".learn-scroll");
+// let learnAnimationPlayed = false;
 
 
-const storyScrollIndicator = document.querySelector(".stories-scroll");
-let storyAnimationPlayed = false;
+// const storyScrollIndicator = document.querySelector(".stories-scroll");
+// let storyAnimationPlayed = false;
 
-const priceScrollIndicator = document.querySelector(".prices-scroll");
-let priceAnimationPlayed = false;
+// const priceScrollIndicator = document.querySelector(".prices-scroll");
+// let priceAnimationPlayed = false;
 
 const mediaQuery = window.matchMedia('(max-width: 450px)');
 
-const handleAnimation = (scrollIndicator, animationPlayed) => {
-    if (!animationPlayed) {
-        scrollIndicator.style.display = 'block';
-        scrollIndicator.style.animation = "scrollAnimation 0.8s ease-in-out 0.2s forwards";
+// const handleAnimation = (scrollIndicator, animationPlayed) => {
+//     if (!animationPlayed) {
+//         scrollIndicator.style.display = 'block';
+//         scrollIndicator.style.animation = "scrollAnimation 0.8s ease-in-out 0.2s forwards";
 
-        scrollIndicator.addEventListener('animationend', () => {
-            scrollIndicator.style.display = 'none';
+//         scrollIndicator.addEventListener('animationend', () => {
+//             scrollIndicator.style.display = 'none';
 
-        });
+//         });
 
-    }
-};
+//     }
+// };
 
-if (mediaQuery.matches) {
-    storiesBox.addEventListener("touchstart", () => {
-        handleAnimation(storyScrollIndicator, storyAnimationPlayed);
-        storyAnimationPlayed = true;
-    });
+// if (mediaQuery.matches) {
+//     storiesBox.addEventListener("touchstart", () => {
+//         handleAnimation(storyScrollIndicator, storyAnimationPlayed);
+//         storyAnimationPlayed = true;
+//     });
 
-    learnElement.addEventListener("touchstart", () => {
-        handleAnimation(learnscrollIndicator, learnAnimationPlayed);
-        learnAnimationPlayed = true;
-    });
+//     learnElement.addEventListener("touchstart", () => {
+//         handleAnimation(learnscrollIndicator, learnAnimationPlayed);
+//         learnAnimationPlayed = true;
+//     });
 
-    pricesBox.addEventListener("touchstart", () => {
-        handleAnimation(priceScrollIndicator, priceAnimationPlayed);
-        priceAnimationPlayed = true;
-    });
-}
+//     pricesBox.addEventListener("touchstart", () => {
+//         handleAnimation(priceScrollIndicator, priceAnimationPlayed);
+//         priceAnimationPlayed = true;
+//     });
+// }
 
 
 

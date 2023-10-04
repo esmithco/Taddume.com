@@ -315,6 +315,7 @@ header {
 /*APRENDER-MATERIAS*/
 
 .learn {
+  position: relative;
   width: 100%;
   height: 320px;
   display: flex;
@@ -398,65 +399,22 @@ header {
   place-items: center;
 }
 
-.learn-scroll {
-  display: none;
+.arrow-l {
   position: absolute;
-  top: 15%;
-  left: 70%;
-  transform: translateX(80%);
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  animation: scrollAnimation 1s ease-in-out 0.2s forwards; /* Inicia la animación después de 0.5 segundos */
+  left: 0;
+  width: 30px;
 }
-
-@keyframes scrollAnimation {
-  0% {
-    transform: translateX(80%) scale(1);
-  }
-  100% {
-    transform: translateX(-150%) scale(1);
-  }
-}
-
-.learn.played .learn-scroll {
-  display: none; 
-}
-
-.stories-scroll {
-  display: none;
+.arrow-r {
   position: absolute;
-  top: 50%;
-  left: 70%;
-  transform: translateX(80%);
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  animation: scrollAnimation 1s ease-in-out 0.2s forwards; /* Inicia la animación después de 0.5 segundos */
+  right: 0;
+  width: 30px;
 }
 
-.stories-section.played .stories-scroll {
-  display: none; 
+.al-l,
+.al-r {
+  top: 120px;
 }
 
-.prices-scroll {
-  display: none;
-  position: absolute;
-  top: 40%;
-  left: 70%;
-  transform: translateX(80%);
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  animation: scrollAnimation 1s ease-in-out 0.2s forwards; /* Inicia la animación después de 0.5 segundos */
-}
-
-.prices-section.played .prices-scroll{
-  display: none; 
-}
 /*MANCHA 1*/
 .first-container {
   position: absolute;
@@ -545,6 +503,7 @@ header {
 /*HISTORIAS DE USUARIOS*/
 
 .stories-section {
+  position: relative;
   background-color: var(--white);
   width: 100%;
   height: 780px;
@@ -589,6 +548,11 @@ header {
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
+}
+
+.as-l,
+.as-r {
+  top: 540px;
 }
 
 .img-story {
@@ -653,15 +617,23 @@ text-justify: inter-word;
 
 /*PRECIOS*/
 
+.combos {
+  color: var(--yellow);
+  font-size: 44px;
+  margin: 0;
+  z-index: 100;
+}
+
 .prices-section {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 700px;
+  justify-content: space-around;
 }
 
 .prices-img {
   width: 100%;
-  height: 600px;
+  height: 100%;
 }
 
 .prices-div {
@@ -1080,8 +1052,6 @@ footer {
     margin-left: 10px;
   }
 
-  .subjects-learn,
-  .stories,
   .prices-div,
   .followup-img,
   .news-img {
@@ -1095,13 +1065,29 @@ footer {
     margin-right: calc((100% - 200px) / 4);
   }
 
-  .stories-section {
-    height: 900px;
+  .stories,
+  .subjects-learn {
+    width: 80%;
   }
 
+  .h2-story,
+  .p-testimonio {
+    margin: 0;
+  }
+
+  .stories-section {
+    height: 900px;
+    justify-content: space-around;
+  }
+
+  .prices-section{
+    height: 700px;
+    justify-content: space-around;
+  }
+  
   .stories {
-    width: 100%;
-    height: 840px;
+    height: 460px;
+    margin-bottom: 0;
   }
 
   .story {
