@@ -343,6 +343,7 @@ header {
   align-items: center;
   justify-content: space-around;
   overflow-x: scroll;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -414,7 +415,7 @@ header {
 
 .al-l,
 .al-r {
-  top: 120px;
+  top: 125px;
 }
 
 /*MANCHA 1*/
@@ -1063,8 +1064,8 @@ footer {
     margin-right: 0;
   }
 
-  .arrow-l,
-  .arrow-r {
+
+  .al-r {
     display: block;
   }
 

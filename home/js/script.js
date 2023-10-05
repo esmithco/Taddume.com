@@ -9,48 +9,42 @@ const learnElement = document.querySelector(".learn");
 
 menuIcon.addEventListener('click', toggleMobileMenu);
 
+const al_l = document.querySelector('.al-l');
+const al_r = document.querySelector('.al-r');
+const as_l = document.querySelector('.as-l');
+const as_r = document.querySelector('.as-r');
+const ap_l = document.querySelector('.ap-l');
+const ap_r = document.querySelector('.ap-r');
 
-// const learnscrollIndicator = document.querySelector(".learn-scroll");
-// let learnAnimationPlayed = false;
+let slider = document.querySelector('.subjects-learn');
+let iconos = slider.getElementsByClassName('subjects');
+let indiceActual = 0;
 
+slider.addEventListener('scroll', () => {
+    if (slider.scrollLeft == 0) {
+        al_l.style.display = "none"
+    } else {
+        al_l.style.display = "inline-block"
+    };
 
-// const storyScrollIndicator = document.querySelector(".stories-scroll");
-// let storyAnimationPlayed = false;
+    if (slider.scrollLeft == 468) {
+        al_r.style.display = "none"
+    } else {
+        al_r.style.display = "inline-block"
+    };
+});
 
-// const priceScrollIndicator = document.querySelector(".prices-scroll");
-// let priceAnimationPlayed = false;
+al_r.addEventListener('touchstart', () => {
+    indiceActual = Math.min(indiceActual + 1, iconos.length - 2);
+    let iconoActual = iconos[indiceActual];
+    slider.scrollLeft = iconoActual.offsetLeft - slider.offsetLeft;
+});
 
-const mediaQuery = window.matchMedia('(max-width: 450px)');
-
-// const handleAnimation = (scrollIndicator, animationPlayed) => {
-//     if (!animationPlayed) {
-//         scrollIndicator.style.display = 'block';
-//         scrollIndicator.style.animation = "scrollAnimation 0.8s ease-in-out 0.2s forwards";
-
-//         scrollIndicator.addEventListener('animationend', () => {
-//             scrollIndicator.style.display = 'none';
-
-//         });
-
-//     }
-// };
-
-// if (mediaQuery.matches) {
-//     storiesBox.addEventListener("touchstart", () => {
-//         handleAnimation(storyScrollIndicator, storyAnimationPlayed);
-//         storyAnimationPlayed = true;
-//     });
-
-//     learnElement.addEventListener("touchstart", () => {
-//         handleAnimation(learnscrollIndicator, learnAnimationPlayed);
-//         learnAnimationPlayed = true;
-//     });
-
-//     pricesBox.addEventListener("touchstart", () => {
-//         handleAnimation(priceScrollIndicator, priceAnimationPlayed);
-//         priceAnimationPlayed = true;
-//     });
-// }
+al_l.addEventListener('touchstart', () => {
+    indiceActual = Math.max(indiceActual - 1, 0);
+    let iconoActual = iconos[indiceActual];
+    slider.scrollLeft = iconoActual.offsetLeft - slider.offsetLeft;
+});
 
 
 
