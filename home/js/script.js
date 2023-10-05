@@ -21,13 +21,13 @@ let iconos = slider.getElementsByClassName('subjects');
 let indiceActual = 0;
 
 slider.addEventListener('scroll', () => {
-    if (slider.scrollLeft == 0) {
+    if (slider.scrollLeft < 10) {
         al_l.style.display = "none"
     } else {
         al_l.style.display = "inline-block"
     };
 
-    if (slider.scrollLeft == 468) {
+    if (slider.scrollLeft > 450) {
         al_r.style.display = "none"
     } else {
         al_r.style.display = "inline-block"
