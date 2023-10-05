@@ -34,13 +34,13 @@ slider.addEventListener('scroll', () => {
     };
 });
 
-al_r.addEventListener('touchstart', () => {
+al_r.addEventListener('click', () => {
     indiceActual = Math.min(indiceActual + 1, iconos.length - 2);
     let iconoActual = iconos[indiceActual];
     slider.scrollLeft = iconoActual.offsetLeft - slider.offsetLeft;
 });
 
-al_l.addEventListener('touchstart', () => {
+al_l.addEventListener('click', () => {
     indiceActual = Math.max(indiceActual - 1, 0);
     let iconoActual = iconos[indiceActual];
     slider.scrollLeft = iconoActual.offsetLeft - slider.offsetLeft;
