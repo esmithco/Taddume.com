@@ -26,7 +26,7 @@ navSubjects.addEventListener('scroll', () => {
         al_l.style.display = "inline-block"
     };
 
-    if (navSubjects.scrollLeft > 450) {
+    if (navSubjects.scrollLeft > 350) {
         al_r.style.display = "none"
     } else {
         al_r.style.display = "inline-block"
