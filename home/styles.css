@@ -540,6 +540,7 @@ header {
   justify-content: center;
   overflow-x: scroll;
   pointer-events: all;
+  scroll-behavior: smooth;
 }
 
 .story {
@@ -1055,7 +1056,9 @@ footer {
   }
 
 
-  .al-r {
+  .al-r,
+  .as-r,
+  .ap-r {
     display: block;
   }
 

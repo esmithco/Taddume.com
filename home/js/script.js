@@ -16,18 +16,17 @@ const as_r = document.querySelector('.as-r');
 const ap_l = document.querySelector('.ap-l');
 const ap_r = document.querySelector('.ap-r');
 
-let slider = document.querySelector('.subjects-learn');
-let iconos = slider.getElementsByClassName('subjects');
+let iconos = navSubjects.getElementsByClassName('subjects');
 let indiceActual = 0;
 
-slider.addEventListener('scroll', () => {
-    if (slider.scrollLeft < 10) {
+navSubjects.addEventListener('scroll', () => {
+    if (navSubjects.scrollLeft < 10) {
         al_l.style.display = "none"
     } else {
         al_l.style.display = "inline-block"
     };
 
-    if (slider.scrollLeft > 450) {
+    if (navSubjects.scrollLeft > 450) {
         al_r.style.display = "none"
     } else {
         al_r.style.display = "inline-block"
@@ -35,19 +34,75 @@ slider.addEventListener('scroll', () => {
 });
 
 al_r.addEventListener('click', () => {
-    indiceActual = Math.min(indiceActual + 1, iconos.length - 2);
+    indiceActual = Math.min(indiceActual + 1, iconos.length - 1);
     let iconoActual = iconos[indiceActual];
-    slider.scrollLeft = iconoActual.offsetLeft - slider.offsetLeft;
+    navSubjects.scrollLeft = iconoActual.offsetLeft - navSubjects.offsetLeft;
 });
 
 al_l.addEventListener('click', () => {
     indiceActual = Math.max(indiceActual - 1, 0);
     let iconoActual = iconos[indiceActual];
-    slider.scrollLeft = iconoActual.offsetLeft - slider.offsetLeft;
+    navSubjects.scrollLeft = iconoActual.offsetLeft - navSubjects.offsetLeft;
 });
 
+const storySlider = document.querySelector('.storySlider');
+let storyIconos = storySlider.getElementsByClassName('story');
+let storyIndiceActual = 0;
 
+storySlider.addEventListener('scroll', () => {
+    if (storySlider.scrollLeft < 10) {
+        as_l.style.display = "none"
+    } else {
+        as_l.style.display = "inline-block"
+    };
 
+    if (storySlider.scrollLeft > 450) {
+        as_r.style.display = "none"
+    } else {
+        as_r.style.display = "inline-block"
+    };
+});
+
+as_r.addEventListener('click', () => {
+    storyIndiceActual = Math.min(storyIndiceActual + 1, iconos.length - 1);
+    let storyIconoActual = storyIconos[storyIndiceActual];
+    storySlider.scrollLeft = storyIconoActual.offsetLeft - storySlider.offsetLeft;
+});
+
+as_l.addEventListener('click', () => {
+    storyIndiceActual = Math.max(storyIndiceActual - 1, 0);
+    let storyIconoActual = storyIconos[storyIndiceActual];
+    storySlider.scrollLeft = storyIconoActual.offsetLeft - storySlider.offsetLeft;
+});
+
+let priceIconos = pricesBox.getElementsByClassName('prices-box');
+let priceIndiceActual = 0;
+
+pricesBox.addEventListener('scroll', () => {
+    if (pricesBox.scrollLeft < 10) {
+        ap_l.style.display = "none"
+    } else {
+        ap_l.style.display = "inline-block"
+    };
+
+    if (pricesBox.scrollLeft > 650) {
+        ap_r.style.display = "none"
+    } else {
+        ap_r.style.display = "inline-block"
+    };
+});
+
+ap_r.addEventListener('click', () => {
+    priceIndiceActual = Math.min(priceIndiceActual + 1, iconos.length - 1);
+    let priceIconoActual = priceIconos[priceIndiceActual];
+    pricesBox.scrollLeft = priceIconoActual.offsetLeft - pricesBox.offsetLeft;
+});
+
+ap_l.addEventListener('click', () => {
+    priceIndiceActual = Math.max(priceIndiceActual - 1, 0);
+    let priceIconoActual = priceIconos[priceIndiceActual];
+    pricesBox.scrollLeft = priceIconoActual.offsetLeft - pricesBox.offsetLeft;
+});
 
 // funciones
 
