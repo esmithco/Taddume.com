@@ -62,6 +62,11 @@ header {
     height: 80%;
 }
 
+
+.header-logo-solo {
+    display: none;
+}
+
 .small-logo {
     display: none;
 }
@@ -510,6 +515,19 @@ h3 {
 
 
 @media (max-width: 450px) {
+    .logo {
+        width: 40px;
+    }
+
+    .header-logo {
+        display: none;
+    }
+
+    .header-logo-solo {
+        display: block;
+        width: 40px;
+    }
+
     .activity {
         margin-top: 20px;
     }
@@ -518,5 +536,13 @@ h3 {
     h3 {
         width: 80%;
         text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .login-button {
+        display: none;
     }
 }

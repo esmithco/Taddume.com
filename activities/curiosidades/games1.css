@@ -1,0 +1,66 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --very-light-gray: #d6d6d6;
+    --text-input-field: #f7f7f7;
+    --hospital-purple: #5e37d1;
+    --yellow: #ffbe1a;
+    --dark-blue: #002337;
+    --diameter: 300px;
+    --height: calc(calc(var(--diameter) / 2));
+    --size-button-4: calc(2 * var(--height) * 0.41);
+    --size-button-5: calc(2 * var(--height) * 0.371);
+    --size-button-1: var(--diameter)
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Zen Maru Gothic", sans-serif;
+    background-color: var(--white);
+}
+
+h1 {
+    text-align: center;
+}
+
+.page {
+    display: flex;
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.square {
+    display: flex;
+    border: 2px var(--hospital-purple) solid;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+p {
+    color: var(--dark-blue);
+    font-size: 30px;
+    text-align: center;
+}
+
+span {
+    color: var(--yellow);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    background-color: var(--yellow);
+    border: 1px var(--dark-blue) solid;
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+}
