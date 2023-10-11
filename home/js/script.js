@@ -36,7 +36,7 @@ navSubjects.addEventListener('scroll', () => {
 al_r.addEventListener('click', () => {
     indiceActual = Math.min(indiceActual + 1, iconos.length - 1);
     let iconoActual = iconos[indiceActual];
-    navSubjects.scrollLeft = iconoActual.offsetLeft - navSubjects.offsetLeft;
+    navSubjects.scrollLeft = iconoActual.offsetLeft + 10 - navSubjects.offsetLeft;
 });
 
 al_l.addEventListener('click', () => {
@@ -66,7 +66,7 @@ storySlider.addEventListener('scroll', () => {
 as_r.addEventListener('click', () => {
     storyIndiceActual = Math.min(storyIndiceActual + 1, iconos.length - 1);
     let storyIconoActual = storyIconos[storyIndiceActual];
-    storySlider.scrollLeft = storyIconoActual.offsetLeft - storySlider.offsetLeft;
+    storySlider.scrollLeft = storyIconoActual.offsetLeft + 10 - storySlider.offsetLeft;
 });
 
 as_l.addEventListener('click', () => {
@@ -95,7 +95,7 @@ pricesBox.addEventListener('scroll', () => {
 ap_r.addEventListener('click', () => {
     priceIndiceActual = Math.min(priceIndiceActual + 1, iconos.length - 1);
     let priceIconoActual = priceIconos[priceIndiceActual];
-    pricesBox.scrollLeft = priceIconoActual.offsetLeft - pricesBox.offsetLeft;
+    pricesBox.scrollLeft = priceIconoActual.offsetLeft + 10 - pricesBox.offsetLeft;
 });
 
 ap_l.addEventListener('click', () => {

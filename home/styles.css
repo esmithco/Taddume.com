@@ -402,14 +402,14 @@ header {
 
 .arrow-l {
   position: absolute;
-  left: 0;
-  width: 30px;
+  left: -24px;
+  width: 100px;
   display: none;
 }
 .arrow-r {
   position: absolute;
-  right: 0;
-  width: 30px;
+  right: -24px;
+  width: 100px;
   display: none;
 }
 
