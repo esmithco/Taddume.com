@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #movableNumber {
+            width: 50px;
+            height: 50px;
+            background-color: lightblue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+        #movableNumber2 {
+            width: 50px;
+            height: 50px;
+            background-color: lightblue;
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="movableNumber">123</div>
+    <div id="movableNumber2">4</div>
+    <script>
+        const movableNumber = document.getElementById('movableNumber');
+
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        movableNumber.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - movableNumber.getBoundingClientRect().left;
+            offsetY = e.clientY - movableNumber.getBoundingClientRect().top;
+            
+        });
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                const newX = e.clientX - offsetX;
+                const newY = e.clientY - offsetY;
+                movableNumber.style.left = newX + 'px';
+                movableNumber.style.top = newY + 'px';
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+    </script>
+</body>
+</html>
