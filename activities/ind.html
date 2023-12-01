@@ -35,8 +35,14 @@
             isDragging = true;
             offsetX = e.clientX - movableNumber.getBoundingClientRect().left;
             offsetY = e.clientY - movableNumber.getBoundingClientRect().top;
-            
         });
+
+        movableNumber.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            offsetX = e.touches[0].clientX - movableNumber.getBoundingClientRect().left;
+            offsetY = e.touches[0].clientY - movableNumber.getBoundingClientRect().top;
+        });
+
         document.addEventListener('mousemove', (e) => {
             if (isDragging) {
                 const newX = e.clientX - offsetX;
@@ -46,7 +52,20 @@
             }
         });
 
+        document.addEventListener('touchmove', (e) => {
+            if (isDragging) {
+                const newX = e.touches[0].clientX - offsetX;
+                const newY = e.touches[0].clientY - offsetY;
+                movableNumber.style.left = newX + 'px';
+                movableNumber.style.top = newY + 'px';
+            }
+        });
+
         document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        document.addEventListener('touchend', () => {
             isDragging = false;
         });
     </script>

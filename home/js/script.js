@@ -16,6 +16,13 @@ const as_r = document.querySelector('.as-r');
 const ap_l = document.querySelector('.ap-l');
 const ap_r = document.querySelector('.ap-r');
 
+
+// window.addEventListener('load', (event) => {
+//     // La página se ha cargado completamente, puedes reproducir el sonido aquí.
+//     const audio = new Audio('../../sounds/decidemp3-14575.mp3');
+//     audio.play();
+//   });
+
 let iconos = navSubjects.getElementsByClassName('subjects');
 let indiceActual = 0;
 
@@ -480,5 +487,3 @@ renderSubject(subjectList);
 renderSubmenus(menuList);
 renderStory(storyList);
 renderPriceBox(priceList); 
-
-
